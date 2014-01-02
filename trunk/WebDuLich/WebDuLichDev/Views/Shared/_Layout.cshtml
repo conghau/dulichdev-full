@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Việt Nam Vẻ Đẹp Bất Tận</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery-1.8.2.min.js")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/base")
+    @RenderSection("scripts", required: false)
+    <link rel="stylesheet" href="@Url.Content("~/Content/styles/kendo.common.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/styles/kendo.default.min.css")">
+    <script src="@Url.Content("~/Scripts/KendoJS/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/KendoJS/kendo.all.min.js")"></script>
+    @Scripts.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.js")
+    @Styles.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.css")
+    <script type="text/javascript" src="http://static.me.zing.vn/v3/js/zm.xcall-1.01.js"></script>
+</head>
+<body>
+    <div id="header">
+        @Html.Partial("p_Header")
+    </div>
+    <div id="body">
+        @*@RenderSection("featured", required: false)*@
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+    <hr />
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - Du Lịch Việt Nam</p>
+            </div>
+        </div>
+    </footer>
+    @RenderSection("resiseIframe", false)
+</body>
+</html>

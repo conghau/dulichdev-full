@@ -1,0 +1,60 @@
+﻿@model DuLichDLL.Model.webpages_Roles
+@{
+    ViewBag.Title = Resources.Language.CreateNew + Resources.Language.Role;
+    Layout = "~/Views/Shared/_PureLayout.cshtml";
+}
+
+<h3 style="color: #DC143C; font-size: 18px; background-color: #f9f9f9; margin-top: 0px;
+    height: 40px; line-height: 2.1em; margin-bottom: 0px">
+    <img src="~/Content/themes/custom/Image/Business-Man-Add.png"/>
+    @Resources.Language.CreateNew.ToUpper() @Resources.Language.Role.ToUpper()
+</h3>
+@if (TempData["Message"] != null)
+{
+    <input id="messageBoxCode" value="@TempData["Message"].ToString()" type="hidden"/>
+    <div id="messageBox" class="alert ">
+        <a class="close" data-dismiss="alert">×</a>
+        @WebDuLichDev.WebUtility.common.GetResourceValue(TempData["Message"].ToString())
+    </div>
+}
+<form action="#" method="post" id="frmMain">
+    <div style="color: #DC143C; text-align:center; padding:2px 0px">@ViewBag.CreateStatus</div>
+
+    <div class="customScrollbar" style="padding:26px">
+        <div>
+            <div style="margin-bottom:4px"><b>@Resources.Language.RoleName</b></div>
+    
+            @Html.TextBoxFor(Model=>Model.RoleName,
+                new { style = "width: 336px; height: 27px", autofocus = "true", required = "", validationMessage = Resources.Language.PleaseInput +" "+ Resources.Language.RoleName})
+        </div>
+
+        <div style="float:right">
+            <input value="@Resources.Language.CreateNew" 
+                type="button" class="btn btn-primary" id="btnSubmit"
+                style="width:120px; border:none; margin-top:15px" />
+        </div>
+    </div>
+</form>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var validator = $(".customScrollbar").kendoValidator().data("kendoValidator");
+            $('#btnSubmit').click(function () {
+                if (validator.validate()) {
+                    
+                    $('#frmMain').submit();
+                } 
+
+            });
+
+            @*var createStatus = "@ViewBag.CreateStatus";
+
+            if (createStatus == "Done") {
+                parent.$.fancybox.close();
+            }*@
+        })
+    </script>
+}

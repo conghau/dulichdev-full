@@ -1,0 +1,109 @@
+﻿@model WebDuLichDev.Models.vm_CityInfo
+@{
+    ViewBag.Title = "PlaceInfoDetail";
+    Layout = "~/Views/Shared/_pureLayout.cshtml";
+}
+
+<div id="tabstrip">
+
+    <ul>
+        
+        <li class="k-state-active">@Resources.Language.Introduce <i class="icon-search"></i></li>
+        <li>@Resources.Language.Nature</li>
+        <li>@Resources.Language.Social</li>
+        <li>@Resources.Language.Administrative</li>
+        <li>@Resources.Language.Economy</li>
+        <li>@Resources.Language.Travel</li>
+    </ul>
+    <div>
+        <div class="k-content info" style="overflow-y: scroll">
+            @if (null != Model)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.summary))
+            }
+            else
+            {
+                <p>@Resources.Language.NoInfo</p>
+                   
+            }
+
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+            @if (null != Model.cityInfoDetail.History)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.cityInfoDetail.History))
+            }
+            else
+            {
+                <p>@Resources.Language.NoInfo</p>   
+            }
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+            @if (null != Model.cityInfoDetail.Social)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.cityInfoDetail.Social))
+            }
+            else
+            {
+                <p>@Resources.Language.NoInfo</p>   
+            }
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+           @if (null != Model.cityInfoDetail.Administrative)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.cityInfoDetail.Administrative))
+            }
+            else
+            {
+                <p>@Resources.Language.NoInfo</p>   
+            }
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+           @if (null != Model.cityInfoDetail.Economy)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.cityInfoDetail.Economy))
+            }
+            else
+            {
+                <p>@Resources.Language.NoInfo</p>   
+            }
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+           @if (null != Model.cityInfoDetail.Travel)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.cityInfoDetail.Travel))
+            }
+            else
+            {
+                <p>@Resources.Language.NoInfo</p>   
+            }
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#tabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            }
+        });
+    });
+</script>
+<style>
+    .info {
+        height: 450px;
+        width:472px;
+    }
+</style>

@@ -1,0 +1,311 @@
+﻿@model WebDuLichDev.Models.CityInfo
+@{
+    ViewBag.Title = "EditCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+}
+<div style="text-align:center" >
+<h2 style="border-bottom: 2px solid #ff6a00">@Resources.Language.Edit @Resources.Language.City</h2>
+</div>
+@using (Html.BeginForm("EditCity", "City", FormMethod.Post, new { @class = "Edit_City ", @id = "frmEditCity" }))
+{
+    <input name="dlCity.ID" value="@Model.dlCity.ID" type="hidden" />
+    <div class="control-group" style="width: 50%">
+        <label class="control-label" for="input01">@Resources.Language.City</label>
+        <div class="controls">
+            @Html.TextBoxFor(m => m.dlCity.CityName, new { @readonly = true })
+        </div>
+    </div>
+  
+    <div>
+        <ul id="panelbar">
+            <li class="k-state-active">
+                <span class="k-link k-state-selected">@Resources.Language.BasicInfo</span>
+                <div>
+                    <div class="control-group">
+                        <label class="control-label" for="input01">@Resources.Language.Avatar</label>
+                        <div class="controls">
+                            <input id="uploadAvatar" name="fileUpload" type="file" />
+                            <input id="Avatar" name="dlCity.Avatar" value="@Model.dlCity.Avatar" type="hidden" required="" validationmessage="Please upload {0}" />
+                            <div id="imgPhotoAvatar">
+                                <div class="row">
+                                    <div class="span8">
+                                        <ul class="thumbnails">
+                                            @if (null != Model && Model.dlCity != null)
+                                            {      
+                                                @:<li class="span2" id="@Model.dlCity.Avatar"  style="margin-left:50px"><a class=thumbnail><img src="/Data/Avatar/City/@Model.dlCity.Avatar" alt='' /></a></li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="input01">@Resources.Language.Introduce</label>
+                        <div id="content_city" class="k-content">
+                            <textarea id="editor" name="dlCity.Summary" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                   @HttpUtility.HtmlDecode(Model.dlCity.Summary);      
+                </textarea>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <span class="">@Resources.Language.DetailInfo</span>
+                <div id="tabstrip">
+                    <ul>
+                        <li class="k-state-active">@Resources.Language.History</li>
+                        <li>@Resources.Language.Nature</li>
+                        <li>@Resources.Language.Social</li>
+                        <li>@Resources.Language.Administrative</li>
+                        <li>@Resources.Language.Economy</li>
+                        <li>@Resources.Language.Travel</li>
+                    </ul>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" id="History" name="dlCityInfoDetail.History" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                   @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.History)   
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" id="Nature" name="dlCityInfoDetail.Nature" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                    @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Nature)  
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" id="Social" name="dlCityInfoDetail.Social" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                   @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Social)    
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" id="Administrative" name="dlCityInfoDetail.Administrative" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                     @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Administrative)   
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" id="Economy" name="dlCityInfoDetail.Economy" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                   @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Economy)
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" id="Travel" name="dlCityInfoDetail.Travel" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                     @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Travel)      
+                </textarea>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+  
+    <div class="form-actions" style="width: 50%">
+        <input class="btn btn-primary" id="btnSubmit" type="button" value="@Resources.Language.Submit" />
+        <input class="btn" id="btnBack" type="button" value="Về Trang Danh Sách" />
+    </div> 
+     
+    
+}
+
+
+
+<script>
+    $(document).ready(function () {
+
+        // create Editor from textarea HTML element with default set of tools
+        $(".editor").kendoEditor({
+
+            encoded: true,
+            tools: ["bold", "italic", "underline", "justifyLeft", "justifyCenter", "justifyRight",
+                "justifyFull", "insertUnorderedList", "insertOrderedList", "indent", "outdent", "viewHtml"
+            ],
+
+
+        });
+        $("#editor").kendoEditor({
+
+            encoded: true,
+
+            tools: ["bold", "italic", "underline", "justifyLeft", "justifyCenter", "justifyRight",
+                "justifyFull", "insertUnorderedList", "insertOrderedList", "indent", "outdent", "viewHtml", "insertHtml"
+            ],
+            insertHtml: [
+                   { text: "Chữ ký:", value: "<p>Regards,<br /> By...,<br /></a></p>" }]
+        });
+        $("#panelbar").kendoPanelBar({
+            expandMode: "multiple",
+            animation: {
+                collapse: {
+                    duration: 1000,
+                    effects: "fadeOut"
+                },
+                expand: {
+                    duration: 500,
+                    effects: "expandVertical fadeIn"
+                }
+
+            }
+
+        });
+
+        $("#tabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: ["expandVertical ", "fadeIn"]
+                }
+
+            }
+
+        });
+
+        var validator = $("#panelbar").kendoValidator().data("kendoValidator");
+
+        $('#btnSubmit').click(function () {
+            //var editor = $("#editor").data("kendoEditor");
+            //var e2 = $("#Travel").data("kendoEditor");
+            //var e1 = $("#History").data("kendoEditor");
+            //alert(editor.encodedValue());
+            //alert(e1.encodedValue() + " ed 2" + e2.encodedValue());
+            if (validator.validate()) {
+                $('#frmEditCity').submit();
+
+
+            } else {
+                alert("Oops! There is invalid data in the form.");
+            }
+
+        });
+    });
+
+</script>
+
+
+
+<script>
+
+    function htmlEncode(value) {
+        if (value) {
+            return jQuery('<div />').text(value).html();
+        } else {
+            return '';
+        }
+    }
+    function htmlDecode(value) {
+        if (value) {
+            return $('<div />').html(value).text();
+        } else {
+            return '';
+        }
+    }
+    // logs "<p>foo</p>"
+    $('#btnBack').click(function () {
+        location.href = '@Url.Action("CityManager", "SystemManager")';
+
+
+    });
+</script>
+
+
+
+
+
+<script>
+    $(function () {
+        $("#uploadAvatar").kendoUpload({
+            localization: {
+                remove: "Remove",
+                uploadSelectedFiles: "Upload"
+            },
+            multiple: false,
+            async: {
+                autoUpload: false,
+                saveUrl: '@Url.Action("UploadAvatarCity", "File", new { cityId = Model.dlCity.ID })',
+                removeUrl: '@Url.Action("RemoveAvatarCity", "File")'
+            },
+            select: function () {
+                // The upload button will be created after the event is triggered
+                // hence the need for a timeout.
+                setTimeout(function () {
+                    $(".k-upload-selected").insertBefore($(".k-upload-action"))
+                });
+
+            },
+            select: onSelect,
+            upload: onUpload,
+            success: onUploadSuccess
+        });
+    });
+    function onUpload(e) {
+        var files = e.files;
+
+        // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
+        $.each(files, function () {
+            if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                return true;
+            }
+            else {
+                alert("it is not .jpg ,.png ,.bmp");
+                e.preventDefault();
+            }
+        });
+    }
+    function onProgress(e) {
+        // Array with information about the uploaded files
+        var files = e.files;
+
+        console.log(e.percentComplete);
+    }
+    function onUploadSuccess(e) {
+        if (e.operation == "upload") {
+            var files = e.response;
+            $.each(files, function () {
+                var name = files.dataName.toString();
+                var id = name.replace('.', '');
+                $('#Avatar').val(name);
+                $('#imgPhotoAvatar > .row > .span8 > .thumbnails').append("<li class=\"span2\" id=" + id + " ><a class=thumbnail><img src=/Data/Avatar/City/" + name + " alt='' /></a></li>");
+                //$('#uploadAvatar').data('kendoUpload').disable();
+                e.files[0].name = name;
+            });
+        }
+
+        if (e.operation == "remove") {
+            $.each(e.files, function () {
+                $('#Avatar').val('');
+                var name = this.name.replace('.', '');
+                $('div#imgPhotoAvatar > .row > .span8 > .thumbnails > li').remove('#' + name);
+                // $('#uploadAvatar').data('kendoUpload').enable();
+            });
+        }
+    }
+    function onSelect(e) {
+        var files = e.files;
+
+        // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
+        $.each(files, function () {
+            //alert(this.extension);
+            if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                return true;
+            }
+            else {
+                alert("it is not .jpg ,.png ,.bmp"); e.preventDefault();
+            }
+        });
+    }
+</script>
+@section resiseIframe{
+    <script>
+        zmXCall.resizeParent("dulich", null);
+    </script>
+}

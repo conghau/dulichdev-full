@@ -1,0 +1,33 @@
+﻿@model WebDuLichDev.Models.vm_Search
+@{Layout = null;}
+
+
+<div class="well control-group search">
+    <label class="control-label" for="input01">@Resources.Language.PlaceName</label>
+
+    @Html.TextBoxFor(m => m.placename, new { placeholder = @Resources.Language.PlaceName + " ..." })
+
+    <label class="control-label" for="input01">@Resources.Language.Address</label>
+
+    @Html.TextBoxFor(m => m.address, new { placeholder = @Resources.Language.Address + " ..." })
+
+    <label class="control-label" for="input01">@Resources.Language.City</label>
+    @Html.DropDownListFor(m => m.cityId, WebDuLichDev.WebUtility.WebDuLichData.ListCity, new { id = "drop_CityList", @class = "CBB kendoDropDownList city", width = "150px" })
+    <button id="btnSearch" class="btn">Search</button>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#drop_CityList').kendoComboBox();
+    });
+</script>
+
+<style>
+    div.search #placename {
+        width: 150px;
+    }
+
+    div.search #address {
+        width: 150px;
+    }
+</style>

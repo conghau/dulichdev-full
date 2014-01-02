@@ -1,0 +1,1 @@
+imap5custom.initMap({id:0,precision:1});

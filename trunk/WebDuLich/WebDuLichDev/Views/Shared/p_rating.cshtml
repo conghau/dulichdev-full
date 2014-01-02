@@ -1,0 +1,16 @@
+﻿@model DuLichDLL.Model.DL_Place
+@{
+    ViewBag.Title = "p_rating";
+    
+}
+<!-- basic exemple -->
+<div class="rating" style="width:56%; float:left">
+
+    <!-- in this exemple, 12 is the average and 1 is the id of the line to update in DB -->
+    <div class="basic" data-average="@Model.AvgRating" data-id="@Model.ID" data-name="@Model.Name" style="float:left">
+        
+    </div>
+    <p class="text">Current Rate : @Model.AvgRating by @Model.TotalUserRating people</p>
+
+</div>
+

@@ -1,0 +1,53 @@
+﻿@model DuLichDLL.Model.DL_City
+@{
+    ViewBag.Title = Resources.Language.DetailInfo;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/themes/city.css");
+}
+
+<h2>@Resources.Language.DetailInfo @Model.CityName</h2>
+<div class="leftpanel" style="width: 40%">
+    <ul class="thumbnails">
+        <li class="span4">
+            <a class="thumbnail cityinfo fancybox.iframe" href="@Url.Action("CityInfoDetail", "City", new {ID= Model.ID, summary=Model.Summary })">
+                <img alt="@Model.CityName" src="@DataHelpper.PATH_AVATAR_CITY/@Model.Avatar" title="@Model.CityName - nhấp vào hình để xem thông tin chi tiết" class="avatarcity">
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="rightpanel" style="width: 60%">
+    <p class="drop-cap">
+        @Model.Summary
+    </p>
+    <div class="showcase">       
+            @Html.Partial("_BookShow2")
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.cityinfo').fancybox({
+            maxWidth: 600,
+            fitToView: false,
+            width: '537px',
+            height: '520px',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'fadeIn',
+            closeEffect: 'none',
+            padding: 10,
+        });
+
+    });
+</script>
+<script>
+    
+    function dosomething() {
+        location.href = '@Url.Action("NicePlaceByCity", "Place", new { ID = Model.ID })';
+    }
+    function dosomething2() {
+        location.href = '@Url.Action("RestaurantByCity", "Restaurant", new { ID = Model.ID })';
+    }
+    function dosomething3() {
+        location.href = '@Url.Action("HotelByCity", "Hotel", new { ID = Model.ID })';
+    }
+</script>

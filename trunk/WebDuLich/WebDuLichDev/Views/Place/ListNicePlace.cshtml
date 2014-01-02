@@ -1,0 +1,144 @@
+﻿@model List<DuLichDLL.Model.DL_Place>
+@{
+    ViewBag.Title = Resources.Language.ListPlace;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align:center">
+<h2>@Resources.Language.ListPlace</h2>
+</div>
+
+<form id="frmMain" method="post" action="#">
+    <div class="form-inline">
+        @Html.Partial("p_Search", new WebDuLichDev.Models.vm_Search())
+    </div>
+
+    @if (TempData["Message"] != null)
+    {
+        <input id="messageBoxCode" value="@TempData["Message"].ToString()" type="hidden"/>
+        <div id="messageBox" class="alert ">
+            <a class="close" data-dismiss="alert">×</a>
+            @WebDuLichDev.WebUtility.common.GetResourceValue(TempData["Message"].ToString())
+        </div>
+    }
+    @if (null != Model)
+    {
+        var pageSize = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageSize.ToString()].ToString());
+        var pageNum = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageNum.ToString()].ToString());
+        var page = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.Page.ToString()].ToString());
+
+        <input type="hidden" value="@ViewData["OrderBy"]" name="orderBy" id="orderBy" />
+        <input type="hidden" value="@ViewData["OrderDirection"]" name="orderDirection"id="orderDirection" />
+    
+        <div class="well container-fluid">
+            <div class="row-fluid">
+                <input type="button" class="btn btn-primary btn-large" id="btnAddNew" value="@Resources.Language.Add"/>
+            </div>
+            <table class="table table-striped table-bordered table-condensed table-hover">
+                <tr>
+                    <th>#</th>
+                    <th>@Resources.Language.Avatar</th>
+                    <th>@Resources.Language.PlaceName</th>
+                    <th>AVG rating</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @{int i = 0;}
+                @foreach (var item in Model)
+                {   
+                    <tr>
+                        <td>
+                            @((page - 1) * pageSize + i + 1)
+                        </td>
+                        <td>
+                            <a class="thumbnail">
+                                <img src="/Data/Avatar/place/@item.Avatar" alt='' height="100" width="100"/></a>
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.AvgRating
+                        </td>
+                        <td style="text-align: center; width: 32px">
+                            @*<a href="@Url.Action("UpdateNicePlace", "Place", new { dlPlaceId = item.ID })"><i class="icon-search"></i></a>*@
+                            <a href="@Url.Action("UpdateNicePlace", "Place", new { dlPlaceId = item.ID })" >
+                                <img src="/Content/themes/custom/Image/Edit-Light.png" width="24" height="24" alt="Chinh sua"
+                                    onmouseover="this.src='/Content/themes/custom/Image/Edit-Dark.png';"
+                                    onmouseout="this.src='/Content/themes/custom/Image/Edit-Light.png'" /></a>
+                        </td>
+                        <td style="text-align: center; width: 32px">
+                           <a href="#" class="delete" id="@item.ID" >
+                                <img src="/Content/themes/custom/Image/Delete-Light.png" width="24" height="24" alt="Chinh sua"
+                                    onmouseover="this.src='/Content/themes/custom/Image/Delete-Dark.png';"
+                                    onmouseout="this.src='/Content/themes/custom/Image/Delete-Light.png'" /></a>
+                        </td>
+                    </tr>
+                    i++;
+                }
+            </table>
+        </div>
+        <div class="form-inline">@Html.Partial("p_Pagination", null, ViewData)</div>
+               
+    }
+
+    <script type="text/javascript">
+        function fancyConfirm(msg, callbackYes, callbackNo, id_niceplace) {
+            var ret;
+            jQuery.fancybox({
+                'modal': true,
+                'content': "<div style=\"margin:1px;width:240px;text-align:center;\">" + msg +
+                    "<div style=\"margin-top:10px;\"><input id=\"fancyconfirm_cancel\" style=\"margin:3px;padding:0px;" +
+                    "\" type=\"button\" class=\"btn btn-warning btn-large\" value=\"Cancel\"><input id=\"fancyConfirm_ok\" style=\"margin:3px;padding:0px;\" " +
+                    " type=\"button\" class=\"btn btn-success btn-large\" value=\"OK\"></div></div>",
+                'beforeShow': function () {
+                    jQuery("#fancyconfirm_cancel").click(function () {
+                        $.fancybox.close();
+                        callbackNo();
+                    });
+
+                    jQuery("#fancyConfirm_ok").click(function () {
+                        $.fancybox.close();
+                        callbackYes();
+                    });
+                }
+            });
+        }
+        function do_something(string, id_niceplace) {
+            if (string == 'yes') {
+                var url = '/Place/DelNicePlace/' + id_niceplace;
+                location.href = url;
+            }
+            else {
+
+            }
+        }
+        $(document).ready(function () {
+
+            $('#btnAddNew').click(function () {
+
+                var url = "@Url.Action("AddPlace", "Place")";
+                location.href = url;
+            });
+
+            $('#btnSearch').click(function () {
+                $('#Page').val(1);
+            });
+
+            $(".delete").click(function () {
+                fancyConfirm('Bạn chắc chắc muốn xóa?',
+                    function () {
+                        do_something('yes', id_niceplace);
+                    }, function () {
+                        do_something('no', id_niceplace);
+                    },
+                    id_niceplace = $(this).attr('id'));
+            });
+        });
+    </script>
+</form>
+@section resiseIframe{
+    <script>
+        zmXCall.resizeParent("dulich", null);
+    </script>
+}

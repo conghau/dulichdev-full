@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/base")
+    <link rel="stylesheet" href="@Url.Content("~/Content/styles/kendo.common.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/styles/kendo.default.min.css")">
+    <script src="@Url.Content("~/Scripts/KendoJS/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/KendoJS/kendo.all.min.js")"></script>
+    @RenderSection("scripts", required: false)
+
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

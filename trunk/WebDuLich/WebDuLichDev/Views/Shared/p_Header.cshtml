@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav pull-right">
+                @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
+
+            </ul>
+        </div>
+        @if (Request.IsAuthenticated)
+        {
+            
+           <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="item"><a title="Home" class="nav-icon" href="javascript:document.location.href=gethostname()"><i class="icon-home"></i>Home</a></li>
+                    @Html.Raw(WebDuLichSecurity.Menu)
+                </ul>
+            </div>
+        }
+    </div>
+</div>

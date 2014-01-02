@@ -1,0 +1,88 @@
+﻿@model List<DuLichDLL.Model.webpages_Roles>
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align: center">
+    <h2>@Resources.Language.Manager_Role</h2>
+</div>
+@if (TempData["Message"] != null)
+{
+    <input id="messageBoxCode" value="@TempData["Message"].ToString()" type="hidden"/>
+    <div id="messageBox" class="alert ">
+        <a class="close" data-dismiss="alert">×</a>
+        @WebDuLichDev.WebUtility.common.GetResourceValue(TempData["Message"].ToString())
+    </div>
+}
+<div style="float: right">
+    <a href="@Url.Action("Create", "Role")" class="createRole fancybox.iframe" >@Resources.Language.CreateNew @Resources.Language.Role</a>
+</div>
+<form id="frmMain" method="post" action="#">
+    @if (Model != null)
+    {
+        var pageSize = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageSize.ToString()].ToString());
+        var pageNum = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageNum.ToString()].ToString());
+        var page = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.Page.ToString()].ToString());
+
+        <input type="hidden" value="@ViewData["OrderBy"]" name="orderBy" id="orderBy" />
+        <input type="hidden" value="@ViewData["OrderDirection"]" name="orderDirection"id="orderDirection" />
+    
+        <table class="table table-bordered table-condensed table-hover">
+            <tr class="nohover">
+                <th>#</th>
+                <th>@Resources.Language.RoleName</th>
+                <th>@Resources.Language.NumberUser</th>
+                <th>@Resources.Language.AssignUserTo</th>
+                <th>@Resources.Language.Edit</th>
+            </tr>
+            @{int i = 0;}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@((page - 1) * pageSize + i + 1)</td>
+                    <td style="text-align: center">@item.RoleName</td>
+                    <td style="text-align: center">@item.NumberUser</td>
+                    <td style="text-align: center"><a href="@Url.Action("Edit", "Role", new { roleId = @item.RoleId })" class="manageUser fancybox.iframe">
+                        <img src="/Content/themes/custom/Image/User-Light.png"
+                            onmouseover="this.src='/Content/themes/custom/Image/User-Dark.png';"
+                            onmouseout="this.src='/Content/themes/custom/Image/User-Light.png'" /></a></td>
+                    <td style="text-align: center"><a href="@Url.Action("UpdateRole", "Role", new { ID = @item.RoleId })" class="">
+                        <img src="/Content/themes/custom/Image/Edit-Light.png" width="32" height="32" alt="Chinh sua"
+                                    onmouseover="this.src='/Content/themes/custom/Image/Edit-Dark.png';"
+                                    onmouseout="this.src='/Content/themes/custom/Image/Edit-Light.png'" /></a>
+                </tr>
+            }
+        </table>
+        <div class="form-inline">@Html.Partial("p_Pagination", null, ViewData)</div>
+    }
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.manageUser').fancybox({
+            maxWidth: 600,
+            fitToView: false,
+            width: '600px',
+            height: '530px',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none',
+            padding: 10,
+            afterClose: function () { location.reload(false); }
+        });
+        $('.createRole').fancybox({
+            maxWidth: 400,
+            fitToView: false,
+            width: '400px',
+            height: '250px',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none',
+            padding: 10,
+            afterClose: function () { location.reload(false); }
+        });
+    });
+</script>

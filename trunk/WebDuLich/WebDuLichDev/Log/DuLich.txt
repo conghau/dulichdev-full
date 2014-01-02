@@ -1,0 +1,1087 @@
+ERROR | 2013-11-08 15:26:41 | Object reference not set to an instance of an object.
+ERROR | 2013-11-08 18:47:26 | ERROR_DL_PlaceDAL: Update_Hotel	Could not find stored procedure 'p_DL_Place_Update_Hotel'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.Update_Hotel(DL_Place dL_Place, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 589
+ERROR | 2013-11-08 18:52:36 | ERROR_DL_PlaceDAL: Update_Hotel	Could not find stored procedure 'p_DL_Place_Update_Hotel'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.Update_Hotel(DL_Place dL_Place, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 589
+ERROR | 2013-11-08 19:14:37 | ERROR_DL_PlaceDAL: Update_Hotel	Could not find stored procedure 'p_DL_Place_Update_Hotel'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.Update_Hotel(DL_Place dL_Place, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 589
+ERROR | 2013-11-08 19:16:58 | ERROR_DL_PlaceDAL: Update_Hotel	Could not find stored procedure 'p_DL_Place_Update_Hotel'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.Update_Hotel(DL_Place dL_Place, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 589
+ERROR | 2013-11-20 10:39:14 | A public action method 'Magage' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 10:55:02 | A public action method 'Magage' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 10:55:25 | A public action method 'Magage' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 10:55:42 | A public action method 'Index' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 10:56:47 | ERROR_webpages_UsersInRolesDAL: ConvertOneRowWithNumberUser	Column 'UserId' does not belong to table .	   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DuLichDLL.DAL.webpages_UsersInRolesDAL.ConvertOneRowWithNumberUser(DataRow row) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_UsersInRolesDAL.cs:line 35
+ERROR | 2013-11-20 11:02:29 | A public action method 'Magage' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 11:04:40 | A public action method 'Magage' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 11:09:23 | ERROR_UserProfileDAL: GetList	Could not find stored procedure 'p_UserProfile_Get_List'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.UserProfileDAL.GetList() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\UserProfileDAL.cs:line 81
+ERROR | 2013-11-20 11:10:05 | ERROR_UserProfileDAL: GetList	Could not find stored procedure 'p_UserProfile_Get_List'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.UserProfileDAL.GetList() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\UserProfileDAL.cs:line 81
+ERROR | 2013-11-20 11:10:15 | ERROR_webpages_UsersInRolesDAL: GetList	Could not find stored procedure 'p_webpages_UsersInRoles_Get_List'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.webpages_UsersInRolesDAL.GetList() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_UsersInRolesDAL.cs:line 81
+ERROR | 2013-11-20 11:12:02 | ERROR_webpages_UsersInRolesDAL: GetList	Could not find stored procedure 'p_webpages_UsersInRoles_Get_List'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.webpages_UsersInRolesDAL.GetList() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_UsersInRolesDAL.cs:line 81
+ERROR | 2013-11-20 13:26:09 | Unable to connect to SQL Server database.
+ERROR | 2013-11-20 13:26:27 | Unable to connect to SQL Server database.
+ERROR | 2013-11-20 13:29:42 | Unable to connect to SQL Server database.
+ERROR | 2013-11-20 14:04:46 | ERROR_webpages_RolesDAL: GetListWithCountNumberUser	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.webpages_RolesDAL.GetListWithCountNumberUser() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 134
+ERROR | 2013-11-20 14:36:05 | ERROR_webpages_RolesDAL: GetListWithCountNumberUser	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.webpages_RolesDAL.GetListWithCountNumberUser() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 134
+ERROR | 2013-11-20 18:20:12 | A public action method 'Magage' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 18:37:06 | A public action method 'Magage' was not found on controller 'WebDuLichDev.Controllers.ManagerUserRoleController'.
+ERROR | 2013-11-20 21:52:59 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-20 21:53:00 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-21 09:14:42 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-21 09:14:43 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-23 14:11:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-23 14:11:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-24 16:37:48 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-24 16:37:48 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-24 16:38:05 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:38:34 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:38:47 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:40:01 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:45:31 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:46:33 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:49:01 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:50:58 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:54:19 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 16:55:17 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:26:13 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:27:54 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:29:30 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:29:49 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:35:33 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:37:14 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:37:54 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:40:22 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:41:35 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:41:43 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:42:11 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:42:14 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:43:00 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:43:02 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:43:49 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:44:23 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:45:06 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:45:38 | The parameters dictionary contains a null entry for parameter 'cityId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.JsonResult Loaddata(Int64, Int32, Int32)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-24 23:46:25 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:46:34 | The parameters dictionary contains a null entry for parameter 'cityId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Loaddata(Int64, Int32, Int32)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-24 23:46:49 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:46:55 | The parameters dictionary contains a null entry for parameter 'cityId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Loaddata(Int64, Int32, Int32)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-24 23:48:36 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:48:42 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:51:24 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:51:27 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:51:48 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:51:50 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:52:41 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:52:42 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:53:12 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:53:25 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:53:40 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:53:52 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:55:39 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:55:45 | A public action method '@Url.Action("Place","Loaddata")' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:57:08 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:57:40 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:58:10 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-24 23:59:03 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:01:28 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:02:28 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:03:16 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:06:18 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:08:31 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:36:17 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:37:21 | The parameters dictionary contains a null entry for parameter 'cityId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-25 00:37:36 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:37:55 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:56:42 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:57:47 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 00:59:11 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 10:54:25 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 10:56:28 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 11:00:54 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 11:01:25 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 11:02:09 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 11:02:20 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 11:03:01 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 11:03:08 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 11:04:44 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 15:08:39 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 20:44:13 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 20:52:36 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 20:52:36 | The parameters dictionary contains a null entry for parameter 'page' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Loaddata(Int64, Int32, Int32)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-25 20:54:59 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 20:55:00 | The parameters dictionary contains a null entry for parameter 'page' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Loaddata(Int64, Int32, Int32)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-25 20:55:56 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 20:56:24 | The parameters dictionary contains a null entry for parameter 'page' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Loaddata(Int64, Int32, Int32)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-25 20:56:25 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 20:56:49 | The parameters dictionary contains a null entry for parameter 'page' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult Loaddata(Int64, Int32, Int32)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-25 20:58:39 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 20:59:01 | The parameters dictionary contains a null entry for parameter 'cityId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Loaddata(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-25 21:00:07 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:06:01 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:14:12 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:22:11 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:25:49 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:26:28 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:27:53 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:29:57 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:30:23 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:36:21 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:36:37 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:39:23 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:41:18 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:41:45 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:56:52 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 21:59:41 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-25 22:07:26 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 08:29:46 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-26 08:29:47 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-26 08:30:03 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 08:39:59 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 08:42:38 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 08:50:13 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 08:52:40 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 08:53:59 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 08:55:00 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:07:14 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:12:05 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:13:12 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:17:39 | A public action method 'images' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:17:39 | A public action method 'images' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:20:09 | A public action method 'images' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:22:14 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:24:11 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:24:36 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:28:15 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:28:17 | Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+ERROR | 2013-11-26 09:28:36 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:28:37 | Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+ERROR | 2013-11-26 09:30:21 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:32:04 | Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+ERROR | 2013-11-26 09:38:20 | A public action method 'DeleteNicePlace' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:38:27 | A public action method 'DeleteNicePlace' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:39:28 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:40:09 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 09:40:37 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 14:30:18 | ERROR_DL_PlaceDAL: GetListNicePlaceByCity	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_PlaceDAL.GetListNicePlaceByCity(Int64 cityId) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 189
+ERROR | 2013-11-26 14:30:26 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 14:30:31 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 14:30:44 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 14:47:15 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:11:44 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:12:22 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:18:43 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:18:49 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:20:45 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:21:39 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:21:45 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:21:55 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:22:08 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:23:13 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:23:20 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:23:29 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:23:34 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:23:41 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:23:53 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:24:57 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:25:23 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:25:45 | The parameters dictionary contains a null entry for parameter 'cityId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-26 15:26:16 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:26:39 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:27:06 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:30:40 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 15:31:13 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:18:41 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-26 21:18:41 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-26 21:18:54 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:23:12 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:23:51 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:24:00 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:24:15 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:30:08 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:36:25 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:36:37 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:44:39 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-26 21:46:20 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:30:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-27 10:30:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-27 10:30:18 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:40:29 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:40:53 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:41:57 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:46:18 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:46:24 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:46:40 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 10:56:36 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:00:19 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:01:57 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:03:05 | A public action method 'DeleteNicePlace' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:04:11 | Input string was not in a correct format.
+ERROR | 2013-11-27 11:29:21 | Nullable object must have a value.
+ERROR | 2013-11-27 11:43:05 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:44:37 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:48:08 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:49:08 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:50:07 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 11:57:45 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 12:01:27 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 12:02:02 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-11-27 12:05:01 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Loaddata(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:03:18 | ERROR_DL_PlaceDAL: ConvertOneRow	Column 'FirstChar' does not belong to table .	   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DuLichDLL.DAL.DL_PlaceDAL.ConvertOneRow(DataRow row) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 32
+ERROR | 2013-11-27 14:18:08 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:19:29 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:23:26 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:24:12 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:24:59 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:26:35 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:28:17 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:29:44 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-27 14:54:29 | The view 'RestaurantsByCity' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Place/RestaurantsByCity.aspx
+~/Views/Place/RestaurantsByCity.ascx
+~/Views/Shared/RestaurantsByCity.aspx
+~/Views/Shared/RestaurantsByCity.ascx
+~/Views/Place/RestaurantsByCity.cshtml
+~/Views/Place/RestaurantsByCity.vbhtml
+~/Views/Shared/RestaurantsByCity.cshtml
+~/Views/Shared/RestaurantsByCity.vbhtml
+ERROR | 2013-11-27 15:35:07 | The for block is missing a closing "}" character.  Make sure you have a matching "}" character for all the "{" characters within this block, and that none of the "}" characters are being interpreted as markup.
+
+ERROR | 2013-11-27 15:45:46 | The foreach block is missing a closing "}" character.  Make sure you have a matching "}" character for all the "{" characters within this block, and that none of the "}" characters are being interpreted as markup.
+
+ERROR | 2013-11-27 15:47:11 | Expected a "{" but found a "index".  Block statements must be enclosed in "{" and "}".  You cannot use single-statement control-flow statements in CSHTML pages. For example, the following is not allowed:
+
+@if(isLoggedIn)
+    <p>Hello, @user</p>
+
+Instead, wrap the contents of the block in "{}":
+
+@if(isLoggedIn) {
+    <p>Hello, @user</p>
+}
+
+ERROR | 2013-11-27 16:35:02 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-27 16:35:02 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-27 16:35:20 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-29 13:15:30 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-29 13:15:31 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-29 13:15:55 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-30 01:58:25 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-30 01:58:25 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-30 13:10:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-30 13:10:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-11-30 13:48:19 | The parameters dictionary contains a null entry for parameter 'cityId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult RestaurantsByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-11-30 14:27:13 | ERROR_DL_PlaceDAL: GetListNicePlaceByCity	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_PlaceDAL.GetListNicePlaceByCity(Int64 cityId) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 194
+ERROR | 2013-11-30 14:27:13 | ERROR_DL_NicePlaceInfoDetailDAL: GetByPlaceID	Internal connection fatal error.	   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_NicePlaceInfoDetailDAL.GetByPlaceID(Int64 placeID) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_NicePlaceInfoDetailDAL.cs:line 89
+ERROR | 2013-11-30 14:27:13 | ERROR_DL_NicePlaceInfoDetailDAL: GetByPlaceID	Invalid operation. The connection is closed.	   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByteArray(Byte[] buff, Int32 offset, Int32 len, Int32& totalRead)
+   at System.Data.SqlClient.TdsParserStateObject.TryReadString(Int32 length, String& value)
+   at System.Data.SqlClient.TdsParser.TryReadSqlStringValue(SqlBuffer value, Byte type, Int32 length, Encoding encoding, Boolean isPlp, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.TryReadSqlValue(SqlBuffer value, SqlMetaDataPriv md, Int32 length, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumnInternal(Int32 i, Boolean readHeaderOnly)
+   at System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   at System.Data.SqlClient.SqlDataReader.GetValues(Object[] values)
+   at System.Data.ProviderBase.DataReaderContainer.CommonLanguageSubsetDataReader.GetValues(Object[] values)
+   at System.Data.ProviderBase.SchemaMapping.LoadDataRow()
+   at System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   at System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   at System.Data.Common.DataAdapter.Fill(DataTable[] dataTables, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_NicePlaceInfoDetailDAL.GetByPlaceID(Int64 placeID) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_NicePlaceInfoDetailDAL.cs:line 89
+ERROR | 2013-12-01 02:57:37 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-01 02:57:37 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-01 03:08:39 | Shataskasd
+ERROR | 2013-12-01 04:27:50 | A public action method 'Index' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-12-01 04:28:03 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-01 04:28:04 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-01 17:50:07 | Shataskasd
+ERROR | 2013-12-01 17:50:35 | ERROR_DL_PlaceDAL: UpdateStatusById	Could not find stored procedure 'p_DL_Place_Update_Status'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.UpdateStatusById(Int64 ID, Int32 status) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 979
+ERROR | 2013-12-01 17:50:45 | ERROR_DL_PlaceDAL: UpdateStatusById	Could not find stored procedure 'p_DL_Place_Update_Status'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.UpdateStatusById(Int64 ID, Int32 status) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 979
+ERROR | 2013-12-01 17:51:37 | Shataskasd
+ERROR | 2013-12-01 17:58:24 | Shataskasd
+ERROR | 2013-12-01 17:59:08 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 17:59:11 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 17:59:11 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 17:59:12 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 17:59:12 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 17:59:20 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 17:59:20 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 17:59:49 | Object reference not set to an instance of an object.
+ERROR | 2013-12-01 18:00:08 | Shataskasd
+ERROR | 2013-12-01 18:12:10 | Shataskasd
+ERROR | 2013-12-01 18:13:35 | Shataskasd
+ERROR | 2013-12-01 18:19:37 | Shataskasd
+ERROR | 2013-12-01 18:24:48 | Shataskasd
+ERROR | 2013-12-01 18:25:42 | Shataskasd
+ERROR | 2013-12-02 03:44:52 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-02 03:44:53 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-02 15:29:16 | Shataskasd
+ERROR | 2013-12-02 15:33:55 | Shataskasd
+ERROR | 2013-12-02 15:37:05 | Shataskasd
+ERROR | 2013-12-02 15:37:33 | Shataskasd
+ERROR | 2013-12-02 15:38:40 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-02 15:38:40 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-02 17:17:00 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-02 17:19:53 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:29:57 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:30:19 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-02 17:30:25 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:33:47 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:36:25 | Exception has been thrown by the target of an invocation.
+ERROR | 2013-12-02 17:39:00 | Exception has been thrown by the target of an invocation.
+ERROR | 2013-12-02 17:41:04 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:41:08 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:41:11 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:45:01 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:45:54 | The "WebSecurity.InitializeDatabaseConnection" method can be called only once.
+ERROR | 2013-12-02 17:48:03 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-02 17:48:11 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-02 17:48:33 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-02 19:03:05 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-02 19:07:23 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-02 19:07:30 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-02 19:09:51 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-02 19:11:28 | You must call the "WebSecurity.InitializeDatabaseConnection" method before you call any other method of the "WebSecurity" class. This call should be placed in an _AppStart.cshtml file in the root of your site.
+ERROR | 2013-12-03 02:50:41 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-03 02:50:41 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-03 02:50:45 | Shataskasd
+ERROR | 2013-12-03 03:20:23 | Shataskasd
+ERROR | 2013-12-03 13:26:59 | e:\KHOALUAN\dulichdev\WebDuLich\WebDuLichDev\Views\Hotel\ListHotel.cshtml(8): error CS0117: 'Resources.Language' does not contain a definition for 'ListHotel'
+ERROR | 2013-12-03 13:27:42 | The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult AddCity(Int64)' in 'WebDuLichDev.Controllers.CityController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:28:42 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-03 13:28:42 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-03 13:28:55 | e:\KHOALUAN\dulichdev\WebDuLich\WebDuLichDev\Views\Restaurant\ListRestaurant.cshtml(8): error CS0117: 'Resources.Language' does not contain a definition for 'ListRestaurant'
+ERROR | 2013-12-03 13:30:35 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:30:37 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:30:37 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:30:38 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:30:38 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:30:38 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:30:39 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:31:30 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:34:05 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:44:17 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.ActionResult UploadAvatarPlace(System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase], Int32)' in 'WebDuLichDev.Controllers.FileController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 13:46:21 | ERROR_DL_HotelPlaceInfoDetailDAL: Insert	Procedure or function p_DL_HotelPlaceInfoDetail_Insert has too many arguments specified.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_HotelPlaceInfoDetailDAL.Insert(DL_HotelPlaceInfoDetail dL_HotelPlaceInfoDetail, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_HotelPlaceInfoDetailDAL.cs:line 224
+ERROR | 2013-12-03 13:47:53 | ERROR_DL_HotelPlaceInfoDetailDAL: Insert	Procedure or function p_DL_HotelPlaceInfoDetail_Insert has too many arguments specified.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_HotelPlaceInfoDetailDAL.Insert(DL_HotelPlaceInfoDetail dL_HotelPlaceInfoDetail, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_HotelPlaceInfoDetailDAL.cs:line 224
+ERROR | 2013-12-03 13:49:37 | ERROR_DL_HotelPlaceInfoDetailDAL: Insert	Procedure or function p_DL_HotelPlaceInfoDetail_Insert has too many arguments specified.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_HotelPlaceInfoDetailDAL.Insert(DL_HotelPlaceInfoDetail dL_HotelPlaceInfoDetail, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_HotelPlaceInfoDetailDAL.cs:line 224
+ERROR | 2013-12-03 14:20:57 | ERROR_DL_HotelPlaceInfoDetailDAL: GetByDLPlaceID	Could not find stored procedure 'p_DL_HotelPlaceInfoDetail_Get_By_DL_PlaceId'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_HotelPlaceInfoDetailDAL.GetByDLPlaceID(Int64 DLPlaceID) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_HotelPlaceInfoDetailDAL.cs:line 95
+ERROR | 2013-12-03 14:31:44 | ERROR_DL_PlaceDAL: Update_Hotel	Could not find stored procedure 'p_DL_Place_Update_Hotel'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.Update_Hotel(DL_Place dL_Place, SqlConnection cnn, SqlTransaction tran) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 594
+ERROR | 2013-12-03 15:56:44 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 18:22:53 | Shataskasd
+ERROR | 2013-12-03 18:23:54 | Shataskasd
+ERROR | 2013-12-03 18:32:14 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 18:32:24 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-03 18:32:39 | Shataskasd
+ERROR | 2013-12-04 05:41:33 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-04 05:41:33 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-04 05:49:13 | Operator '-' cannot be applied to operands of type 'string' and 'string'
+ERROR | 2013-12-04 05:50:23 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 07:06:08 | Encountered end tag "section" with no matching start tag.  Are your start/end tags properly balanced?
+
+ERROR | 2013-12-04 07:08:20 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 07:12:53 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 07:14:06 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 07:39:23 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 07:45:19 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 13:47:10 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 13:48:23 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 13:49:17 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 14:13:42 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 14:16:05 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 15:14:57 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 15:20:40 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 15:51:02 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 16:03:36 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-04 16:03:36 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-04 16:03:40 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 16:05:55 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 16:07:21 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 16:34:18 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 16:35:52 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 16:38:27 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 16:40:29 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-04 17:13:46 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 06:46:04 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-05 06:46:04 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-05 06:47:06 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 06:49:51 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 06:54:49 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 06:57:25 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 07:12:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-05 07:12:05 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-05 07:38:59 | Shataskasd
+ERROR | 2013-12-05 07:39:27 | Shataskasd
+ERROR | 2013-12-05 07:42:57 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 11:41:19 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 13:32:42 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 15:18:05 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-05 15:46:28 | Shataskasd
+ERROR | 2013-12-05 16:12:29 | Shataskasd
+ERROR | 2013-12-05 17:49:24 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-06 02:58:42 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-06 02:58:42 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-06 03:04:01 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-06 03:22:35 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-06 03:29:13 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-06 03:39:38 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-06 03:42:05 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-06 04:10:50 | A public action method 'css' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-12-06 04:19:26 | Shataskasd
+ERROR | 2013-12-06 14:01:14 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-06 14:01:14 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-06 17:47:39 | ERROR_webpages_RolesDAL: Insert	Cannot insert the value NULL into column 'RoleName', table 'dulichdev.dbo.webpages_Roles'; column does not allow nulls. INSERT fails.
+The statement has been terminated.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.webpages_RolesDAL.Insert(webpages_Roles webpages_Roles) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 172
+ERROR | 2013-12-06 18:31:10 | ERROR_webpages_RolesDAL: GetList	Could not find stored procedure 'p_webpages_Roles_Get_List'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.webpages_RolesDAL.GetList() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 106
+ERROR | 2013-12-06 18:35:26 | ERROR_webpages_RolesDAL: Insert	Violation of UNIQUE KEY constraint 'UQ__webpages__8A2B61602AC8DF6F'. Cannot insert duplicate key in object 'dbo.webpages_Roles'. The duplicate key value is (MOD).
+The statement has been terminated.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.webpages_RolesDAL.Insert(webpages_Roles webpages_Roles) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 172
+ERROR | 2013-12-06 18:45:45 | ERROR_webpages_RolesDAL: GetListWithCountNumberUser	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.webpages_RolesDAL.GetListWithCountNumberUser() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 134
+ERROR | 2013-12-06 18:51:59 | ERROR_webpages_RolesDAL: GetListWithCountNumberUser	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.webpages_RolesDAL.GetListWithCountNumberUser() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 134
+ERROR | 2013-12-06 18:52:22 | ERROR_webpages_RolesDAL: Insert	Violation of UNIQUE KEY constraint 'UQ__webpages__8A2B61602AC8DF6F'. Cannot insert duplicate key in object 'dbo.webpages_Roles'. The duplicate key value is (MOD1).
+The statement has been terminated.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.webpages_RolesDAL.Insert(webpages_Roles webpages_Roles) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 172
+ERROR | 2013-12-06 18:52:59 | ERROR_webpages_RolesDAL: Insert	Violation of UNIQUE KEY constraint 'UQ__webpages__8A2B61602AC8DF6F'. Cannot insert duplicate key in object 'dbo.webpages_Roles'. The duplicate key value is (MOD1).
+The statement has been terminated.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.webpages_RolesDAL.Insert(webpages_Roles webpages_Roles) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\webpages_RolesDAL.cs:line 172
+ERROR | 2013-12-07 09:43:57 | Failed to compare two elements in the array.
+ERROR | 2013-12-07 09:53:55 | Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+ERROR | 2013-12-07 09:55:36 | Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+ERROR | 2013-12-07 09:58:25 | Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+ERROR | 2013-12-07 10:14:20 | Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+ERROR | 2013-12-07 10:16:01 | Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+ERROR | 2013-12-07 10:16:41 | Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+ERROR | 2013-12-07 14:52:52 | ERROR_A_ObjectDAL: GetListParent	Could not find stored procedure 'p_A_Object_Get_ListParent'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.A_ObjectDAL.GetListParent() in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\A_ObjectDAL.cs:line 118
+ERROR | 2013-12-07 14:57:08 | ERROR_A_FunctionDAL: GetListFunctionByObjectIdAndRoleId	Procedure or function 'p_A_Function_Get_ByObjectIDAndRoleId' expects parameter '@RoleId', which was not supplied.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.A_FunctionDAL.GetListFunctionByObjectIdAndRoleId(Int64 objectId, Int64 roleId) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\A_FunctionDAL.cs:line 145
+ERROR | 2013-12-07 14:59:58 | Object reference not set to an instance of an object.
+ERROR | 2013-12-07 15:07:35 | Object reference not set to an instance of an object.
+ERROR | 2013-12-07 15:20:54 | e:\KHOALUAN\dulichdev\WebDuLich\WebDuLichDev\Views\Role\UpdateRole.cshtml(14): error CS1061: 'WebDuLichDev.Models.vm_EditRole' does not contain a definition for 'Object' and no extension method 'Object' accepting a first argument of type 'WebDuLichDev.Models.vm_EditRole' could be found (are you missing a using directive or an assembly reference?)
+ERROR | 2013-12-07 15:31:04 | Unexpected "foreach" keyword after "@" character.  Once inside code, you do not need to prefix constructs like "foreach" with "@".
+
+ERROR | 2013-12-07 15:32:32 | Unexpected "{" after "@" character. Once inside the body of a code block (@if {}, @{}, etc.) you do not need to use "@{" to switch to code.
+
+ERROR | 2013-12-07 20:06:33 | ERROR_A_AssignedPermissionDAL: Insert	Procedure or function p_A_AssignedPermission_Insert has too many arguments specified.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.A_AssignedPermissionDAL.Insert(A_AssignedPermission a_AssignedPermission, Int64 functionId, Int64 objectId) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\A_AssignedPermissionDAL.cs:line 201
+ERROR | 2013-12-07 20:08:52 | ERROR_A_AssignedPermissionDAL: Insert	Procedure or function p_A_AssignedPermission_Insert has too many arguments specified.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.A_AssignedPermissionDAL.Insert(A_AssignedPermission a_AssignedPermission, Int64 functionId, Int64 objectId) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\A_AssignedPermissionDAL.cs:line 201
+ERROR | 2013-12-08 06:07:33 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-08 06:46:26 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-08 07:21:01 | A public action method 'Manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-08 07:21:21 | A public action method 'Manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-08 07:24:09 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-08 07:24:09 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-08 07:27:12 | A public action method 'Manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-08 18:41:49 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-08 18:41:49 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-08 18:50:44 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-09 08:08:58 | The provided anti-forgery token was meant for user "fuckyou", but the current user is "".
+ERROR | 2013-12-09 08:09:51 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-09 08:09:52 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-09 10:01:28 | A public action method 'Manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-09 10:02:21 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-09 12:46:56 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-09 12:46:56 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-09 13:05:15 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-09 15:25:56 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-10 15:19:50 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-10 15:19:50 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-10 15:34:46 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-10 15:51:28 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-10 15:56:46 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-10 15:56:59 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 05:18:53 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-11 05:18:53 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-11 05:18:56 | A public action method 'HotelByCity' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-12-11 05:19:54 | A public action method 'HotelByCity' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-12-11 05:20:12 | A public action method 'HotelByCity' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-12-11 05:20:49 | A public action method 'RestaurantsByCity' was not found on controller 'WebDuLichDev.Controllers.RestaurantController'.
+ERROR | 2013-12-11 05:24:36 | A public action method 'HotelByCity' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-12-11 05:24:38 | A public action method 'RestaurantsByCity' was not found on controller 'WebDuLichDev.Controllers.RestaurantController'.
+ERROR | 2013-12-11 05:26:20 | A public action method 'RestaurantsByCity' was not found on controller 'WebDuLichDev.Controllers.RestaurantController'.
+ERROR | 2013-12-11 05:30:59 | Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+ERROR | 2013-12-11 05:41:01 | Unexpected "foreach" keyword after "@" character.  Once inside code, you do not need to prefix constructs like "foreach" with "@".
+
+ERROR | 2013-12-11 09:38:37 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-11 09:38:38 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-11 09:38:47 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 09:44:06 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 09:58:53 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:01:30 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:03:17 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:04:12 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:06:24 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:13:16 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:17:30 | e:\KHOALUAN\dulichdev\WebDuLich\WebDuLichDev\Views\Place\NicePlace.cshtml(17): error CS1061: 'WebDuLichDev.Models.vm_NicePlace' does not contain a definition for 'listImageCity' and no extension method 'listImageCity' accepting a first argument of type 'WebDuLichDev.Models.vm_NicePlace' could be found (are you missing a using directive or an assembly reference?)
+ERROR | 2013-12-11 10:18:30 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:35:24 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-11 10:42:15 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-12 08:28:19 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-12 08:28:20 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-12 08:28:38 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-12 13:37:19 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-12 13:43:55 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-12 14:35:42 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-12 15:56:53 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-12 15:57:03 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-12 15:57:40 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 03:27:54 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-13 03:27:55 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-13 03:28:00 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:32:21 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:32:23 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:32:32 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:32:34 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:33:12 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:33:14 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:35:09 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:35:12 | The parameters dictionary contains a null entry for parameter 'ID' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-13 04:35:34 | e:\KHOALUAN\dulichdev\WebDuLich\WebDuLichDev\Views\Shared\p_rating.cshtml(12): error CS1061: 'DuLichDLL.Model.DL_Place' does not contain a definition for 'i' and no extension method 'i' accepting a first argument of type 'DuLichDLL.Model.DL_Place' could be found (are you missing a using directive or an assembly reference?)
+ERROR | 2013-12-13 13:20:30 | A public action method 'icons' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2013-12-13 14:21:31 | 'System.Collections.Generic.List<WebDuLichDev.Models.vm_NicePlace>' does not contain a definition for 'ID'
+ERROR | 2013-12-13 14:22:51 | 'System.Collections.Generic.List<WebDuLichDev.Models.vm_NicePlace>' does not contain a definition for 'ID'
+ERROR | 2013-12-16 06:48:46 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-16 06:48:47 | A public action method 'favicon.ico' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-16 07:16:33 | A public action method 'PostNotice' was not found on controller 'WebDuLichDev.Controllers.ZingController'.
+ERROR | 2013-12-16 07:18:35 | Object reference not set to an instance of an object.
+ERROR | 2013-12-16 07:27:04 | Object reference not set to an instance of an object.
+ERROR | 2013-12-16 11:18:09 | Object reference not set to an instance of an object.
+ERROR | 2013-12-16 14:15:31 | Access token had been expired. You must got another accesstoken
+ERROR | 2013-12-16 14:47:34 | Access token had been expired. You must got another accesstoken
+ERROR | 2013-12-16 14:49:28 | Access token had been expired. You must got another accesstoken
+ERROR | 2013-12-16 15:01:02 | Object reference not set to an instance of an object.
+ERROR | 2013-12-18 19:00:03 | A public action method 'Manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-19 05:55:23 | A public action method 'Manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-19 05:58:48 | A public action method 'Manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-19 07:52:10 | A public action method 'manage' was not found on controller 'WebDuLichDev.Controllers.AccountController'.
+ERROR | 2013-12-20 16:53:48 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 16:58:19 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 17:00:58 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 17:01:34 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 17:02:16 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 17:14:05 | ERROR_DL_CityDAL: GetByID	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_CityDAL.GetByID(Int64 ID) in e:\KHOALUAN\dulichdev\WebDuLich\DuLichDLL\DAL\DL_CityDAL.cs:line 56
+ERROR | 2013-12-20 17:19:02 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 17:23:59 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 17:37:16 | Link url invalid
+ERROR | 2013-12-20 17:49:50 | Link url invalid
+ERROR | 2013-12-20 18:44:32 | Object reference not set to an instance of an object.
+ERROR | 2013-12-20 18:48:12 | Object reference not set to an instance of an object.
+ERROR | 2013-12-27 15:01:06 | A public action method 'listcity' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-27 16:34:47 | A public action method 'edit' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-27 16:49:42 | A public action method 'CityInfoDetail' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-27 16:49:54 | A public action method 'CityInfoDetail' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-27 16:55:51 | A public action method 'CityInfoDetail' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2013-12-27 16:57:46 | e:\KHOALUAN\dulichdev\WebDuLich\WebDuLichDev\Views\City\CityInfoDetail.cshtml(22): error CS1061: 'WebDuLichDev.Models.vm_CityInfo' does not contain a definition for 'sumary' and no extension method 'sumary' accepting a first argument of type 'WebDuLichDev.Models.vm_CityInfo' could be found (are you missing a using directive or an assembly reference?)
+ERROR | 2013-12-28 13:27:10 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64, Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-29 05:32:58 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64, Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-30 03:24:24 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64, Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2013-12-30 03:42:45 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult NicePlaceByCity(Int64, Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters

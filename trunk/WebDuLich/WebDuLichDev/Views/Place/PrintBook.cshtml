@@ -1,0 +1,84 @@
+﻿@model List<WebDuLichDev.Models.vm_NicePlace>
+@{
+    ViewBag.Title = Resources.Language.PrintBook;
+    Layout = "~/Views/Shared/_printLayout.cshtml";
+}
+
+<div id="pages">
+    <div>
+        <section class="template-start-7 title-foreword page-1">
+            <div class="page">
+                <div class="page-title">
+                    <h2>CHỦ ĐỀ NĂM DU LỊCH QUỐC GIA 2014</h2>
+                </div>
+                <div class="image1">
+                    <img src="~/Data/Logo/2013/logodulich.jpg" data-src="~/Data/Logo/2013/logodulich.jpg" />
+                </div>
+                <div class="left">
+                    <p class="drop-cap">
+                        Năm Du lịch Quốc gia 2014 với chủ đề “Đại ngàn Tây nguyên” Theo Tổng Cục Du lịch Năm Du lịch Quốc gia 2014 sẽ được tổ chức tại tỉnh Lâm Đồng và các tỉnh, thành thuộc khu vực Tây Nguyên (Đắc Lắk, Đắc Nông, Gia Lai, Kon Tum) với tên gọi Năm Du lịch Quốc gia 2014 - Tây Nguyên - Đà Lạt mang chủ đề “Đại ngàn Tây Nguyên” và biểu trưng (logo) được đề xuất là Hoa dã quỳ, loài hoa có mặt ở khắp 5 tỉnh Tây Nguyên.Đây là sự kiện văn hóa-kinh tế-xã hội tiêu biểu, có quy mô quốc gia và quốc tế nhằm giới thiệu, quảng bá hình ảnh thiên nhiên và con người Tây Nguyên nói chung, Lâm Đồng – Đà Lạt nói riêng với bạn bè trong nước và quốc tế.
+                    </p>
+                </div>
+                <div>
+                </div>
+
+            </div>
+        </section>
+        @if (null != Model)
+        {
+            foreach (var item in Model)
+            {    
+    
+            <section>
+                <div class="page">
+                    <div class="page-title">
+                        <h2>@item.dlPlace.Name</h2>
+                    </div>
+                    <div class="image1">
+                        <img src="~/Data/Avatar/Place/item.dlPlace.Avatar" width="300" height="250" alt="" class="fancybox" />
+                    </div>
+                    <div class="left">
+                        <p class="drop-cap">
+                            @Html.Raw(HttpUtility.HtmlDecode(item.dlNicePlaceInfoDetail.Info))
+                        </p>
+                        <p class="drop-cap">
+                            @Html.Raw(HttpUtility.HtmlDecode(item.dlNicePlaceInfoDetail.History))
+                        </p>
+                        @Html.Raw(HttpUtility.HtmlDecode(item.dlNicePlaceInfoDetail.OpenCloseTime))
+                        @Html.Raw(HttpUtility.HtmlDecode(item.dlNicePlaceInfoDetail.Note))
+
+                    </div>
+                    <div>
+                        <p>Hinh anh lien quan</p>
+                        @if (null != item.listImagePlace && item.listImagePlace.Count > 0)
+                        {
+                            foreach (var img in item.listImagePlace)
+                            {
+                                <img src="~/Data/Images/Place/@img.LinkImage" width="300" height="250"/>
+                            }
+                        }
+                    </div>
+                </div>
+            </section>
+            }
+        }
+
+        <section class="title-theend page-1">
+            <div class="page">
+                <div class="page-title">
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            window.print();
+        }, 500);
+    }
+
+
+</script>

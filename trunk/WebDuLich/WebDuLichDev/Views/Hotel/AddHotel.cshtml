@@ -1,0 +1,339 @@
+﻿@{
+    ViewBag.Title = "AddHotel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="text-align:center">
+<h2>@Resources.Language.AddHotel</h2>
+</div>
+<form id="frmAddHotel" class="well form-horizontal" method="post" action="/Hotel/AddHotel">
+    <div>
+        <ul id="panelbar">
+            <li class="k-state-active">
+                <span class="k-link k-state-selected">@Resources.Language.BasicInfo</span>
+                <div class="tabstrip">
+                    <ul>
+                        <li class="k-state-active">@Resources.Language.Introduce</li>
+                        <li>@Resources.Language.DetailInfo</li>
+                        <li>@Resources.Language.Note</li>
+                    </ul>
+                    <div>
+                        <div class="control-group">
+                            <label class="control-label" for="input01">@Resources.Language.PlaceName</label>
+                            <div class="controls">
+                                @Html.TextBox("hotelinfo.dlPlace.Name")                               
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input01">@Resources.Language.Address</label>
+                            <div class="controls">
+                                @Html.TextBox("hotelinfo.dlPlace.Address")
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input01">@Resources.Language.City</label>
+                            <div class="controls">                            
+                            @Html.DropDownList("hotelinfo.dlPlace.DL_CityId", WebDuLichDev.WebUtility.WebDuLichData.ListCity, new { id = "drop_CityList", @class = "DLL kendoDropDownList city" })
+                                </div>
+                        </div>                        
+                         <div class="control-group">
+                            <label class="control-label" for="input01">@Resources.Language.Avatar</label>
+                           <div class="controls">
+                                <input id="uploadAvatar" name="fileUpload" type="file" />
+                                @Html.TextBox("hotelinfo.dlPlace.Avatar", "", new { id = "Avatar", type = "hidden", required = "", validationmessage = "Please upload {0}" })
+                                <div id="imgPhotoAvatar">
+                                    <div class="row">
+                                        <div class="span8">
+                                            <ul class="thumbnails">
+                                               
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="k-content">
+                                <textarea class="editor" name="hotelinfo.dlHotelPlaceInfoDetail.Note" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                  &lt;p&gt;Please input some detail about this city:&lt;/p&gt;       
+                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="control-label">
+                            @Html.Label("RoomType")
+                            </div>
+                            <div class="controls">
+                                @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.RoomType")
+                            </div>                       
+                        <div class="control-label">
+                            @Html.Label("OpenCloseTime")
+                        </div>
+                        <div class="controls">
+                            @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.OpenCloseTime")                           
+                        </div>
+
+                        <div class="control-label">
+                            @Html.Label("Price")
+                        </div>
+                        <div class="controls">
+                            @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.Price")                            
+                        </div>
+                        <div class="control-label">
+                            @Html.Label("PayType")
+                        </div>
+                        <div class="controls">
+                            @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.PayType")                           
+                        </div>
+                        </div>
+                </div>
+            </li>
+            <li>
+                <span class="">@Resources.Language.DetailInfo - @Resources.Language.Services - @Resources.Language.Contact</span>
+                <div class="tabstrip">
+                    <ul>
+                        <li class="k-state-active">@Resources.Language.DetailInfo</li>
+                        <li>@Resources.Language.Services</li>
+                        <li>@Resources.Language.Contact</li>
+                    </ul>
+                    <div>
+                        <div class="k-content">        
+                           
+                                <textarea class="editor" name="hotelinfo.dlHotelPlaceInfoDetail.Info" rows="5" cols="20" style="width: 100%; height: 400px">
+                                    &lt;p&gt;Please input some detail about this city:&lt;/p&gt;</textarea>
+                   
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" name="hotelinfo.dlHotelPlaceInfoDetail.Service" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                   &lt;p&gt;Press any key &lt;/p&gt;   
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="control-label">
+                            @Html.Label("MobiPhone")
+                        </div>
+                        <div class="controls">
+                            @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.MobiPhone")
+                           
+                        </div>
+
+                        <div class="control-label">
+                            @Html.Label("HomePhone")
+                        </div>
+                        <div class="controls">
+                            @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.HomePhone")
+                            
+                        </div>
+
+                        <div class="control-label">
+                            @Html.Label("Fax")
+                        </div>
+                        <div class="controls">
+                            @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.Fax")
+                           
+                        </div>
+
+                        <div class="control-label">
+                            @Html.Label("Email")
+                        </div>
+                        <div class="controls">
+                            @Html.TextBox("hotelinfo.dlHotelPlaceInfoDetail.Email")
+                           
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="">@Resources.Language.ImagePlace</span>
+                <div class="control-group">
+                    <label class="control-label" for="input01">@Resources.Language.ImagePlace</label>
+                    <div class="controls">
+                        <input id="uploadImage" name="fileUpload" type="file" />
+                        <div id="imageName">                            
+                        </div>
+                        <div id="imgPhotoPlace">
+                            <div class="row">
+                                <div class="span8">
+                                    <ul class="thumbnails">
+                                        <li>
+                                            <input class="imagePlace" value="LinkImage" type="hidden"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+                    
+    </div>
+    <div class="form-actions">
+        <input class="btn btn-primary" id="btnSubmit" type="button" value="@Resources.Language.Submit" />
+        <input class="btn" id="btnCancel" type="button" value="@Resources.Language.Cancel" />
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#panelbar").kendoPanelBar({
+                expandMode: "multiple"
+            });
+
+            $(".tabstrip").kendoTabStrip({
+                animation: {
+                    open: {
+                        effects: "fadeIn"
+                    }
+                }
+            });
+
+            $(".editor").kendoEditor({
+
+                tools: ["bold", "italic", "underline", "justifyLeft", "justifyCenter", "justifyRight",
+                    "justifyFull", "insertUnorderedList", "insertOrderedList", "indent", "outdent", "viewHtml"],
+
+            });
+
+            $("#uploadAvatar").kendoUpload({
+                localization: {
+                    remove: "Remove",
+                    uploadSelectedFiles: "Upload"
+                },
+                async: {
+                    //saveUrl: "/Place/UploadAvatar",
+                    //removeUrl: "/Place/RemoveAvatar",
+                    saveUrl: '@Url.Action("UploadAvatar", "File")',
+                    removeUrl: '@Url.Action("RemoveAvatarPlace", "File")',
+                    autoUpload: false,
+                    multiple: false,
+                },
+                select: onSelect,
+                upload: onUpload,
+                success: onUploadAvatarSuccess
+            });
+
+            $("#uploadImage").kendoUpload({
+                localization: {
+                    remove: "Remove",
+                    uploadSelectedFiles: "Upload"
+                },
+                async: {
+                    saveUrl: '@Url.Action("UploadImagePlace", "File")',
+                    removeUrl: '@Url.Action("RemoveImagePlace", "File")',
+                    autoUpload: false,
+                },
+                select: onSelect,
+                upload: onUpload,
+                success: onUploadSuccess
+            });
+
+            var validator = $("#panelbar").kendoValidator().data("kendoValidator");
+            $('#btnSubmit').click(function () {
+                $('#frmAddHotel').submit();
+                //if (validator.validate()) {
+
+                //} else {
+                //    alert("Oops! There is invalid data in the form.");
+                //}
+
+            });
+
+            $('#btnCancel').click(function () {
+                $('#frmAddHotel')[0].reset();
+            });
+        });
+        function onSelect(e) {
+            var files = e.files;
+
+            // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
+            $.each(files, function () {
+                //alert(this.extension);
+                if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                    return true;
+                }
+                else {
+                    alert("it is not .jpg ,.png ,.bmp"); e.preventDefault();
+                }
+            });
+        }
+        function onUpload(e) {
+            var files = e.files;
+
+            // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
+            $.each(files, function () {
+                if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                    return true;
+                }
+                else {
+                    alert("it is not .jpg ,.png ,.bmp");
+                    e.preventDefault();
+                }
+            });
+        }
+        function onProgress(e) {
+            // Array with information about the uploaded files
+            var files = e.files;
+
+            console.log(e.percentComplete);
+        }
+
+        function onUploadAvatarSuccess(e) {
+            if (e.operation == "upload") {
+                var files = e.response;
+                $.each(files, function () {
+                    var name = files.dataName.toString();
+                    var id = name.replace('.', '');
+                    $('#Avatar').val(name);
+                    $('#imgPhotoAvatar > .row > .span8 > .thumbnails').append("<li class=\"span2\" id=" + id + " ><a class=thumbnail><img src=/Data/Avatar/place/" + name + " alt='' /></a></li>");
+                    //$('#uploadAvatar').data('kendoUpload').disable();
+                    e.files[0].name = name;
+                });
+            }
+
+            if (e.operation == "remove") {
+                $.each(e.files, function () {
+                    $('#Avatar').val('');
+                    var name = this.name.replace(' ', '').replace('.', '');
+                    $('div#imgPhotoAvatar > .row > .span8 > .thumbnails > li').remove('#' + name);
+                    // $('#uploadAvatar').data('kendoUpload').enable();
+                });
+            }
+        }
+
+        function onUploadSuccess(e) {
+            var index = 0;
+            if (e.operation == "upload") {
+                var files = e.response;
+                $.each(files, function () {
+                    var name = files.dataname.toString();
+                    var names = name.replace('.', '');
+                    $('#imageName').append("<input id=" + names + " name='imagePlace' value=" + files.dataname + " type= hidden />")
+                    $('#imgPhotoPlace> .row > .span8 > .thumbnails').append("<li class= 'span2 " + names + "' ><a class=thumbnail><img src=/Data/Images/place/" + files.dataname + " alt='' /></a></li>");
+                    e.files[index].name = name;
+                    index++;
+                });
+            }
+
+            if (e.operation == "remove") {
+                $.each(files, function () {
+                    var name = this.name.replace(' ', '').replace('.', '');
+                    $('div#imageName > input#' + name).remove();
+                    $('div#imgPhotoPlace > .row > .span8 > .thumbnails > li').remove('.' + name)
+                });
+            }
+        }
+
+
+    </script>
+</form>
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
