@@ -1,0 +1,7 @@
+v1.01
+- thêm chức năng upload hình
+- thêm chức năng share feed
+- thêm chức năng post feed có hình 
+- thêm chức năng gửi thông báo, gửi lời mời kết bạn 
+- thêm chức năng lấy danh sách đề nghị kết bạn
+- thêm chức năng mời bạn bè tham gia ứng dụng
