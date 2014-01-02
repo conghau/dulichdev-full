@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3715F4F2-C60E-4B11-B902-0DDF9E035265}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DuLichDLL</RootNamespace>
+    <AssemblyName>DuLichDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\A_AssignedPermissionBAL.cs" />
+    <Compile Include="BAL\A_FunctionBAL.cs" />
+    <Compile Include="BAL\A_MembershipBAL.cs" />
+    <Compile Include="BAL\A_ObjectBAL.cs" />
+    <Compile Include="BAL\A_ObjectFunctionBAL.cs" />
+    <Compile Include="BAL\A_RoleBAL.cs" />
+    <Compile Include="BAL\A_RolesTranslationBAL.cs" />
+    <Compile Include="BAL\A_UserProfileBAL.cs" />
+    <Compile Include="BAL\A_UserRoleBAL.cs" />
+    <Compile Include="BAL\A_UserSettingBAL.cs" />
+    <Compile Include="BAL\DL_CategoryBAL.cs" />
+    <Compile Include="BAL\DL_CityBAL.cs" />
+    <Compile Include="BAL\DL_CityInfoDetailBAL.cs" />
+    <Compile Include="BAL\DL_CommentCityBAL.cs" />
+    <Compile Include="BAL\DL_CommentPlaceBAL.cs" />
+    <Compile Include="BAL\DL_HotelPlaceInfoDetailBAL.cs" />
+    <Compile Include="BAL\DL_ImageCityBAL.cs" />
+    <Compile Include="BAL\DL_ImagePlaceBAL.cs" />
+    <Compile Include="BAL\DL_LikePlaceBAL.cs" />
+    <Compile Include="BAL\DL_NicePlaceInfoDetailBAL.cs" />
+    <Compile Include="BAL\DL_PlaceBAL.cs" />
+    <Compile Include="BAL\DL_PlaceTypeBAL.cs" />
+    <Compile Include="BAL\DL_RestaurantInfoDetailBAL.cs" />
+    <Compile Include="BAL\M_SystemSettingBAL.cs" />
+    <Compile Include="BAL\UserProfileBAL.cs" />
+    <Compile Include="BAL\webpages_MembershipBAL.cs" />
+    <Compile Include="BAL\webpages_OAuthMembershipBAL.cs" />
+    <Compile Include="BAL\webpages_RolesBAL.cs" />
+    <Compile Include="BAL\webpages_UsersInRolesBAL.cs" />
+    <Compile Include="DAL\A_AssignedPermissionDAL.cs" />
+    <Compile Include="DAL\A_FunctionDAL.cs" />
+    <Compile Include="DAL\A_MembershipDAL.cs" />
+    <Compile Include="DAL\A_ObjectDAL.cs" />
+    <Compile Include="DAL\A_ObjectFunctionDAL.cs" />
+    <Compile Include="DAL\A_RoleDAL.cs" />
+    <Compile Include="DAL\A_RolesTranslationDAL.cs" />
+    <Compile Include="DAL\A_UserProfileDAL.cs" />
+    <Compile Include="DAL\A_UserRoleDAL.cs" />
+    <Compile Include="DAL\A_UserSettingDAL.cs" />
+    <Compile Include="DAL\DL_CategoryDAL.cs" />
+    <Compile Include="DAL\DL_CityDAL.cs" />
+    <Compile Include="DAL\DL_CityInfoDetailDAL.cs" />
+    <Compile Include="DAL\DL_CommentCityDAL.cs" />
+    <Compile Include="DAL\DL_CommentPlaceDAL.cs" />
+    <Compile Include="DAL\DL_HotelPlaceInfoDetailDAL.cs" />
+    <Compile Include="DAL\DL_ImageCityDAL.cs" />
+    <Compile Include="DAL\DL_ImagePlaceDAL.cs" />
+    <Compile Include="DAL\DL_LikePlaceDAL.cs" />
+    <Compile Include="DAL\DL_NicePlaceInfoDetailDAL.cs" />
+    <Compile Include="DAL\DL_PlaceDAL.cs" />
+    <Compile Include="DAL\DL_PlaceTypeDAL.cs" />
+    <Compile Include="DAL\DL_RestaurantInfoDetailDAL.cs" />
+    <Compile Include="DAL\M_SystemSettingDAL.cs" />
+    <Compile Include="DAL\UserProfileDAL.cs" />
+    <Compile Include="DAL\webpages_MembershipDAL.cs" />
+    <Compile Include="DAL\webpages_OAuthMembershipDAL.cs" />
+    <Compile Include="DAL\webpages_RolesDAL.cs" />
+    <Compile Include="DAL\webpages_UsersInRolesDAL.cs" />
+    <Compile Include="Enum\Exception.cs" />
+    <Compile Include="ExceptionType\BusinessException.cs" />
+    <Compile Include="ExceptionType\DataAccessException.cs" />
+    <Compile Include="ExceptionType\UserInterfaceException.cs" />
+    <Compile Include="Model\A_AssignedPermission.cs" />
+    <Compile Include="Model\A_Function.cs" />
+    <Compile Include="Model\A_Membership.cs" />
+    <Compile Include="Model\A_Object.cs" />
+    <Compile Include="Model\A_ObjectFunction.cs" />
+    <Compile Include="Model\A_Role.cs" />
+    <Compile Include="Model\A_RolesTranslation.cs" />
+    <Compile Include="Model\A_UserProfile.cs" />
+    <Compile Include="Model\A_UserRole.cs" />
+    <Compile Include="Model\A_UserSetting.cs" />
+    <Compile Include="Model\DL_Category.cs" />
+    <Compile Include="Model\DL_City.cs" />
+    <Compile Include="Model\DL_CityInfoDetail.cs" />
+    <Compile Include="Model\DL_CommentCity.cs" />
+    <Compile Include="Model\DL_CommentPlace.cs" />
+    <Compile Include="Model\DL_HotelPlaceInfoDetail.cs" />
+    <Compile Include="Model\DL_ImageCity.cs" />
+    <Compile Include="Model\DL_ImagePlace.cs" />
+    <Compile Include="Model\DL_LikePlace.cs" />
+    <Compile Include="Model\DL_NicePlaceInfoDetail.cs" />
+    <Compile Include="Model\DL_Place.cs" />
+    <Compile Include="Model\DL_PlaceType.cs" />
+    <Compile Include="Model\DL_RestaurantInfoDetail.cs" />
+    <Compile Include="Model\M_SystemSetting.cs" />
+    <Compile Include="Model\M_SystemSetting_Config.cs" />
+    <Compile Include="Model\UserProfile.cs" />
+    <Compile Include="Model\webpages_Membership.cs" />
+    <Compile Include="Model\webpages_OAuthMembership.cs" />
+    <Compile Include="Model\webpages_Roles.cs" />
+    <Compile Include="Model\webpages_UsersInRoles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TOOLS\DataProvider.cs" />
+    <Compile Include="TOOLS\ProcessWithFiles.cs" />
+    <Compile Include="Utility\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
