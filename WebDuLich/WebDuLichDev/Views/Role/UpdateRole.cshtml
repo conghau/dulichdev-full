@@ -1,0 +1,66 @@
+﻿@model List<WebDuLichDev.Models.ObjectParent>
+@{
+    ViewBag.Title = "UpdateRole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/themes/Role.css");
+    List<WebDuLichDev.Models.vm_EditRole> listEditRole = new List<WebDuLichDev.Models.vm_EditRole>();
+}
+
+<h2>UpdateRole</h2>
+ <form method="post" action="@Url.Action("UpdateRole", "Role", new {ID = @ViewBag.RoleId })" class="Vertical" >
+     @{int k = -1; int i = 0; int j = 0;}
+    @if (null != Model)
+    {
+       
+        foreach (var item in Model)
+        {
+            <div class="Objparent">
+                @{i++;}
+                <label style="color:red">@i : @item.ObjectParentName</label>
+                @foreach(var ob in item.ListObject)
+                {
+                     j++;
+                    <div class="row" style="margin-left:50px">
+                        <label>@i . @j . @ob.ObjectName</label>
+                        <ul>
+                           @foreach(var fn in ob.ListFunction)
+                           {
+                               k++;
+                               <li style="width: 130px; display: inline-block">
+                                   <ul>
+                                       <li style="display: inline">
+                                           @Html.CheckBox(string.Format("listEditRole[{0}].Checked", k), fn.isHasPermission ?? false, new { id = "check-" + fn.ID+ob.ID })
+                                           @Html.Hidden(string.Format("listEditRole[{0}].FunctionId", k), fn.ID)
+                                           @Html.Hidden(string.Format("listEditRole[{0}].ObjectId", k), ob.ID)
+                                       </li>
+                                       <li style="display: inline">
+                                           <label for="check-@fn.ID+@ob.ID">@fn.FunctionName</label>
+                                       </li>
+                                   </ul>
+
+                               </li>
+                           }
+                        </ul>
+                    </div>
+                }
+        
+            </div>
+        }
+        
+    }
+     <div>
+         <input type="submit" class="btn btn-primary" value="@Resources.Language.Save"/>
+         <input type="button" class="btn btn-warning" value="@Resources.Language.Cancel"/>
+     </div>
+ </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".Objparent:even").addClass('well');
+        })
+    </script>
+@section resiseIframe{
+    <script>
+        zmXCall.resizeParent("dulich", null);
+    </script>
+}
+

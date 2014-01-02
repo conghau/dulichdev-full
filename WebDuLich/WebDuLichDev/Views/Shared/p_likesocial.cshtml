@@ -1,0 +1,13 @@
+﻿@model long
+@{var url = "http://dulich.azurewebsites.net/place/niceplace/"; url = url + Model;}
+<div id="zme-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "http://static.me.zing.vn/sp/js/all-1.39.js#&appId=663270de6faf4149ac73cb5e77374924&status=true";
+    fjs.parentNode.insertBefore(js, fjs);
+}
+											(document, "script", "zingme-jssdk"));</script>
+<div class="zme-like"  data-layout="button_count" data-width="100" data-link="@url" data-show-face="false" style="float:left; width:30px; margin-left:59px"></div>

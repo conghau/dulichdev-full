@@ -1,0 +1,41 @@
+﻿﻿@model List<DuLichDLL.Model.DL_City>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Index</h2>
+
+
+
+
+<div>
+    <table class="table table-condensed">
+        <tr>
+            <th>avatar </th>
+            <th>thanh pho</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@DataHelpper.PATH_AVATAR_CITY/@item.Avatar" width ="25px" height="25px"/>
+                </td>
+                <td>
+                    <a href="@Url.Action("Detail", "City", new { ID = item.ID })">@item.CityName</a>
+                </td>
+                <td>
+                    @item.AvgRating
+                </td>
+                <td>
+
+                    @Html.Partial("~/Views/Shared/_Rate.cshtml", item);                   
+
+                </td>
+            </tr>
+        }
+
+
+    </table>
+
+</div>
+

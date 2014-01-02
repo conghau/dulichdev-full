@@ -1,0 +1,64 @@
+﻿@model WebDuLichDev.Models.vm_NicePlace
+@{
+    ViewBag.Title = @Resources.Language.Place;
+    Layout = "~/Views/Shared/_PageDefault.cshtml";
+}
+
+@if (null != Model)
+{
+    <h2>NicePlace</h2>
+    <div class="page">
+        <section>
+            <div class="page-title">
+                <h2>@Model.dlPlace.Name</h2>
+            </div>
+            <div>
+                <img src="~/Data/Avatar/Place/@Model.dlPlace.Avatar" width="350" height="250" alt="@Model.dlPlace.Name" />
+                @if (Model.listImagePlace != null)
+                {
+                    foreach (var item in Model.listImagePlace)
+                    {
+                    <img src="~/Data/Avatar/Place/@item.LinkImage" width="350" height="250" alt="@Model.dlPlace.Name" />   
+                    }
+                }
+            </div>
+            <div>
+                <p>@Resources.Language.DetailInfo</p>
+                @if (null != Model.dlNicePlaceInfoDetail.Info)
+                {
+                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Info))</p>}
+                else
+                { <p>Chua co thong tin</p>}
+            </div>
+            <div>
+                <p>@Resources.Language.History</p>
+                @if (null != Model.dlNicePlaceInfoDetail.History)
+                {
+                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.History))</p>}
+                else
+                { <p>Chua co thong tin</p>}
+            </div>
+            <div>
+                <p>@Resources.Language.Note</p>
+                @if (null != Model.dlNicePlaceInfoDetail.Note)
+                {
+                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Note))</p>}
+                else
+                { <p>Chua co thong tin</p>}
+            </div>
+            <div>
+                <p>@Resources.Language.Time</p>
+                @if (null != Model.dlNicePlaceInfoDetail.OpenCloseTime)
+                {
+                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.OpenCloseTime))</p>}
+                else
+                { <p>Chua co thong tin</p>}
+            </div>
+        </section>
+    </div>
+    
+}
+else
+{
+    <h2>Xin loi, dia diem nay da bi xoa hoac co loi khong hien thi duoc</h2>
+}

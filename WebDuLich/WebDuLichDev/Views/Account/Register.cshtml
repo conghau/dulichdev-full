@@ -1,0 +1,56 @@
+﻿@model WebDuLichDev.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+<body>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-register" }))
+    {
+        @Html.AntiForgeryToken()
+    
+        if (!ViewData.ModelState.IsValid)
+        { 
+        <div id="messageBox" class="alert ">
+            <a class="close" data-dismiss="alert">×</a>
+            <p>@Html.ValidationSummary() </p>
+        </div>
+        }
+        <fieldset>
+            <legend>Registration Form</legend>
+            <ol>
+                <li>
+                    <h1><span class="register">@Resources.Language.Register</span></h1>
+                </li>
+                <li>
+                    <label class="control-label" for="input01">@Resources.Language.Username</label>
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "input-xlarge", placeholder = @Resources.Language.Username })
+                </li>
+                <li>
+                    <label class="control-label" for="input01">@Resources.Language.Password</label>
+                    @Html.PasswordFor(m => m.Password, new { @class = "input-xlarge" })
+                </li>
+                <li>
+                    <label class="control-label" for="input01">@Resources.Language.ConfirmPassword</label>
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "input-xlarge" })
+                </li>
+                <li>
+                    <label class="control-label" for="input01">@Resources.Language.Captcha</label>
+                    <div class="editor-label">
+
+                        <img alt="Captcha" src='@Url.Action("CaptchaImage", "Account")' style="" />
+
+                        <a href='@Url.Action("Register", "Account")'>
+                            <i class="icon-refresh"></i>
+                        </a>
+                    </div>
+                    @Html.TextBoxFor(model => model.Captcha, new { @class = "input-xlarge", placeholder = "Kết quả của phép tính bên trên" })
+                </li>
+                <li>
+                    <input type="submit" value="@Resources.Language.Register" class="btn btn-large btn-primary"/>
+                </li>
+            </ol>
+
+        </fieldset>
+    }
+
+</body>

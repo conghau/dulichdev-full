@@ -1,0 +1,48 @@
+﻿@font-face {
+    font-family: 'MolengoRegular';
+    src: url('/Content/themes/20thing/css/fonts/molengo-regular-webfont.eot');
+    src: local('☺'), url('/Content/themes/20thing/css/fonts/molengo-regular-webfont.woff') format('woff'), url('fonts/molengo-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSerif';
+    src: url('/Content/themes/20thing/css/fonts/droidserif-webfont.eot');
+    src: local('☺'), url('/Content/themes/20thing/css/fonts/droidserif-webfont.woff') format('woff'), url('fonts/droidserif-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url("/Content/themes/custom/image/wood_inner.jpg") no-repeat scroll 100% 100% / cover rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    padding: 0px;
+    height: 100%;
+    width: 836px;
+}
+
+#imapbuilder_div {
+    display: block;
+    float: left;
+    margin: 5px;
+    width: 500px;
+}
+
+.notetext {
+    background: url(/Content/themes/custom/image/notecover3.png) no-repeat scroll 100% 100% / cover rgba(0, 0, 0, 0);
+    height: 704px;
+    overflow: hidden;
+    width: 410px;
+}
+
+.container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 80px;
+    margin-left: 5px;
+}

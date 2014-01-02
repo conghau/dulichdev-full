@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+    @Styles.Render("~/Content/themes/20Thing/css/reset.css")
+    @Styles.Render("~/Content/themes/20Thing/css/layouts.css")
+    @Styles.Render("~/Content/themes/20Thing/css/print-preview.css")
+</head>
+<body>
+     @RenderBody();
+</body>
+</html>

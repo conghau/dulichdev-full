@@ -1,0 +1,98 @@
+﻿
+    @Styles.Render("~/Content/themes/3DBookShowcase/js/modernizr.custom.js")
+
+    @Styles.Render("~/Content/themes/3DBookShowcase/css/default.css.css")
+    @Styles.Render("~/Content/themes/3DBookShowcase/css/component.css")
+		<div class="span6">				
+			<div class="main">
+				<ul id="bk-list" class="bk-list clearfix">
+					<li>
+						<div class="bk-book book-1 bk-bookdefault" onclick="dosomething()">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span>Địa Điểm Nên Đến</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-back">
+								<p>Chuẩn bị đồ đạt cho chuyến đi</p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span>@ViewBag.City</span>									
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+						<div class="bk-info">
+							<button class="bk-bookback">Xoay</button>
+						</div>
+					</li>		
+					<li>
+						<div class="bk-book book-3 bk-bookdefault" onclick="dosomething3()">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>										
+										<span>Điểm Nghỉ Ngơi</span>
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>						
+							<div class="bk-back">
+								<p>Mẹo nhỏ: Không Nên Ăn Quá Nhiều</p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span>@ViewBag.City</span>
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+						<div class="bk-info">
+							<button class="bk-bookback">Xoay</button>					
+						</div>
+					</li>
+                    <li>
+						<div class="bk-book book-2 bk-bookdefault" onclick="dosomething2()">
+							<div class="bk-front">
+								<div class="bk-cover">
+									<h2>
+										<span>Điểm Ăn Uống</span>										
+									</h2>
+								</div>
+								<div class="bk-cover-back"></div>
+							</div>
+							<div class="bk-back">
+								<p>Mẹo nhỏ: Không nên uống quá nhiều rượu bia</p>
+							</div>
+							<div class="bk-right"></div>
+							<div class="bk-left">
+								<h2>
+									<span>@ViewBag.City</span>									
+								</h2>
+							</div>
+							<div class="bk-top"></div>
+							<div class="bk-bottom"></div>
+						</div>
+						<div class="bk-info">
+							<button class="bk-bookback">Xoay</button>							
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /container -->
+		
+		<script src="~/Content/themes/3DBookShowcase/js/books1.js"></script>
+		<script>
+			$(function() {
+
+				Books.init();
+			});	
+			
+		</script>

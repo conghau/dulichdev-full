@@ -1,0 +1,96 @@
+﻿@model List<DuLichDLL.Model.DL_Place>
+@{
+    ViewBag.Title = "AddPlace";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align:center">
+<h2>@Resources.Language.ListPlace</h2>
+</div>
+<form id="frmMain" method="post" action="#">
+    <div class="form-inline">
+        @Html.Partial("p_Search",new WebDuLichDev.Models.vm_Search())
+    </div>
+    @if (null != Model)
+    {
+        var pageSize = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageSize.ToString()].ToString());
+        var pageNum = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageNum.ToString()].ToString());
+        var page = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.Page.ToString()].ToString());
+
+        <input type="hidden" value="@ViewData["OrderBy"]" name="orderBy" id="orderBy" />
+        <input type="hidden" value="@ViewData["OrderDirection"]" name="orderDirection"id="orderDirection" />
+    
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <input type="button" class="btn btn-primary btn-large" id="btnAddNew" value="@Resources.Language.Add"/>
+            </div>
+            <table class="table table-striped">
+                <tr>
+                    <th>#</th>
+                    <th>@Resources.Language.Avatar</th>
+                    <th>@Resources.Language.PlaceName</th>
+                    <th>ABV rating</th>
+                    <th></th>
+                </tr>
+                @{int i = 0;}
+                @foreach (var item in Model)
+                {   
+                    <tr>
+                        <td>
+                             @((page - 1) * pageSize + i + 1)
+                        </td>
+                        <td>
+                            <a class="thumbnail">
+                                <img src="/Data/Avatar/place/@item.Avatar" alt='' height="50px" width="50px"/></a>
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.AvgRating
+                        </td>
+                        <td>
+                            <i class="icon-search"></i>
+                        </td>
+                    </tr>
+                    i++;
+                }
+            </table>
+            @*        @foreach (var item in Model)
+        { 
+            <div class="row-fluid">
+                <div class="span10">
+                        <ul class="thumbnails">   
+                            @if(null == item.Avatar || string.IsNullOrWhiteSpace(item.Avatar))
+                            {   <li class="span4" id="">
+                                    <a class=thumbnail><img src="/Data/Avatar/place/@WebDuLichData.PathAvatarDefault" alt='' /></a>
+                                </li>
+                            }
+                            else
+                            {
+                              <li class="span4" id=""><a class=thumbnail><img src="/Data/Avatar/place/@item.Avatar" alt='' /></a></li>
+                            }
+                        </ul>
+                </div>
+                <div class="span2">
+                    <button class="btn">Edit</button>
+                </div>
+            </div>
+            
+        }*@
+        </div>
+        <div class="form-inline"> @Html.Partial("p_Pagination", null, ViewData)</div>
+               
+    }
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        
+            $('#btnAddNew').click(function () {
+
+                var url = "@Url.Action("AddPlace", "Place")";
+                location.href = url;
+            });
+        });
+    </script>
+</form>

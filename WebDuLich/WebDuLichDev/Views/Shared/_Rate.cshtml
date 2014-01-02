@@ -1,0 +1,77 @@
+﻿@model DuLichDLL.Model.DL_City
+@{
+    Layout = null;
+}
+<div id="st1_@Model.ID">
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Lib/jquery.raty.js")"></script>
+    <div id="star_@Model.ID" data-pid="@Model.ID" data-score="@Model.AvgRating"></div>
+    <p id="currentlyrated" style="float: left; padding-left: 20px;">
+        Currently rated: @Model.AvgRating by @Model.TotalUserRating people;
+    </p>
+</div>
+<script>
+
+    $('#star_@Model.ID').raty({
+        click: function (score, evt) {
+            var anchor = $(evt.currentTarget),
+            //pid = anchor.closest('div').data("pid").val(),
+            pid = anchor.closest('div').data('pid'),
+            url = '@Url.Action("RateProduct", "City")';
+            alert('ID: ' + pid + "\nscore: " + score + "\nevent: " + evt);
+            $.ajax({
+                url: url,
+                type: "GET",
+                data: { rate: score, Cityid: pid },
+                success: function (data) {
+
+                    if (data.success) {
+                        // all went well, here you can say Thank you
+
+                        alert('ID: ' + pid + "\nscore: " + data.Avg + "\nevent: ");
+                        $(this).html('<p> Avg: ' + data.Avg + 'by' + data.Total + 'person</p>');
+                        $('#currentlyrated').html('Currently rated:: ' + data.Avg + ' by ' + data.Total + ' persons');
+
+                        $.post('@Url.Action("Restar", "City", new { cityId = Model.ID })', function (data1) {
+                    alert("data" + data1);
+                    $('#st1_@Model.ID').replaceWith(data1);
+   
+
+    alert("data");
+
+                });
+}
+else {
+                // There must be an Exception error, let's show 
+    alert("Co loi");
+}
+        },
+        error: function (err) {
+            // the call thrown an error
+            $('.result').text(err);
+        },
+        complete: function () {
+            $('#star').fadeOut();
+        }
+    });
+        },
+        score: function () {
+            return $(this).attr('data-score');
+        },
+        @* scoreName: function (evt){
+var
+anchor = $(evt.currentTarget),
+pid = anchor.closest('div').data('pid'),
+url = '@Url.Action("LoadRateProduct", "City")';
+$.ajax({
+url: url,
+type: "GET",
+data: {Cityid: pid },
+success: function (data)
+{
+return data.Avg;
+}
+});
+}*@
+    });
+</script>
+

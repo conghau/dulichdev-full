@@ -1,0 +1,94 @@
+﻿@model  List<WebDuLichDev.Models.NicePlace>
+@if (Model != null)
+{
+    <div id="book">
+        <div id="shadow">
+            <div class="shadow-left"></div>
+            <div class="shadow-right"></div>
+        </div>
+        <div id="spine">
+            <div class="spine-top"></div>
+            <div class="spine-bottom"></div>
+        </div>
+        <div id="front-cover-bookmark">
+            <div class="content">
+                <p>What’s a cookie? How do I protect myself on the web? And most importantly: What happens if a truck runs over my laptop?</p>
+                <p>For things you’ve always wanted to know about the web but were afraid to ask, read on.</p>
+                <a class="open-book" href="/en-US/foreword">OPEN BOOK</a>
+                <canvas id="flip-intro" width="89" height="69"></canvas>
+            </div>
+        </div>
+        <div id="sharer">
+            <div class="background-top"></div>
+            <div class="background-bottom"></div>
+            <div class="content">
+                <ul>
+                    <li class="facebook">
+                        <a title="Facebook" href="#"></a>
+                    </li>
+                    <li class="twitter">
+                        <a title="Twitter" href="#"></a>
+                    </li>
+                    <li class="gplus"></li>
+                    <li class="print">
+                        <a title="Print Thing" target="_blank" href="/en-US/foreword/print">Print Thing</a>
+                    </li>
+                </ul>
+                <p class="index">THING</p>
+                <p class="instruction">SHARE THING</p>
+            </div>
+        </div>
+        <div id="front-cover">
+            <img src="/Content/themes/20Thing/css/images/front-cover.jpg" width="830" height="520">
+        </div>
+        <div id="back-cover">
+            <img src="/Content/themes/20Thing/css/images/back-cover.jpg" data-src-flipped="/Content/themes/20Thing/css/images/back-cover-flipped.jpg" width="830" height="520">
+        </div>
+        <div id="page-shadow-overlay"></div>
+
+        <div id="pages">
+        </div>
+        <div id="left-page">
+            <img src="/Content/themes/20Thing/css/images/left-page.jpg" data-src-flipped="/Content/themes/20Thing/css/images/left-page-flipped.jpg" width="830" height="520">
+        </div>
+        <div id="right-page">
+            <div id="paperstack">
+                <div class="paper s1"></div>
+                <div class="paper s2"></div>
+                <div class="paper s3"></div>
+                <div class="paper s4"></div>
+                <div class="paper s5"></div>
+                <div class="paper s6"></div>
+                <div class="paper s7"></div>
+                <div class="shadow"></div>
+            </div>
+            <img src="/Content/themes/20Thing/css/images/right-page.jpg" width="830" height="520">
+        </div>
+    </div>
+}
+<nav id="chapter-nav"></nav>
+<div id="overlay" style="display: none;">
+    <div class="bookmark" style="left: 674.5px; top: 340px; margin: 0px; display: none;"></div>
+    <div class="print" style="display: none;"></div>
+</div>
+<div id="credits" style="left: 354.5px; top: 85px; margin: 0px;">
+    <div class="header"></div>
+    <div class="people"></div>
+    <hr>
+    <div class="share"></div>
+</div>
+<div id="pagination-prev" class="inactive" style="top: 320px; left: 0px;">
+    <a href="#">
+        <div class="arrow">LOCALE_PREVIOUS_PAGE</div>
+    </a>
+    <div class="page-progress" style="display: none;">
+      
+    </div>
+</div>
+<div id="pagination-next" class="" style="top: 320px; right: auto; left: 996px;">
+    <a href="#">
+        <div class="arrow">LOCALE_NEXT_PAGE</div>
+    </a>
+    
+</div>
+

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Scripts/Lib/bootstrap/css/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/rating.css")
+    @Scripts.Render("~/Scripts/rating.js")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/base")
+    @RenderSection("scripts", required: false)
+    <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+    @*@Styles.Render("~/Content/themes/pageDefault.css")*@
+    @Styles.Render("~/Content/themes/20Thing/css/main.css")
+</head>
+<body>
+    <header class="navbar navbar-fixed-top">
+        <nav>
+            <ul>
+                <li class="backtobook"><a href="#">BACK TO BOOK</a></li>
+                <li class="divider1"></li>
+                <li class="about"><a href="#">FIRST</a></li>
+                <li class="divider2"></li>
+                <li class="credits"><a href="#">CREDITS</a></li>
+                <li class="divider2"></li>
+            </ul>
+        </nav>
+
+        <div id="language-selector">
+            <div id="language-selector-title"><a>VIETNAM (VI)</a></div>
+            <div id="language-selector-list">
+                <ul>
+                    <li><a>ENGLISH (US)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Input type="search" is currently too inconsistent across browsers and platforms -->
+        <input id="search-field" type="text" value="Search Book">
+    </header>
+    <div id="bodyPageDefault">
+        @RenderBody()
+    </div>
+    <footer class="navbar navbar-fixed-bottom">
+        <span class="curator"><a href="#">Hau Team. ©,2013</a></span>
+        <div class="right-side">
+            <div class="divider"></div>
+            <div class="invite">
+
+                <ul>
+                    <li>
+                        <div id="zme-root"></div>
+                        <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "http://static.me.zing.vn/sp/js/all-1.39.js#&appId=663270de6faf4149ac73cb5e77374924&status=true";
+    fjs.parentNode.insertBefore(js, fjs);
+}
+											(document, "script", "zingme-jssdk"));</script>
+                        <a class="zme-invite" data-link="http://dulich.azurewebsites.net" data-title="Mời bạn bè" data-type="app"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="sharing">
+                <p>@Resources.Language.SHAREBOOK</p>
+                <input type="text" class="clipboard-notification" value="" readonly="readonly" />
+                <ul>
+                    <li class="facebook"><a href="http://www.facebook.com/sharer.php?u=http://20thingsilearned.com&amp;t=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web" title="Facebook"></a></li>
+                    <li class="twitter"><a href="http://twitter.com/share?original_referer=http://20thingsilearned.com&amp;text=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web&amp;url=http://20thingsilearned.com" title="Twitter"></a></li>
+                    <li class="gplus"></li>
+                    <li class="zingme"><a class="" name="zm_share" type="icon" title="Chia sẻ lên Zing Me"></a>
+                        <script src="http://stc.ugc.zdn.vn/link/js/lwb.0.7.js" type="text/javascript"></script>
+                    </li>
+                    <li class="url"><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="print">
+                <a href="/en-US/all/print" target="_blank"><span class="icon"></span>PRINT BOOK</a>
+            </div>
+            <div class="divider"></div>
+            <div class="lights-wrapper">
+                <div class="lights">
+                    <a href="#"><span class="icon">LIGHTS</span></a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="fullscreen-wrapper" style="display: none;">
+                <div class="fullscreen">
+                    <a href="#"><span class="icon"></span>FULL SCREEN</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/Content/themes/20Thing/js/twentythings.js"></script>
+</body>
+</html>

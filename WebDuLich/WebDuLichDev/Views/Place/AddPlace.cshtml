@@ -1,0 +1,296 @@
+﻿@model WebDuLichDev.Models.vm_NicePlace
+@{
+    ViewBag.Title = "AddPlace";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="text-align:center">
+<h2>@Resources.Language.AddPlace</h2>
+</div>
+<form id="frmAddPlace" class="well form-horizontal" method="post" action="/Place/AddPlace">
+    <div>
+        <ul id="panelbar">
+            <li class="k-state-active">
+                <span class="k-link k-state-selected">@Resources.Language.BasicInfo</span>
+                <div>
+                    <div class="control-group">
+                        <label class="control-label" for="input01">@Resources.Language.PlaceName</label>
+                        <div class="controls">
+                            @Html.TextBoxFor(m => m.dlPlace.Name, new { id = "placeName", placeholder = "Place name ...", required = "", validationMessage = "Please enter {0}" })
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="input01">@Resources.Language.Address</label>
+                        <div class="controls">@Html.TextBoxFor(m => m.dlPlace.Address, new { id = "Address", placeholder = "Address...", required = "", validationMessage = "Please enter {0}" })</div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="input01">@Resources.Language.City</label>
+                        <div class="controls">@Html.DropDownListFor(m => m.dlPlace.DL_CityId, WebDuLichDev.WebUtility.WebDuLichData.ListCity, new { id = "drop_CityList", @class = "DLL kendoDropDownList city" })</div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="input01">@Resources.Language.Avatar</label>
+
+                        <div class="controls">
+                            <input id="uploadAvatar" name="fileUpload" type="file" />
+                            @Html.TextBoxFor(m => m.dlPlace.Avatar, new { id = "Avatar", type = "hidden", required = "", validationmessage = "Please upload {0}" })
+                            @*<input id="Avatar" name="dlPlace.Avatar" value="" type="hidden" required="" validationmessage="Please upload {0}" />*@
+                            <div id="imgPhotoAvatar">
+                                <div class="row">
+                                    <div class="span8">
+                                        <ul class="thumbnails">
+                                            @if (null != Model && Model.dlPlace != null)
+                                            {      
+                                                @:<li class="span2" id="@Model.dlPlace.Avatar"><a class=thumbnail><img src="/Data/Avatar/place/@Model.dlPlace.Avatar" alt='' /></a></li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="">@Resources.Language.DetailInfo</span>
+                <div id="tabstrip">
+                    <ul>
+                        <li class="k-state-active">@Resources.Language.Introduce</li>
+                        <li>@Resources.Language.History</li>
+                        <li>@Resources.Language.Time @Resources.Language.Open/ @Resources.Language.Close</li>
+                        <li>@Resources.Language.Note</li>
+                    </ul>
+                    <div>
+                        <div class="k-content">
+                            @if (null != Model && Model.dlNicePlaceInfoDetail != null)
+                            { 
+                                <textarea class="editor" name="dlNicePlaceInfoDetail.Info" rows="5" cols="20" style="width: 100%; height: 400px">@HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Info)</textarea>
+                            }
+                            else
+                            {
+                                <textarea class="editor" name="dlNicePlaceInfoDetail.Info" rows="5" cols="20" style="width: 100%; height: 400px">&lt;p&gt;Please input some detail about this city:&lt;/p&gt;</textarea>
+                   
+                            }
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" name="dlNicePlaceInfoDetail.History" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                    &lt;p&gt;Please input some detail about this city:&lt;/p&gt;      
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" name="dlNicePlaceInfoDetail.OpenCloseTime" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                    &lt;p&gt;Please input some detail about this city:&lt;/p&gt;      
+                </textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="k-content">
+                            <textarea class="editor" name="dlNicePlaceInfoDetail.Note" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                    &lt;p&gt;Please input some detail about this city:&lt;/p&gt;      
+                </textarea>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="">@Resources.Language.ImagePlace</span>
+                <div class="control-group">
+                    <label class="control-label" for="input01">@Resources.Language.ImagePlace</label>
+                    <div class="controls">
+                        <input id="uploadImage" name="fileUpload" type="file" />
+                        @*<div id="imageName">
+                            @if (null != Model && Model.listImageCity != null)
+                            {
+                                foreach (var item in Model.listImageCity)
+                                {     
+                                
+                                }
+                            }
+                        </div>*@
+                        <div id="imgPhotoPlace">
+                            <div class="row">
+                                <div class="span8">
+                                    <ul class="thumbnails">
+                                        @if (null != Model && Model.listImagePlace != null)
+                                        {
+                                            int i = 0;
+                                            foreach (var item in Model.listImagePlace)
+                                            {
+                                                var name = item.LinkImage.Replace(" ", "").Replace(".", "");
+                                            @:<li class="span3 @name">
+<div class="thumbnail">
+                                                     <div class="caption"><a  onclick="deleteImage('@name')"><img src="/Content/themes/custom/Image/Delete.png" 
+                                                          style="margin-top:-6px; margin-bottom:-6px"
+                                                            onmouseover="this.src='/Content/themes/custom/Image/Delete-highlight.png';"
+                                                            onmouseout="this.src='/Content/themes/custom/Image/Delete.png'" /></a></div>
+                                                
+                                                    <img src="/Data/Images/place/@item.LinkImage" alt='' /> 
+                                                    </div>
+                                            <input id="@name" class="listImagePlace" value="@item.LinkImage" type="hidden"/>                                   
+                                                @:</li>
+                                                                                        i++;
+
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="form-actions">
+        <input class="btn btn-primary" id="btnSubmit" type="button" value="@Resources.Language.Submit" />
+        <input class="btn" id="btnCancel" type="button" value="@Resources.Language.Cancel" />
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $("#panelbar").kendoPanelBar({
+                expandMode: "single"
+            });
+
+            $("#tabstrip").kendoTabStrip({
+                animation: {
+                    open: {
+                        effects: "fadeIn"
+                    }
+                }
+            });
+
+            $(".editor").kendoEditor({
+
+                tools: ["bold", "italic", "underline", "justifyLeft", "justifyCenter", "justifyRight",
+                    "justifyFull", "insertUnorderedList", "insertOrderedList", "indent", "outdent", "viewHtml"],
+
+            });
+
+            $("#uploadAvatar").kendoUpload({
+                async: {
+                    saveUrl: "/File/UploadAvatar",
+                    removeUrl: "/File/RemoveAvatarPlace",
+                    autoUpload: true,
+                    multiple: false,
+                },
+                select: onSelect,
+                upload: onUpload,
+                success: onUploadAvatarSuccess
+            });
+
+            $("#uploadImage").kendoUpload({
+                async: {
+                    saveUrl: "/File/UploadImagePlace",
+                    removeUrl: "/File/RemoveImagePlace",
+                    autoUpload: true,
+                },
+                select: onSelect,
+                upload: onUpload,
+                success: onUploadSuccess
+            });
+
+            var validator = $("#panelbar").kendoValidator().data("kendoValidator");
+            $('#btnSubmit').click(function () {
+                if (validator.validate()) {
+                    $('#frmAddPlace').submit();
+                } else {
+                    alert("Oops! There is invalid data in the form.");
+                }
+
+            });
+
+            $('#btnCancel').click(function () {
+
+            });
+        });
+        function onSelect(e) {
+            var files = e.files;
+
+            // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
+            $.each(files, function () {
+                //alert(this.extension);
+                if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                    return true;
+                }
+                else {
+                    alert("it is not .jpg ,.png ,.bmp"); e.preventDefault();
+                }
+            });
+        }
+        function onUpload(e) {
+            var files = e.files;
+            //var newName = new 
+            // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
+            $.each(files, function () {
+                if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                    return true;
+                }
+                else {
+                    alert("it is not .jpg ,.png ,.bmp");
+                    e.preventDefault();
+                }
+            });
+        }
+        function onProgress(e) {
+            // Array with information about the uploaded files
+            var files = e.files;
+
+            console.log(e.percentComplete);
+        }
+
+        function onUploadAvatarSuccess(e) {
+            //var files = e.files;
+
+            if (e.operation == "upload") {
+                var files = e.response;
+                $.each(files, function () {
+                    var name = files.dataName.toString();
+                    var id = name.replace('.', '');
+                    $('#Avatar').val(name);
+                    $('#imgPhotoAvatar > .row > .span8 > .thumbnails').append("<li class=\"span2\" id=" + id +" ><a class=thumbnail><img src=/Data/Avatar/place/" + name + " alt='' /></a></li>");
+                    //$('#uploadAvatar').data('kendoUpload').disable();
+                    e.files[0].name=name;
+                });
+            }
+
+            if (e.operation == "remove") {
+                $.each(e.files, function () {
+                    $('#Avatar').val('');
+                    var name = this.name.replace('.', '');
+                    $('div#imgPhotoAvatar > .row > .span8 > .thumbnails > li').remove('#'+name);
+                    // $('#uploadAvatar').data('kendoUpload').enable();
+                });
+            }
+        }
+
+        function onUploadSuccess(e) {
+
+            var index = 0;
+            if (e.operation == "upload"){ 
+                var files = e.response;
+                $.each(files, function () {
+                    var name = files.dataname.toString();
+                    var names = name.replace('.', '');
+                    var element = "<li class='span3 " + names + "'><div class=thumbnail ><div class=caption > <a  onclick=deleteImage('" + names + "')> <img src=/Content/themes/custom/Image/Delete.png ; onmouseout=this.src='@Url.Content("~/Content/themes/custom/Image/Delete.png")'; onmouseover=this.src='@Url.Content("~/Content/themes/custom/Image/Delete-highlight.png")'; /></a></div> <img src=/Data/Images/place/" + files.dataname + " /></div><input id=" + names + " name=listImagePlace value=" + files.dataname + " type=hidden /></li>";
+                    $('#imgPhotoPlace> .row > .span8 > .thumbnails').append(element);
+                    e.files[index].name = name;
+                    index++;
+                });
+            }
+
+            if (e.operation == "remove") {
+                $.each(e.files, function () {
+                    var name = this.name.replace(' ', '').replace('.', '');
+                    $('div#imgPhotoPlace > .row > .span8 > .thumbnails > li').remove('.' + name)
+                });
+            }
+        }
+
+
+    </script>
+</form>

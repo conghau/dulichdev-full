@@ -1,0 +1,61 @@
+﻿@model WebDuLichDev.Models.vm_NicePlace
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+@{
+    SelectListItem[] citylist = WebDuLichData.ListCity.ToArray();
+    string valuefind = Model.dlPlace.DL_CityId.ToString();
+    SelectListItem city_pdf = citylist.FirstOrDefault(i => i.Value == valuefind) ?? citylist[0];
+    var city_pdf_text = city_pdf.Text;
+}
+<table width="100%" style="text-align: center">
+    <tr>
+        <th>@Resources.Language.BasicInfo</th>
+        <th>@Resources.Language.Avatar</th>
+    </tr>
+    <tr>
+        <td>+ @Resources.Language.PlaceName : @Model.dlPlace.Name
+            <br />
+            + @Resources.Language.Address : @Model.dlPlace.Address
+            <br />
+            + @Resources.Language.City: @city_pdf_text
+            <br />
+        </td>
+        @if(!String.IsNullOrEmpty(Model.dlPlace.Avatar))
+        {
+        <td>
+            <img width="200" src="/Data/Avatar/Place/@Model.dlPlace.Avatar"/></td>
+        }
+    </tr>
+</table>
+
+<h3>************************************************** @Resources.Language.DetailInfo ********************************************</h3>
+
+<p>@Resources.Language.Introduce: @Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Info))</p>
+<p>@Resources.Language.History: @Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.History))</p>
+<p>@Resources.Language.Open/@Resources.Language.Close: @Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.OpenCloseTime))</p>
+<p>@Resources.Language.Note: @Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Note))</p>
+
+<h3>********************************************************* @Resources.Language.ImagePlace *************************************************</h3>
+<br />
+
+@if ((null != Model.listImagePlace)&&(0!=Model.listImagePlace.Count))
+{
+    <table style="text-align: center">
+        <tr>
+            <th>#</th>
+        </tr>
+
+        <tr>
+            @foreach (var pic in Model.listImagePlace)
+            {
+                <td>
+                    <img width="300" src="/Data/Images/Place/@pic.LinkImage"/>
+                </td>
+            }
+        </tr>
+
+    </table>
+}

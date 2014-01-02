@@ -1,0 +1,81 @@
+﻿@model DuLichDLL.Model.DL_NicePlaceInfoDetail
+@{
+    ViewBag.Title = "PlaceInfoDetail";
+    Layout = "~/Views/Shared/_pureLayout.cshtml";
+}
+
+<div id="tabstrip">
+
+    <ul>
+        <li class="k-state-active">@Resources.Language.Introduce <i class="icon-search"></i></li>
+        <li>@Resources.Language.History</li>
+        <li>@Resources.Language.Time @Resources.Language.Open/ @Resources.Language.Close</li>
+        <li>@Resources.Language.Note</li>
+    </ul>
+    <div>
+        <div class="k-content info" style="overflow-y:scroll">
+            @if (null != Model)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.Info))
+            }
+            else
+            {
+                <p>Chua co thong tin</p>
+                   
+            }
+
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+            @if (null != Model)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.History))
+            }
+            else
+            {
+                <p>Chua co thong tin</p>   
+            }
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+            @if (null != Model)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.OpenCloseTime))
+            }
+            else
+            {
+                <p>Chua co thong tin</p>   
+            }
+        </div>
+    </div>
+    <div>
+        <div class="k-content info">
+            @if (null != Model)
+            { 
+                @Html.Raw(HttpUtility.HtmlDecode(Model.Note))
+            }
+            else
+            {
+                <p>Chua co thong tin</p>   
+            }
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#tabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            }
+        });
+    });
+</script>
+<style>
+    .info {
+        height:450px;
+    }
+</style>

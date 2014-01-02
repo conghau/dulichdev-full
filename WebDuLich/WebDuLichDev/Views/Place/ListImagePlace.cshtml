@@ -1,0 +1,37 @@
+﻿@model List<DuLichDLL.Model.DL_ImagePlace>
+@{
+   
+    ViewBag.Title = "ListImage";
+    Layout = "~/Views/Shared/_ImageSliderLayout.cshtml";
+
+}
+@{int i = 0;}
+@if (null != Model)
+{
+  
+    <div class="fotorama" data-width="499" data-height="333">
+
+        @foreach (var item in Model)
+        {
+                    
+            <a href="~/Data/Images/Place/@item.LinkImage">
+                <img alt="" src="~/Data/Images/Place/@item.LinkImage" width="480" height="250">
+            </a>                        
+        }
+
+    </div>
+}
+<script>
+    $(function () {
+        $('.fotorama').fotorama({
+            width: 499,
+            height: 333,
+            minWidth: 400,
+            maxWidth: 500,
+            minHeight: 300,
+            maxHeight: 333,
+            loop: true,
+        });
+    });
+
+</script>

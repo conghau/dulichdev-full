@@ -1,0 +1,316 @@
+﻿@model List<WebDuLichDev.Models.HotelInfo>
+@{
+    ViewBag.Title = ViewBag.Title + " - " + Resources.Language.Hotel;
+    Layout = "~/Views/Shared/_LayoutFilp.cshtml";
+}
+<div id="search-dropdown">
+    <div class="fader">
+        <div class="background-top"></div>
+        <div class="background-bottom"></div>
+        <div class="results">
+            <div class="things">
+                <h4><span>Search Book</span></h4>
+                <hr>
+            </div>
+            <div class="keywords">
+                <h4><span>KEYWORDS</span></h4>
+                <hr>
+            </div>
+            <div class="empty">@Resources.Language.NoFound .</div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="cityId" name="cityId" value="@ViewBag.CityId"/>
+<div id="grey-mask" style="left: 0px;"></div>
+<div id="book">
+    <div id="shadow">
+        <div class="shadow-left"></div>
+        <div class="shadow-right"></div>
+    </div>
+    <div id="spine">
+        <div class="spine-top"></div>
+        <div class="spine-bottom"></div>
+    </div>
+    <div id="front-cover-bookmark">
+        <div class="content">
+            <p>@ViewBag.Title</p>
+            <p>Bạn không có điều kiện, thời gian để đi du lịch. Vậy thì hãy đọc cuốn sách này...</p>
+            <a class="open-book" href="#">@Resources.Language.openBook</a>
+            <canvas id="flip-intro" width="89" height="69"></canvas>
+        </div>
+    </div>
+    <div id="sharer">
+        <div class="background-top"></div>
+        <div class="background-bottom"></div>
+        <div class="content">
+            <ul type="none">
+                <li class="facebook">
+                    <a title="Facebook" href="#"></a>
+                </li>
+                <li class="twitter">
+                    <a title="Twitter" href="#"></a>
+                </li>
+                <li class="gplus"></li>
+                <li class="print">
+                    <a title="Print Thing" target="_blank" href="/en-US/foreword/print">Print Thing</a>
+                </li>
+            </ul>
+            <p class="index">THING</p>
+            <p class="instruction">SHARE THING</p>
+        </div>
+    </div>
+    <div id="front-cover">
+        <img src="/Content/themes/20Thing/css/images/cover-hotel.png" width="664" height="520" />
+    </div>
+    <div id="back-cover">
+        <img src="/Content/themes/20Thing/css/images/back-cover.jpg" data-src-flipped="/Content/themes/20Thing/css/images/back-cover-flipped.jpg" width="664" height="520" />
+    </div>
+    <div id="page-shadow-overlay"></div>
+
+    <div id="pages">
+        <div>
+            <article id="foreword">
+                <section class="template-start-7 title-foreword page-1">
+                    <div class="page">
+                        <div class="page-title">
+                            <h2>CHỦ ĐỀ NĂM DU LỊCH QUỐC GIA 2014</h2>
+                        </div>
+                        <p style="text-align: center">
+                            <img src="/data/logo/2013/logodulich.jpg" data-src="/data/logo/2013/logodulich.jpg" />
+                        </p>
+                        <p class="drop-cap">
+                            Năm Du lịch Quốc gia 2014 với chủ đề “Đại ngàn Tây nguyên”
+    Theo Tổng Cục Du lịch Năm Du lịch Quốc gia 2014 sẽ được tổ chức tại tỉnh Lâm Đồng và các tỉnh, thành thuộc khu vực Tây Nguyên (Đắc Lắk, Đắc Nông, Gia Lai, Kon Tum) với tên gọi Năm Du lịch Quốc gia 2014 - Tây Nguyên - Đà Lạt mang chủ đề “Đại ngàn Tây Nguyên” và biểu trưng (logo) được đề xuất là Hoa dã quỳ, loài hoa có mặt ở khắp 5 tỉnh Tây Nguyên.Đây là sự kiện văn hóa-kinh tế-xã hội tiêu biểu, có quy mô quốc gia và quốc tế nhằm giới thiệu, quảng bá hình ảnh thiên nhiên và con người Tây Nguyên nói chung, Lâm Đồng – Đà Lạt nói riêng với bạn bè trong nước và quốc tế.
+                        </p>
+                    </div>
+                </section>
+            </article>
+
+            @{int i = 0;
+              //int index = 0;
+              string tempChar = "";
+            }
+    @if (null != Model && Model.Count > 0)
+    {
+        tempChar = Model[0].dlPlace.FirstChar.ToUpper();
+        <article id="@tempChar">
+            @foreach (var item in Model)
+            {
+                if (tempChar == item.dlPlace.FirstChar.ToUpper())
+                {
+                    i++;
+                    <section class="title-@item.dlPlace.FirstChar.ToUpper() page-@i">
+                        <div class="page">
+                            <div class="page-title">
+                                <h2>@item.dlPlace.Name</h2>
+                                </div>
+                                @Html.Partial("p_rating", item.dlPlace)
+                        
+                            <div class="right">
+                                <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
+                                <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
+                                @*<img src="~/Data/Avatar/Place/@Model[0].dlPlace.Avatar" width="300" height="250" alt=""  class="fancybox" title="title"/>*@
+                                @if (item.listImagePlace != null)
+                                {
+                                    <a href="@Url.Action("ListImagePlace", "Place", new { placeId = item.dlPlace.ID })" class="listImage fancybox.iframe">@Resources.Language.SeeMore ...</a>
+                                }
+                            </div>
+                            <div class="box">
+                                 @Html.Raw(HttpUtility.HtmlDecode(item.dlHotelPlaceInfoDetail.Info))                           
+                            </div>
+                            <div class="seemore"><a href="@Url.Action("PlaceInfoDetail", "Place", new { placeId = item.dlPlace.ID })" class="ptext fancybox.iframe">@Resources.Language.SeeMore ...</a></div>
+                            <div class="comment">
+                                <p>@Resources.Language.Comment:</p>
+                                <a href="@Url.Action("CommentPlace", "Place", new { placeId = item.dlPlace.ID, type = "zingme" })" class="zingme fancyboxCmt fancybox.iframe" title="Bình luận trên zingme"></a>
+                                <a href="@Url.Action("CommentPlace", "Place", new { placeId = item.dlPlace.ID, type = "facebook" })" class="facebook fancyboxCmt fancybox.iframe" title="Bình luận trên facebook"></a>
+                                <a href="@Url.Action("CommentPlace", "Place", new { placeId = item.dlPlace.ID, type = "twitter" })" class="twitter fancyboxCmt fancybox.iframe" title="Bình luận trên twitter"></a>
+                            </div>
+                        </div>
+                    </section>
+                }
+                else
+                {
+                    i = 1;
+                    @:</article>
+                    @:<article id="@item.dlPlace.FirstChar.ToUpper()">
+                        <section class="title-@item.dlPlace.FirstChar.ToUpper() page-@i">
+                            <div class="page">
+                                <div class="page-title">
+                                    <h2>@item.dlPlace.Name</h2>
+                                    @Html.Partial("p_rating", item.dlPlace)
+                                </div>
+                                <div class="right">
+                                    <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
+                                    <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
+                                @if (item.listImagePlace != null)
+                                {
+                                    <a href="@Url.Action("ListImagePlace", "Place", new { placeId = item.dlPlace.ID })" class="listImage fancybox.iframe">@Resources.Language.SeeMore ...</a>
+                                }
+                            </div>
+                                
+                    <div class="box">
+                            @Html.Raw(HttpUtility.HtmlDecode(item.dlHotelPlaceInfoDetail.Info))                           
+                    </div>
+                    <div class="seemore"><a href="@Url.Action("HotelInfoDetail", "Hotel", new { placeId = item.dlPlace.ID })" class="ptext fancybox.iframe">@Resources.Language.SeeMore ...</a></div>
+                    <div class="comment">
+                        <p>@Resources.Language.Comment:</p>
+                        <a href="@Url.Action("CommentPlace", "Place", new { placeId = item.dlPlace.ID, type = "zingme" })" class="zingme fancyboxCmt fancybox.iframe" title="Bình luận trên zingme"></a>
+                        <a href="@Url.Action("CommentPlace", "Place", new { placeId = item.dlPlace.ID, type = "facebook" })" class="facebook fancyboxCmt fancybox.iframe" title="Bình luận trên facebook"></a>
+                        <a href="@Url.Action("CommentPlace", "Place", new { placeId = item.dlPlace.ID, type = "twitter" })" class="twitter fancyboxCmt fancybox.iframe" title="Bình luận trên twitter"></a>
+                    </div>
+
+                            </div>
+                        </section>
+                        tempChar = item.dlPlace.FirstChar.ToUpper();
+                }
+
+            }
+        </article>
+    }            
+
+    <article id="theend">
+        <section class="title-theend page-1">
+    <div class="page"></div>
+    <div class="page-title">
+                
+    </div>
+    </section>
+    </article>
+        </div>
+    </div>
+    <div id="left-page">
+        <img src="/Content/themes/20Thing/css/images/left-page.jpg" data-src-flipped="/Content/themes/20Thing/css/images/left-page-flipped.jpg" width="664" height="520" />
+    </div>
+    <div id="right-page">
+        <div id="paperstack">
+            <div class="paper s1"></div>
+            <div class="paper s2"></div>
+            <div class="paper s3"></div>
+            <div class="paper s4"></div>
+            <div class="paper s5"></div>
+            <div class="paper s6"></div>
+            <div class="paper s7"></div>
+            <div class="shadow"></div>
+        </div>
+        <img src="/Content/themes/20Thing/css/images/right-page.jpg" width="664" height="520" />
+    </div>
+</div>
+<nav id="chapter-nav">
+    <ul>
+        @{string tmpChar = "";}
+        @foreach (var item in Model)
+        {
+            if (tmpChar != @item.dlPlace.FirstChar.ToUpper())
+            {
+            <li class="@item.dlPlace.FirstChar.ToUpper()">
+                <a href="#" class="cnItem" title="@item.dlPlace.FirstChar" data-title="@item.dlPlace.FirstChar" data-subtitle="" data-article="@item.dlPlace.FirstChar.ToUpper()" data-globalstartpage="" data-globalendpage="" data-numberofpages="">
+                    <div class="illustration"></div>
+                    <span>1</span>
+                </a>
+                <a class="over" href="#">
+                    <div class="description">
+                        <p class="title">@item.dlPlace.FirstChar</p>
+                        <p class="pagenumber"></p>
+                    </div>
+                    <div class="small-book">
+                        <div class="illustration"></div>
+                        <p class="index"></p>
+                    </div>
+                </a>
+            </li>
+                tmpChar = @item.dlPlace.FirstChar.ToUpper();
+            }
+
+        }
+
+    </ul>
+</nav>
+<div id="overlay" style="display: none;">
+    <div class="bookmark"></div>
+    <div class="print">
+        <a class="closeprint fancybox-close" href="#" title="@Resources.Language.Close"></a>
+        <a class="printBook" href="@Url.Action("PrintBook", "Place", new { cityId = @ViewBag.cityId })" target="_blank">
+            <h2>@Resources.Language.PrintBook</h2>
+            <p>In cuốn sách theo chuẩn A4</p>
+        </a>
+        <a class="downloadPdf" target="_blank" href="/media/20ThingsILearnedaboutBrowsersandtheWeb.pdf">
+            <h2>Download PDF</h2>
+            
+        </a>
+    </div>
+</div>
+<div id="credits">
+    <div class="header">
+        <h2><span>@Resources.Language.Credit.ToUpper()</span></h2>
+        <hr>
+    </div>
+    <div class="people">
+        <ul>
+            <li>
+                <h3>Thiết Kế</h3>
+                <a href="#">Trương Công Hậu</a></li>
+            <li>
+                <h3>Nhóm tác giả</h3>
+                H.A Team</li>   
+            <li>
+                <h3>Xây dựng hệ thống</h3>
+                <a href="#" >Võ Tiến An</a>
+                <a href="#" >Trương Công Hậu</a>
+            </li>
+        </ul>
+        <h4>Very Special Thanks To</h4>
+        <p class="special-thanks">Cảm ơn các bạn đã đọc cuốn sách này của chúng tôi. Mọi ý kiến đóng góp xin gửi về hộp thư ...</p>
+    </div>
+    <hr>
+    <div class="share">
+        <p>Share this book and what you've learned with friends and family;</p>
+        <ul>
+            <li class="facebook"><a href="http://www.facebook.com/sharer.php?u=http://20thingsilearned.com&amp;t=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web" title="Facebook"><span class="icon"></span><span class="text">Share On</span></a></li>
+            <li class="twitter"><a href="http://twitter.com/share?original_referer=http://20thingsilearned.com&amp;text=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web&amp;url=http://20thingsilearned.com" title="Twitter"><span class="icon"></span><span class="text">Share On</span></a></li>
+            <li class="gplus"></li>
+        </ul>
+    </div>
+</div>
+<div id="pagination-prev" class="inactive" style="top: 320px; left: 0px;">
+    <a href="#">
+        <div class="arrow">LOCALE_PREVIOUS_PAGE</div>
+    </a>
+    <div class="page-progress" style="display: none;">
+    </div>
+</div>
+<div id="pagination-next" class="" style="top: 320px; right: auto; left: 996px;">
+    <a href="#">
+        <div class="arrow">LOCALE_NEXT_PAGE</div>
+    </a>
+
+</div>
+<div id="table-of-contents">
+			<div class="center">
+				<div class="header">
+					<a class="go-back" href="/">Go Back</a>
+					<h2><span>Table of Things</span></h2>
+					<hr>
+				</div>
+				<ul>
+                    @{ tmpChar = "";}
+        @foreach (var item in Model)
+        {
+            if (tmpChar != @item.dlPlace.FirstChar.ToUpper())
+            {
+            <li class="@item.dlPlace.FirstChar.ToUpper()">
+                <a href="#" class="cnItem" title="@item.dlPlace.FirstChar.ToUpper()" data-article="@item.dlPlace.FirstChar.ToUpper()">
+                    <div class="medium-book">
+                        <div class="illustration"></div>
+                        <p class="index">THING @item.dlPlace.FirstChar.ToUpper()</p>
+                    </div>
+                    <h3>@item.dlPlace.FirstChar.ToUpper()</h3>
+                    <p> Danh sách địa điểm bắt đầu bằng chữ @item.dlPlace.FirstChar.ToUpper() </p>
+                </a>
+            </li>
+                tmpChar = @item.dlPlace.FirstChar.ToUpper();
+            }
+
+        }            
+                </ul>
+                </div>
+    </div>

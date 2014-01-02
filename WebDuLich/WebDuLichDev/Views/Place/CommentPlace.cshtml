@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "CommentPlace";
+    Layout = "~/Views/Shared/_pureLayout.cshtml";
+}
+<h2 style="color: #DC143C; background-color: #f9f9f9; margin-top: 0px;
+    height: 54px; line-height: 1.8em; margin-bottom: 0px; width:auto">
+        <img src="~/Content/themes/custom/Image/Message-Add.png" width="32" />
+        <span>@Resources.Language.Comment</span> @*<b style="color:#DC143C"> @ViewBag.RoleName</b>*@
+</h2>
+@{var url = "http://dulich.azurewebsites.net/place/niceplace/";
+  url = url + ViewBag.placeId;
+   }
+@if (ViewBag.type == "zingme")
+{
+    <div id="zme-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "http://static.me.zing.vn/sp/js/all-1.39.js#&appId=663270de6faf4149ac73cb5e77374924&status=true";
+    fjs.parentNode.insertBefore(js, fjs);
+}
+											(document, "script", "zingme-jssdk"));</script>
+    <div id="bxwg" class="zme-comments" data-url="@url" data-width="520" data-num-posts="3" data-min-character="5" data-show-message="" data-max-character="300"></div>
+}
+else if (ViewBag.type == "facebook")
+{
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=1381367088774409";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-comments" data-href="@url" data-width="520" data-numposts="5" data-colorscheme="light"></div>
+}
+else
+{
+    <h3>Chua tich hop</h3>
+}
