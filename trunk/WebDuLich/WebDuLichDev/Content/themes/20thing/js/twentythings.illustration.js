@@ -16,7 +16,7 @@ TT.illustrations.FRAME_RATE = 30;
  * The location of all our illustration asset images.
  * @type {string}
  */
-TT.illustrations.ASSETS_URL = '/Content/themes/20Things/css/images_full/';
+TT.illustrations.ASSETS_URL = '/Content/themes/20Things/css/images/';
 
 
 /**

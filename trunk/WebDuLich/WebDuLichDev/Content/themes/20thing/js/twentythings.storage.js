@@ -55,8 +55,6 @@ TT.storage.contents = '';
 
 TT.cityid = $('#cityId').val();
 
-TT.placeIdfromUrl = '0';
-
 /**
  * Article list.
  */

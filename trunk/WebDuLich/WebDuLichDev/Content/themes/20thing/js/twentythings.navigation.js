@@ -1,3 +1,26 @@
+// Copyright 2011 Google Inc.
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
+// USA.
+
+/**
+ * @fileoverview The navigation class ties the site together by making sure the
+ * pagination and other in-site links are bound.
+ * @author hakim.elhattab@f-i.com (Hakim El Hattab)
+ * @author erik.kallevig@f-i.com (Erik Kallevig)
+ */
+
 
 /**
  * Sub-namespace.
@@ -78,7 +101,7 @@ TT.navigation.initialize = function() {
   //TT.sharing.updateSharer();
 
   // Load images.
-  //TT.navigation.loadImages();
+  TT.navigation.loadImages();
 
   // Check if we need to start any illustration animation.
   TT.illustrations.update($('#pages section.current'));
@@ -753,90 +776,6 @@ TT.navigation.goToPage = function(articleId, pageNumber, fromHistoryChange) {
   return false;
 };
 
-//TT.navigation.goToPageByPlaceId = function (placeId) {
-//    // The currently visible page, i.e. the page we are leaving   
-//    // The page that we are navigating too, this page will be the new
-//    // "currentPage".
-//    var currentPage = $('#pages section.current');
-
-//    var targetPage = $('#pages section.place-' + placeId);
-    
-//    articleId = TT.navigation.classToArticle(targetPage.attr('class'));
-//    pageNumber = TT.navigation.classToArticlePage(targetPage.attr('class'));
-
-//    TT.navigation.hasNavigated = true;
-
-//    TT.tableofthings.hide();
-
-//    // We should never navigate to the page we are already on.
-//    var isSamePageInBook = currentPage.attr('class') === targetPage.attr('class');
-//    var isSamePageOverall = targetPage.attr('class') ===
-//        TT.navigation.currentPageName;
-
-//    if ((!isSamePageOverall && !isSamePageInBook) ||
-//        (TT.navigation.isHomePage() || TT.navigation.isCreditsPage())) {
-
-//        TT.navigation.currentPageName = targetPage.attr('class');
-
-//        if (TT.navigation.classToArticle(TT.navigation.currentPageName) ==
-//            TT.history.THEEND) {
-//            TT.sharing.updateSharer(true);
-//        }
-
-//        // Assume that we will be doing a soft flip
-//        var type = TT.pageflip.SOFT_FLIP;
-
-//        // If we are on either the home or credits pages, change the transition to
-//        // hard cover.
-//        if (TT.navigation.isHomePage() || TT.navigation.isCreditsPage()) {
-//            type = TT.pageflip.HARD_FLIP;
-
-//            TT.navigation.transitioningFromHardCover = true;
-//        }
-
-//        // Determine the global page numbers of the current and target pages
-//        var currentGlobalPageNumber = TT.navigation.classToGlobalPage($('.current')
-//            .attr('class'));
-//        var targetGlobalPageNumber = TT.navigation.classToGlobalPage(targetPage
-//            .attr('class'));
-
-//        if (currentGlobalPageNumber != null && targetGlobalPageNumber != null) {
-//            // Determine how many pages we are stepping past
-//            var steps = Math.abs(currentGlobalPageNumber - targetGlobalPageNumber);
-
-//            // Using the global page numbers, we can determine which direction we are
-//            // navigating in.
-//            var direction = targetGlobalPageNumber > currentGlobalPageNumber ? 1 : -1;
-
-//            // Special case for the home and credits pages which don't have page
-//            // numbers and directions.
-//            if (targetGlobalPageNumber == currentGlobalPageNumber) {
-//                direction = TT.navigation.isHomePage() ? 1 : -1;
-//            }
-
-//            TT.navigation.updatePageVisibility(targetPage, direction, steps);
-
-//            // Execute the transition from the current to the target page
-//            TT.pageflip.turnToPage(currentPage, targetPage, direction, type);
-
-//            if (!fromHistoryChange) {
-//                // Push the current URL to the history
-//                TT.history.pushState('/' + TT.locale.getLocaleCodeFromURL() + '/' + pageNumber);
-//            }
-
-//            // Make sure the bookmark is up to date with the latest navigation
-//            TT.storage.setBookmark(articleId, pageNumber);
-
-//            TT.navigation.updateNextPrevLinks(targetPage);
-
-//            TT.navigation.updatePageReferences(articleId);
-
-//            return true;
-//        }
-//    }
-
-//    return false;
-//};
 
 /**
  * Hides uninvolved sections, shows target section and prepares previous width.

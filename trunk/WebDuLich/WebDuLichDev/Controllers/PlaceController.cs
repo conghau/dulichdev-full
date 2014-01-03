@@ -16,7 +16,7 @@ using WebMatrix.WebData;
 
 namespace WebDuLichDev.Controllers
 {
-    public class PlaceController : BaseController
+    public class PlaceController : Controller
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(PlaceController).Name);
         string version = "Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + " ";
@@ -84,7 +84,6 @@ namespace WebDuLichDev.Controllers
             try
             {
                 ViewBag.CityId = ID;
-                //ViewBag.placeId = placeId;
 
                 DL_CityBAL dlCityBal = new DL_CityBAL();
                 var city = dlCityBal.GetByID(ID);
@@ -126,22 +125,18 @@ namespace WebDuLichDev.Controllers
 
         public ActionResult NicePlace(long ID)
         {
-            DL_PlaceBAL placeBal = new DL_PlaceBAL();
-            var cityId = placeBal.GetByID(ID).DL_CityId;
-            //DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
-            //DL_NicePlaceInfoDetailBAL dlNicePlaceInfoDetailBal = new DL_NicePlaceInfoDetailBAL();
-            //DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
+            DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
+            DL_NicePlaceInfoDetailBAL dlNicePlaceInfoDetailBal = new DL_NicePlaceInfoDetailBAL();
+            DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
 
-            //var nicePlace = new vm_NicePlace();
+            var nicePlace = new vm_NicePlace();
 
-            ////nicePlace = nicePlaceBook.Where(p => p.dlPlace.ID == ID).Single();
-            //nicePlace.dlPlace = dlPlaceBal.GetByID(ID);
-            //nicePlace.dlNicePlaceInfoDetail = dlNicePlaceInfoDetailBal.GetByPlaceId(ID);
-            //nicePlace.listImagePlace = dlImagePlaceBal.GetByDLPlaceID(ID);
+            //nicePlace = nicePlaceBook.Where(p => p.dlPlace.ID == ID).Single();
+            nicePlace.dlPlace = dlPlaceBal.GetByID(ID);
+            nicePlace.dlNicePlaceInfoDetail = dlNicePlaceInfoDetailBal.GetByPlaceId(ID);
+            nicePlace.listImagePlace = dlImagePlaceBal.GetByDLPlaceID(ID);
 
-            //return View(nicePlace);
-
-            return RedirectToAction("NicePlaceByCity",new {ID = cityId, placeId= ID});// NicePlaceByCity(cityId,ID);
+            return View(nicePlace);
         }
 
         public ActionResult ListImagePlace(long placeId)
@@ -184,12 +179,12 @@ namespace WebDuLichDev.Controllers
 
         public ActionResult PrintBook(long cityId)
         {
-           DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
-            if(null != nicePlaceBookTemp && nicePlaceBookTemp.Count !=0)
-               for (int index = 0; index < nicePlaceBookTemp.Count; index++)
-               {
-                   nicePlaceBookTemp[index].listImagePlace = dlImagePlaceBal.GetByDLPlaceID(nicePlaceBookTemp[index].dlPlace.ID);
-               }
+            DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
+            if (null != nicePlaceBookTemp && nicePlaceBookTemp.Count != 0)
+                for (int index = 0; index < nicePlaceBookTemp.Count; index++)
+                {
+                    nicePlaceBookTemp[index].listImagePlace = dlImagePlaceBal.GetByDLPlaceID(nicePlaceBookTemp[index].dlPlace.ID);
+                }
             var model = nicePlaceBookTemp;
             return View(model);
         }
@@ -221,7 +216,7 @@ namespace WebDuLichDev.Controllers
                 total = dlPlace.TotalUserRating;
                 ViewBag.AVG = avg;
 
-                return Json(new { success = success, Avg = avg, TotalUser = total});
+                return Json(new { success = success, Avg = avg, TotalUser = total });
             }
             catch (BusinessException bx)
             {
@@ -246,7 +241,7 @@ namespace WebDuLichDev.Controllers
             ViewBag.type = type.Trim().ToLower();
             return View();
         }
-      
+
         #region Admin Control
 
         [Authorize]
