@@ -342,7 +342,6 @@ namespace WebDuLichDev.Controllers
                 DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
                 DL_NicePlaceInfoDetailBAL dlNicePlaceDetailBal = new DL_NicePlaceInfoDetailBAL();
                 DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
-                //long[] listImageDeleted = new long[]{};
                 //update status image
                 if (null != listImagePlaceOld)
                 {
