@@ -189,7 +189,7 @@ div.fullscreen.clone, div.fullscreen.clone a, .fullscreen.clone a span.icon, foo
 #overlay div.print p, #overlay div.print a.downloadPdf:hover, #overlay div.print a.printBook:hover, #credits div.people ul li h3,
 #credits div.share ul li span.icon, #front-cover-bookmark, #sharer div.background-top,
 #sharer div.background-bottom, #sharer div.content ul li a, #sharer div.content p.instruction span, #sharer div.content ul li.print #front-cover-arrow, #paperstack .shadow, #overlay div.print a.disabled, #language-selector-title > a {
-    background: transparent url('images/sprites.png?v=15') no-repeat top left;
+    background: transparent url('images_full/sprites.png') no-repeat top left;
 }
 
 /**
@@ -202,11 +202,11 @@ div.fullscreen.clone, div.fullscreen.clone a, .fullscreen.clone a span.icon, foo
     left: 50%;
     top: 50%;
     margin: -270px 0 0 -1220px;
-    z-index: 2px;
+    z-index: 2;
 }
 
 #grey-mask {
-    background: url('images/grey-mask.png') repeat-y top left;
+    background: url('images_full/grey-mask.png') repeat-y top left;
     position: absolute;
     display: block;
     z-index: 1100;
@@ -1357,22 +1357,22 @@ body.tot #table-of-contents {
         }
 
 
-#table-of-contents ul li:hover h3,
-#table-of-contents ul li.selected h3 {
-    color: #b41e21;
-}
+        #table-of-contents ul li:hover h3,
+        #table-of-contents ul li.selected h3 {
+            color: #b41e21;
+        }
 
-#table-of-contents ul li.disabled h3 {
-    color: #777777;
-}
+        #table-of-contents ul li.disabled h3 {
+            color: #777777;
+        }
 
-#table-of-contents ul li p {
-    font-size: 11px;
-    width: 90%;
-    margin-left: 5%;
-    color: #999999;
-    padding-bottom: 5px;
-}
+        #table-of-contents ul li p {
+            font-size: 11px;
+            width: 90%;
+            margin-left: 5%;
+            color: #999999;
+            padding-bottom: 5px;
+        }
 
 
 
@@ -1561,7 +1561,7 @@ body.credits #credits {
  * 
  */
 #overlay {
-    background: url('images/overlay-pattern.png') repeat top left;
+    background: url('images_full/overlay-pattern.png') repeat top left;
     display: none;
     width: 100%;
     height: 100%;
@@ -1879,70 +1879,70 @@ footer div.sharing {
     }
 
 
-footer div.sharing ul {
-    margin-left: 2px;
-    width: 85px;
-    float: left;
-}
-
-    footer div.sharing ul li {
-        margin: -3px 0px 0 5px;
+    footer div.sharing ul {
+        margin-left: 2px;
+        width: 85px;
         float: left;
     }
 
-        footer div.sharing ul li a {
-            width: 16px;
-            height: 21px;
-            display: block;
+        footer div.sharing ul li {
+            margin: -3px 0px 0 5px;
+            float: left;
         }
 
-        footer div.sharing ul li.facebook a {
-            background-position: -7px -150px;
-        }
-
-            footer div.sharing ul li.facebook a:hover {
-                background-position: -7px -174px;
+            footer div.sharing ul li a {
+                width: 16px;
+                height: 21px;
+                display: block;
             }
 
-            footer div.sharing ul li.facebook a:active {
-                background-position: -7px -198px;
+            footer div.sharing ul li.facebook a {
+                background-position: -7px -150px;
             }
 
-        footer div.sharing ul li.twitter a {
-            background-position: -26px -150px;
-        }
+                footer div.sharing ul li.facebook a:hover {
+                    background-position: -7px -174px;
+                }
 
-            footer div.sharing ul li.twitter a:hover {
-                background-position: -26px -174px;
+                footer div.sharing ul li.facebook a:active {
+                    background-position: -7px -198px;
+                }
+
+            footer div.sharing ul li.twitter a {
+                background-position: -26px -150px;
             }
 
-            footer div.sharing ul li.twitter a:active {
-                background-position: -26px -198px;
+                footer div.sharing ul li.twitter a:hover {
+                    background-position: -26px -174px;
+                }
+
+                footer div.sharing ul li.twitter a:active {
+                    background-position: -26px -198px;
+                }
+
+            footer div.sharing ul li.buzz a {
+                background-position: -43px -150px;
             }
 
-        footer div.sharing ul li.buzz a {
-            background-position: -43px -150px;
-        }
+                footer div.sharing ul li.buzz a:hover {
+                    background-position: -43px -174px;
+                }
 
-            footer div.sharing ul li.buzz a:hover {
-                background-position: -43px -174px;
+                footer div.sharing ul li.buzz a:active {
+                    background-position: -43px -198px;
+                }
+
+            footer div.sharing ul li.url a {
+                background-position: -63px -150px;
             }
 
-            footer div.sharing ul li.buzz a:active {
-                background-position: -43px -198px;
-            }
+                footer div.sharing ul li.url a:hover {
+                    background-position: -63px -174px;
+                }
 
-        footer div.sharing ul li.url a {
-            background-position: -63px -150px;
-        }
-
-            footer div.sharing ul li.url a:hover {
-                background-position: -63px -174px;
-            }
-
-            footer div.sharing ul li.url a:active {
-                background-position: -63px -198px;
-            }
+                footer div.sharing ul li.url a:active {
+                    background-position: -63px -198px;
+                }
 
 footer div.print {
     margin: 0;
@@ -2266,13 +2266,13 @@ footer ul li {
         width: 80px;
     }
 
-#sharer div.content p.instruction span {
-    background-position: -309px -697px;
-    width: 6px;
-    height: 6px;
-    display: block;
-    margin: 5px 0 0 37px;
-}
+        #sharer div.content p.instruction span {
+            background-position: -309px -697px;
+            width: 6px;
+            height: 6px;
+            display: block;
+            margin: 5px 0 0 37px;
+        }
 
 
 /**
@@ -2287,7 +2287,7 @@ footer ul li {
 }
 
     #pages section {
-        /*width: 640px;*/
+        width: 800px;
         height: 500px;
         position: absolute;
         top: 0;
@@ -2356,7 +2356,7 @@ footer ul li {
                 #pages section div.page .comment .facebook,
                 #pages section div.page .comment .twitter {
                     margin-bottom: 10px;
-                    background: transparent url('images/socialicons.png') no-repeat top left;
+                    background: transparent url('images_full/socialicons.png') no-repeat top left;
                 }
 
                 #pages section div.page .comment a {
@@ -2683,7 +2683,7 @@ body.dark,
     position: absolute;
     right: 20px;
     top: -13px;
-    background: url(./images/repeat-x.png) repeat-x;
+    background: url(./images_full/repeat-x.png) repeat-x;
 }
 
 .home #shadow {
