@@ -2335,6 +2335,10 @@ footer ul li {
                 text-align: center;
             }
 
+            #page section div.page .showmap {
+                background: transparent url('Content\themes\custom\Image\Maps.png') no-repeat top left;
+            }
+
             #pages section div.page .right {
                 padding: 5px;
                 position: absolute;

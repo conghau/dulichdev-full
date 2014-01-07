@@ -192,6 +192,7 @@
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\mapController.cs" />
     <Compile Include="Controllers\RazorPDFController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
@@ -208,6 +209,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\vm_CityInfo.cs" />
+    <Compile Include="Models\vm_map.cs" />
     <Compile Include="Models\vm_pagination.cs" />
     <Compile Include="Models\vm_Place.cs" />
     <Compile Include="Models\vm_Role.cs" />
@@ -250,6 +252,7 @@
     <Content Include="Content\themes\20thing\css\images\sprites.png" />
     <Content Include="Content\themes\20thing\css\layouts.css" />
     <Content Include="Content\themes\20thing\css\main.css" />
+    <Content Include="Content\themes\20thing\css\main_full.css" />
     <Content Include="Content\themes\20thing\css\print-preview.css" />
     <Content Include="Content\themes\20thing\css\print.css" />
     <Content Include="Content\themes\20thing\css\reset.css" />
@@ -274,6 +277,7 @@
     <Content Include="Content\themes\20thing\js\twentythings.sharing.js" />
     <Content Include="Content\themes\20thing\js\twentythings.storage.js" />
     <Content Include="Content\themes\20thing\js\twentythings.tableofthings.js" />
+    <Content Include="Content\themes\20thing\js\twentythings_full.js" />
     <Content Include="Content\themes\3DBookShowcase\css\component.css" />
     <Content Include="Content\themes\3DBookShowcase\css\component2.css" />
     <Content Include="Content\themes\3DBookShowcase\css\default.css" />
@@ -701,6 +705,7 @@
     <Content Include="Views\Shared\p_likesocial.cshtml" />
     <Content Include="Views\City\CityInfoDetail.cshtml" />
     <Content Include="Views\City\EditCity.cshtml" />
+    <Content Include="Views\map\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

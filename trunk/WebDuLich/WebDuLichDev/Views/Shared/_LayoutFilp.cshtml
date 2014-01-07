@@ -17,12 +17,8 @@
     @Styles.Render("~/Content/themes/20Thing/css/main_full.css")
     @Scripts.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.js")
     @Styles.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.css")
-@*    @Styles.Render("~/Scripts/Lib/notepad/html5notepad.css")
-    @Scripts.Render("~/Scripts/Lib/notepad/html5notepad.js")*@
     <link rel="stylesheet" type="text/css" href="~/Scripts/Lib/jRating/jquery/jRating.jquery.css" media="screen" />
-    <!-- jQuery files -->
-    <script type="text/javascript" src="Scripts/Lib/jRating/jquery/jquery.js"></script>
-
+ 
     <script type="text/javascript">
         document.write('<link rel="stylesheet" type="text/css" media="all" href="css/hideOnLoad.css" />');
 
@@ -142,6 +138,18 @@
     <script type="text/javascript">
         $(function () {
             //$(".basic").jRating();
+            $('.map').fancybox({
+                maxWidth: 600,
+                fitToView: false,
+                width: '537px',
+                height: '530px',
+                autoSize: false,
+                closeClick: false,
+                openEffect: 'fadeIn',
+                closeEffect: 'none',
+                padding: 10,
+                //afterClose: function () { location.reload(false); }
+            });
             
             $('.ptext').fancybox({
                 maxWidth: 600,
@@ -183,13 +191,6 @@
             });
         });
     </script>
-@*     <script>
-         $(document).ready(function () {
-             //$('.test').click(function () { alert('kk') });
-             //TT.initialize();
-             TT.placeIdfromUrl = '@ViewBag.placeId';
-         });
-     </script*@>
     <script src="/Content/themes/20Thing/js/twentythings_full.js"></script>
     <script src="/Content/themes/20Thing/js/twentythings.preloader.js"></script>
     <script src="/Content/themes/20Thing/js/twentythings.history.js"></script>
@@ -210,9 +211,7 @@
     <script type="text/javascript" src="~/Scripts/Lib/jRating/jquery/jRating.jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            //$('.test').click(function () { alert('kk') });
             TT.initialize();
-
 
             $(".basic").jRating({
                 onClick: function (element, rate, idBox,nameBox, widthColorOneStar) {
@@ -245,15 +244,6 @@
                     });
                 }
             });
-
-@*            var placeId = '@ViewBag.placeId';
-            if (null != placeId && 0 < placeId) {
-
-                //var targetPage = $('#pages section.place-' + placeId);
-                //articleId = TT.navigation.classToArticle(targetPage.attr('class'));
-                //pageNumber = TT.navigation.classToArticlePage(targetPage.attr('class'));
-                //TT.navigation.goToPageByPlaceId(placeId);
-            }*@
         });
         
     </script>
