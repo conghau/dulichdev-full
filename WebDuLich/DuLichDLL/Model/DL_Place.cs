@@ -85,6 +85,14 @@ namespace DuLichDLL.Model
             get { return _firstChar; }
             set { _firstChar = value; }
         }
+
+        private string _co_ordinate;
+
+        public string Co_ordinate
+        {
+            get { return _co_ordinate; }
+            set { _co_ordinate = value; }
+        }
     }
     public enum DL_PlaceColumns
     {
@@ -101,6 +109,7 @@ namespace DuLichDLL.Model
         CreatedBy,
         Status,
         FirstChar,
+        Co_ordinate,
     }
     public enum DL_PlaceProcedure
     {
