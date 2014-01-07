@@ -2307,7 +2307,7 @@ footer ul li {
             #pages section div.page .page-title {
                 text-align: center;
             }
-            #pages section div.page .page-title a {
+            /*#pages section div.page .page-title a {
                     display: inline-block;
                     height: 25px;
                     width: 28px;
@@ -2315,7 +2315,7 @@ footer ul li {
             #pages section div.page .showmap {
                 background: url('images/Maps.png') no-repeat top left;
                 background-position: 0px 0px;
-            }
+            }*/
 
             #pages section div.page .right {
                 padding: 5px;
