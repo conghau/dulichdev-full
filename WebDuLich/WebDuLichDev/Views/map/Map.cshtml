@@ -1,0 +1,113 @@
+﻿@model WebDuLichDev.Models.vm_map
+@{
+    ViewBag.Title = "Map";
+    Layout = "~/Views/Shared/_pureLayout.cshtml";
+}
+<div id="map-canvas" style="width: 100%; height: 100%;position:absolute"></div>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAb4omacI8xyU6jYJ6ouNgTgRTHgHwgNZk&sensor=false">
+</script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        init();
+    });
+
+    function init() {
+        var address = '@ViewBag.address';
+        alert(address);
+        var latitude = '@Model.latitude';
+        var longitude = '@Model.longitude';
+
+        if (latitude != '' && longitude != '') {
+            AddMarkByCoordinates(latitude, longitude, address);
+        } else {       
+            AddMarkByAddress(address, address);
+        }
+    }
+
+    function AddMarkByCoordinates(latitude, longitude, description) {
+        infowindow = new google.maps.InfoWindow();
+        var marker, i;
+        latitude = latitude.replace(',', '.');
+        longitude = longitude.replace(',', '.');
+        var mapOptions = {
+            'center': new google.maps.LatLng(latitude, longitude),
+            'mapTypeId': google.maps.MapTypeId.ROADMAP,
+            'scaleControl': true,
+            'zoom': 13
+        }
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(latitude, longitude),
+            map: map
+        });
+        markersArray.push(marker);
+        google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
+            return function () {
+                if (infowindow) {
+                    infowindow.close();
+                };
+                infowindow.setContent(description);
+                infowindow.open(map, marker);
+            }
+        })(marker));
+    }
+
+    function AddMarkByAddress(address, description) {
+        infowindow = new google.maps.InfoWindow();
+        var marker;
+        var geocoder = new google.maps.Geocoder();
+        //markersArray.push(marker);
+        geocoder.geocode({ 'address': address },
+             //function(results, status) {
+             //    if (status == google.maps.GeocoderStatus.OK) {
+                
+             //        // For accurate addresses, the type is ROOFTOP else APPROXIMATE
+             //        if (results[0].geometry.location_type == "ROOFTOP")
+             //            map.setZoom(18);
+             //        else
+             //            map.setZoom(14);
+             //        map.setCenter(results[0].geometry.location);
+             //        marker.setPosition(results[0].geometry.location);
+             //        infoWindow.open(map, marker);
+             //    } else {
+             //        alert("Error: " + address + " cannot be found on Google Maps.");
+             //    }
+             //});
+            function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var x = results[0].geometry.location.lat();
+                    var y = results[0].geometry.location.lng();
+                    //map.setCenter(new google.maps.LatLng(x, y));   
+
+                    var mapOptions = {
+                        'center': new google.maps.LatLng(x, y),
+                        'mapTypeId': google.maps.MapTypeId.ROADMAP,
+                        'scaleControl': true,
+                        'zoom': 13
+                    }
+                    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(x, y),
+                        map: map
+                    });
+                    markersArray.push(marker);
+                    google.maps.event.addListener(marker, 'mouseover', (function (marker) {
+                        return function () {
+                            if (infowindow) {
+                                infowindow.close();
+                            };
+                            infowindow.setContent(description);
+                            infowindow.open(map, marker);
+                        }
+                    })(marker));
+                }
+            }
+        );
+    }  
+</script>
+
