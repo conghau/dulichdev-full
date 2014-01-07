@@ -50,5 +50,9 @@ namespace WebDuLichDev.Controllers
             }
         }
 
+        public ActionResult DirectionGetLatLong()
+        {
+            return View();
+        }
     }
 }
