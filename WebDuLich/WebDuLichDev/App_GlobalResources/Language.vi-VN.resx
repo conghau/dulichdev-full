@@ -393,4 +393,7 @@
   <data name="VN" xml:space="preserve">
     <value>Tiếng Việt</value>
   </data>
+  <data name="Co_ordinate" xml:space="preserve">
+    <value>Tọa độ</value>
+  </data>
 </root>

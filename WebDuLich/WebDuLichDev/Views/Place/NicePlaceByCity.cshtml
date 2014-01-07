@@ -60,7 +60,7 @@
         </div>
     </div>
     <div id="front-cover">
-        <img src="/Content/themes/20Thing/css/images_full/front-cover.jpg" width="830" height="520" />
+        <img src="/Content/themes/20Thing/css/images_full/front-cover.png" width="830" height="520" />
     </div>
     <div id="back-cover">
         <img src="/Content/themes/20Thing/css/images_full/back-cover.jpg" data-src-flipped="/Content/themes/20Thing/css/images_full/back-cover-flipped.jpg" width="830" height="520" />
@@ -101,8 +101,9 @@
                     i++;
                     <section class="title-@item.dlPlace.FirstChar.ToUpper() place-@item.dlPlace.ID page-@i">
                         <div class="page">
-                            <div class="page-title">
-                                <h2>@item.dlPlace.Name</h2>
+                            <div class="page-title" style="height:35px">
+                                <h2 style="display:inline">@item.dlPlace.Name</h2>
+                                <a href="@Url.Action("map", "map", new {co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ"></a>
                             </div>
                             <div style="height: 28px;">
                                 @Html.Partial("p_rating", item.dlPlace)
@@ -139,7 +140,7 @@
                             <div class="page">
                                 <div class="page-title">
                                     <h2>@item.dlPlace.Name</h2>
-
+                                    <a href="@Url.Action("map", "map", new {co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe"><img src="~/Content/themes/20thing/css/images/Maps.png" width="32" height="32"/></a>
                                 </div>
                                 <div style="height: 28px;">
                                     @Html.Partial("p_rating", item.dlPlace)

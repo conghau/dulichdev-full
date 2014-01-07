@@ -25,6 +25,10 @@
                         <div class="controls">@Html.TextBoxFor(m => m.dlPlace.Address, new { id = "Address",Name="dataRequest.dlPlace.Address", placeholder = "Địa chỉ...", required = "", validationMessage = "Please enter {0}" })</div>
                     </div>
                     <div class="control-group">
+                        <label class="control-label" for="input01">@Resources.Language.Co_ordinate</label>
+                        <div class="controls">@Html.TextBoxFor(m => m.dlPlace.Co_ordinate, new { Name="dataRequest.dlPlace.Co_ordinate"})</div>
+                    </div>
+                    <div class="control-group">
                         <label class="control-label" for="input01">@Resources.Language.City</label>
                         <div class="controls">@Html.DropDownListFor(m => m.dlPlace.DL_CityId, WebDuLichDev.WebUtility.WebDuLichData.ListCity, new { id = "drop_CityList", Name="dataRequest.dlPlace.DL_CityId",@class = "DLL kendoDropDownList city" })</div>
                     </div>

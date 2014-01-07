@@ -32,6 +32,7 @@ namespace WebDuLichDev.Controllers
                     model.longitude = co_ordinate.Split(',')[1] ?? "";
                 }
                 model.address = address ?? "";
+                ViewBag.address = address ?? "";
                 return View(model);
             }
             catch (BusinessException bx)

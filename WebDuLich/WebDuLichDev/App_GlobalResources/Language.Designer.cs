@@ -250,6 +250,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tọa độ.
+        /// </summary>
+        internal static string Co_ordinate {
+            get {
+                return ResourceManager.GetString("Co_ordinate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tạo mới.
         /// </summary>
         internal static string CreateNew {
