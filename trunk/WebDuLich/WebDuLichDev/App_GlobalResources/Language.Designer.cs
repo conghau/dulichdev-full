@@ -286,6 +286,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hướng dẫn.
+        /// </summary>
+        internal static string Direction {
+            get {
+                return ResourceManager.GetString("Direction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kinh tế.
         /// </summary>
         internal static string Economy {
