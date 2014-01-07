@@ -706,6 +706,7 @@
     <Content Include="Views\City\CityInfoDetail.cshtml" />
     <Content Include="Views\City\EditCity.cshtml" />
     <Content Include="Views\map\Map.cshtml" />
+    <Content Include="Views\map\DirectionGetLatLong.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
