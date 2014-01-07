@@ -22,6 +22,7 @@ namespace DuLichDLL.DAL
                 result.DL_PlaceTypeId = Utility.Utility.ObjectToLong(row[DL_PlaceColumns.DL_PlaceTypeId.ToString()].ToString());
                 result.Name = Utility.Utility.ObjectToString(row[DL_PlaceColumns.Name.ToString()].ToString());
                 result.Address = Utility.Utility.ObjectToString(row[DL_PlaceColumns.Address.ToString()].ToString());
+                result.Co_ordinate = Utility.Utility.ObjectToString(row[DL_PlaceColumns.Co_ordinate.ToString()].ToString());
                 result.Avatar = Utility.Utility.ObjectToString(row[DL_PlaceColumns.Avatar.ToString()].ToString());
                 result.AvgRating = Utility.Utility.ObjectToInt(row[DL_PlaceColumns.AvgRating.ToString()].ToString());
                 result.TotalUserRating = Utility.Utility.ObjectToLong(row[DL_PlaceColumns.TotalUserRating.ToString()].ToString());
@@ -279,6 +280,7 @@ namespace DuLichDLL.DAL
                 cmd.Parameters.Add("@DL_PlaceTypeId", SqlDbType.BigInt).Value = dL_Place.DL_PlaceTypeId;
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = dL_Place.Name;
                 cmd.Parameters.Add("@Address", SqlDbType.NVarChar).Value = dL_Place.Address;
+                cmd.Parameters.Add("@Co_ordinate", SqlDbType.NChar).Value = dL_Place.Co_ordinate;
                 cmd.Parameters.Add("@Avatar", SqlDbType.NVarChar).Value = dL_Place.Avatar;
                 cmd.Parameters.Add("@AvgRating", SqlDbType.Int).Value = dL_Place.AvgRating;
                 cmd.Parameters.Add("@TotalUserRating", SqlDbType.BigInt).Value = dL_Place.TotalUserRating;
@@ -323,6 +325,7 @@ namespace DuLichDLL.DAL
                 cmd.Parameters.Add("@DL_PlaceTypeId", SqlDbType.BigInt).Value = dL_Place.DL_PlaceTypeId;
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = dL_Place.Name;
                 cmd.Parameters.Add("@Address", SqlDbType.NVarChar).Value = dL_Place.Address;
+                cmd.Parameters.Add("@Co_ordinate", SqlDbType.NChar).Value = dL_Place.Co_ordinate;
                 cmd.Parameters.Add("@Avatar", SqlDbType.NVarChar).Value = dL_Place.Avatar;
                 cmd.Parameters.Add("@AvgRating", SqlDbType.Int).Value = dL_Place.AvgRating;
                 cmd.Parameters.Add("@TotalUserRating", SqlDbType.BigInt).Value = dL_Place.TotalUserRating;
@@ -364,6 +367,7 @@ namespace DuLichDLL.DAL
                 cmd.Parameters.Add("@DL_PlaceTypeId", SqlDbType.BigInt).Value = dL_Place.DL_PlaceTypeId;
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = dL_Place.Name;
                 cmd.Parameters.Add("@Address", SqlDbType.NVarChar).Value = dL_Place.Address;
+                cmd.Parameters.Add("@Co_ordinate", SqlDbType.NChar).Value = dL_Place.Co_ordinate;
                 cmd.Parameters.Add("@Avatar", SqlDbType.NVarChar).Value = dL_Place.Avatar;
                 cmd.Parameters.Add("@AvgRating", SqlDbType.Int).Value = dL_Place.AvgRating;
                 cmd.Parameters.Add("@TotalUserRating", SqlDbType.BigInt).Value = dL_Place.TotalUserRating;
@@ -410,6 +414,7 @@ namespace DuLichDLL.DAL
                 cmd.Parameters.Add("@DL_PlaceTypeId", SqlDbType.BigInt).Value = dL_Place.DL_PlaceTypeId;
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = dL_Place.Name;
                 cmd.Parameters.Add("@Address", SqlDbType.NVarChar).Value = dL_Place.Address;
+                cmd.Parameters.Add("@Co_ordinate", SqlDbType.NChar).Value = dL_Place.Co_ordinate;
                 cmd.Parameters.Add("@Avatar", SqlDbType.NVarChar).Value = dL_Place.Avatar;
                 cmd.Parameters.Add("@AvgRating", SqlDbType.Int).Value = dL_Place.AvgRating;
                 cmd.Parameters.Add("@TotalUserRating", SqlDbType.BigInt).Value = dL_Place.TotalUserRating;
@@ -624,6 +629,7 @@ namespace DuLichDLL.DAL
                 cmd.Parameters.Add("@DL_CityId", SqlDbType.BigInt).Value = dL_Place.DL_CityId;
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = dL_Place.Name;
                 cmd.Parameters.Add("@Address", SqlDbType.NVarChar).Value = dL_Place.Address;
+                cmd.Parameters.Add("@Co_ordinate", SqlDbType.NChar).Value = dL_Place.Co_ordinate;
                 cmd.Parameters.Add("@Avatar", SqlDbType.NVarChar).Value = dL_Place.Avatar;
                 SqlParameterCollection parameterValues = cmd.Parameters;
                 int i = 0;
