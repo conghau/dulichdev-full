@@ -102,10 +102,15 @@
                     <section class="title-@item.dlPlace.FirstChar.ToUpper() page-@i">
                         <div class="page">
                             <div class="page-title">
-                                <h2>@item.dlPlace.Name</h2>
-                                </div>
+                                <h2 style="display: inline">@item.dlPlace.Name</h2>
+                                <a href="@Url.Action("map", "map", new { co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ">
+                                    <img src="/Content/themes/custom/Image/Maps.png" style="margin-top: -13px;" /></a>
+                            </div>
+                            <div style="height: 28px;">
                                 @Html.Partial("p_rating", item.dlPlace)
-                        
+                                @Html.Partial("p_likesocial", item.dlPlace.ID)
+
+                            </div>
                             <div class="right">
                                 <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
                                 <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
@@ -136,9 +141,15 @@
                         <section class="title-@item.dlPlace.FirstChar.ToUpper() page-@i">
                             <div class="page">
                                 <div class="page-title">
-                                    <h2>@item.dlPlace.Name</h2>
-                                    @Html.Partial("p_rating", item.dlPlace)
-                                </div>
+                                <h2 style="display: inline">@item.dlPlace.Name</h2>
+                                <a href="@Url.Action("map", "map", new { co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ">
+                                    <img src="/Content/themes/custom/Image/Maps.png" style="margin-top: -13px;" /></a>
+                            </div>
+                            <div style="height: 28px;">
+                                @Html.Partial("p_rating", item.dlPlace)
+                                @Html.Partial("p_likesocial", item.dlPlace.ID)
+
+                            </div>
                                 <div class="right">
                                     <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
                                     <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
@@ -161,7 +172,7 @@
 
                             </div>
                         </section>
-                        tempChar = item.dlPlace.FirstChar.ToUpper();
+                                tempChar = item.dlPlace.FirstChar.ToUpper();
                 }
 
             }
