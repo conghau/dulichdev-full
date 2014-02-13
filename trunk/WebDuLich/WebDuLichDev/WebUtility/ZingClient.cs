@@ -84,8 +84,8 @@ namespace WebDuLichDev.WebUtility
             ZME_Me me = new ZME_Me(WebDuLichDev.RegisterAuthZing.config());
             string id = "id";
             string username = "username";
-            string gender = "gender";
-            string dob = "dob";
+            //string gender = "gender";
+            //string dob = "dob";
             var user_data_id = me.getInfo(access_token, id);
             var user_data_username = me.getInfo(access_token, username);
             string rawUrl = context.Request.Url.ToString();
