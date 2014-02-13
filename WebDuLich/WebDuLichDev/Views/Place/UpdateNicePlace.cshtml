@@ -258,7 +258,7 @@
             var value = $('input#' + e).val();
             $.ajax({
                 type: 'post',
-                url: "@Url.Action("RemoveImagePlace", "File")",
+                url: '@Url.Action("RemoveImagePlace", "File")',
                 data: { fileNames: value },
             }).done(function (result) {
             });
