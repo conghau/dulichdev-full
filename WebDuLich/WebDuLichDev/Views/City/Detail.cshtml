@@ -17,7 +17,7 @@
 </div>
 <div class="rightpanel" style="width: 60%">
     <p class="drop-cap">
-        @Model.Summary
+        @Html.Raw(HttpUtility.HtmlDecode(Model.Summary))
     </p>
     <div class="showcase">       
             @Html.Partial("_BookShow2")
