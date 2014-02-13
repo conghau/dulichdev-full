@@ -417,7 +417,11 @@ namespace DuLichDLL.DAL
                 cnn = DataProvider.OpenConnection();
                 tran = cnn.BeginTransaction();
                 UpdateContent(dlCity, cnn, tran);
-                dlCityInfoDAL.Update(dlCityInfo, cnn, tran);
+                var ls = dlCityInfoDAL.GetByCityID(dlCity.ID);
+                if (ls.Id == 0)
+                    dlCityInfoDAL.Insert(dlCityInfo);
+                else
+                    dlCityInfoDAL.Update(dlCityInfo);                
                 tran.Commit();
                 result = true;
                 return result;

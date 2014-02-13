@@ -9,11 +9,13 @@
 </div>
 @using (Html.BeginForm("EditCity", "City", FormMethod.Post, new { @class = "Edit_City ", @id = "frmEditCity" }))
 {
-    <input name="dlCity.ID" value="@Model.dlCity.ID" type="hidden" />
+    <input name="cityinfo.dlCity.ID" value="@Model.dlCity.ID" type="hidden" />
+    <input name="cityinfo.dlCity.CountryCode" value="@Model.dlCity.CountryCode" type="hidden" />
+    <input name="cityinfo.dlCityInfoDetail.Id" value="@Model.dlCityInfoDetail.Id" type="hidden" />
     <div class="control-group" style="width: 50%">
         <label class="control-label" for="input01">@Resources.Language.City</label>
         <div class="controls">
-            @Html.TextBoxFor(m => m.dlCity.CityName, new { @readonly = true })
+            @Html.TextBoxFor(m => m.dlCity.CityName, new { @readonly = true,Name="cityinfo.dlCity.CityName" })
         </div>
     </div>
   
@@ -26,7 +28,7 @@
                         <label class="control-label" for="input01">@Resources.Language.Avatar</label>
                         <div class="controls">
                             <input id="uploadAvatar" name="fileUpload" type="file" />
-                            <input id="Avatar" name="dlCity.Avatar" value="@Model.dlCity.Avatar" type="hidden" required="" validationmessage="Please upload {0}" />
+                            <input id="Avatar" name="cityinfo.dlCity.Avatar" value="@Model.dlCity.Avatar" type="hidden" required="" validationmessage="Please upload {0}" />
                             <div id="imgPhotoAvatar">
                                 <div class="row">
                                     <div class="span8">
@@ -44,7 +46,7 @@
                     <div class="control-group">
                         <label class="control-label" for="input01">@Resources.Language.Introduce</label>
                         <div id="content_city" class="k-content">
-                            <textarea id="editor" name="dlCity.Summary" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                            <textarea id="editor" name="cityinfo.dlCity.Summary" rows="5" cols="20" style="width: 100%; height: 400px">                  
                    @HttpUtility.HtmlDecode(Model.dlCity.Summary);      
                 </textarea>
                         </div>
@@ -65,42 +67,42 @@
                     </ul>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" id="History" name="dlCityInfoDetail.History" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                            <textarea class="editor" id="History" name="cityinfo.dlCityInfoDetail.History" rows="5" cols="20" style="width: 100%; height: 400px">                  
                    @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.History)   
                 </textarea>
                         </div>
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" id="Nature" name="dlCityInfoDetail.Nature" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                            <textarea class="editor" id="Nature" name="cityinfo.dlCityInfoDetail.Nature" rows="5" cols="20" style="width: 100%; height: 400px">                  
                     @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Nature)  
                 </textarea>
                         </div>
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" id="Social" name="dlCityInfoDetail.Social" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                            <textarea class="editor" id="Social" name="cityinfo.dlCityInfoDetail.Social" rows="5" cols="20" style="width: 100%; height: 400px">                  
                    @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Social)    
                 </textarea>
                         </div>
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" id="Administrative" name="dlCityInfoDetail.Administrative" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                            <textarea class="editor" id="Administrative" name="cityinfo.dlCityInfoDetail.Administrative" rows="5" cols="20" style="width: 100%; height: 400px">                  
                      @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Administrative)   
                 </textarea>
                         </div>
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" id="Economy" name="dlCityInfoDetail.Economy" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                            <textarea class="editor" id="Economy" name="cityinfo.dlCityInfoDetail.Economy" rows="5" cols="20" style="width: 100%; height: 400px">                  
                    @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Economy)
                 </textarea>
                         </div>
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" id="Travel" name="dlCityInfoDetail.Travel" rows="5" cols="20" style="width: 100%; height: 400px">                  
+                            <textarea class="editor" id="Travel" name="cityinfo.dlCityInfoDetail.Travel" rows="5" cols="20" style="width: 100%; height: 400px">                  
                      @HttpUtility.HtmlDecode(Model.dlCityInfoDetail.Travel)      
                 </textarea>
                         </div>
@@ -211,7 +213,7 @@
     }
     // logs "<p>foo</p>"
     $('#btnBack').click(function () {
-        location.href = '@Url.Action("CityManager", "SystemManager")';
+        location.href = '@Url.Action("CityManager", "City")';
 
 
     });
