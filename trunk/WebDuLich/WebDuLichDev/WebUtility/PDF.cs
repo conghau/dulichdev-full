@@ -97,7 +97,7 @@ namespace WebDuLichDev.WebUtility
                                 tempInput = tempInput.Remove(m.Index, m.Length);
                                 tempInput = tempInput.Insert(m.Index, tempM);
                             }
-                            catch (Exception e)
+                            catch
                             {
 
                             }

@@ -3,6 +3,14 @@
     ViewBag.Title = ViewBag.Title + " - " + Resources.Language.Hotel;
     Layout = "~/Views/Shared/_LayoutFilp.cshtml";
 }
+@if (ViewBag.IntoZing =="zing")
+{
+    ViewBag.PathImageBook = "/Content/themes/20Thing/css/images";
+}
+else
+{
+    ViewBag.PathImageBook = "/Content/themes/20Thing/css/images_full";
+}
 <div id="search-dropdown">
     <div class="fader">
         <div class="background-top"></div>
@@ -60,10 +68,10 @@
         </div>
     </div>
     <div id="front-cover">
-        <img src="/Content/themes/20Thing/css/images_full/cover-hotel.png" />
+        <img src="@ViewBag.PathImageBook/cover-hotel.png" />
     </div>
     <div id="back-cover">
-        <img src="/Content/themes/20Thing/css/images_full/back-cover.jpg" data-src-flipped="/Content/themes/20Thing/css/images_full/back-cover-flipped.jpg"/>
+        <img src="@ViewBag.PathImageBook/back-cover.jpg" data-src-flipped="@ViewBag.PathImageBook/back-cover-flipped.jpg"/>
     </div>
     <div id="page-shadow-overlay"></div>
 
@@ -123,7 +131,7 @@
                             <div class="box">
                                  @Html.Raw(HttpUtility.HtmlDecode(item.dlHotelPlaceInfoDetail.Info))                           
                             </div>
-                            <div class="seemore"><a href="@Url.Action("PlaceInfoDetail", "Place", new { placeId = item.dlPlace.ID })" class="ptext fancybox.iframe">@Resources.Language.SeeMore ...</a></div>
+                            <div class="seemore"><a href="@Url.Action("HotelInfoDetail", "Hotel", new { placeId = item.dlPlace.ID })" class="ptext fancybox.iframe">@Resources.Language.SeeMore ...</a></div>
                             <div class="comment">
                                 <p>@Resources.Language.Comment:</p>
                                 <a href="@Url.Action("CommentPlace", "Place", new { placeId = item.dlPlace.ID, type = "zingme" })" class="zingme fancyboxCmt fancybox.iframe" title="Bình luận trên zingme"></a>
@@ -190,7 +198,7 @@
         </div>
     </div>
     <div id="left-page">
-        <img src="/Content/themes/20Thing/css/images_full/left-page.jpg" data-src-flipped="/Content/themes/20Thing/css/images_full/left-page-flipped.jpg"  />
+        <img src="@ViewBag.PathImageBook/left-page.jpg" data-src-flipped="@ViewBag.PathImageBook/left-page-flipped.jpg"  />
     </div>
     <div id="right-page">
         <div id="paperstack">
@@ -203,7 +211,7 @@
             <div class="paper s7"></div>
             <div class="shadow"></div>
         </div>
-        <img src="/Content/themes/20Thing/css/images_full/right-page.jpg"  />
+        <img src="@ViewBag.PathImageBook/right-page.jpg"  />
     </div>
 </div>
 <nav id="chapter-nav">

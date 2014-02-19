@@ -14,7 +14,16 @@
     @Scripts.Render("~/bundles/base")
     @RenderSection("scripts", required: false)
     <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
-    @Styles.Render("~/Content/themes/20Thing/css/main_full.css")
+    @*@Styles.Render("~/Content/themes/20Thing/css/main_full.css")*@
+    <script>
+        var intoZing = '@ViewBag.IntoZing';
+        if (intoZing.toLowerCase() === 'zing') {
+            document.write('<link rel="stylesheet" type="text/css" media="all" href="/Content/themes/20Thing/css/main.css" />');
+        }
+        else {
+            document.write('<link rel="stylesheet" type="text/css" media="all" href="/Content/themes/20Thing/css/main_full.css" />');
+        }
+    </script>
     @Scripts.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.js")
     @Styles.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.css")
     <link rel="stylesheet" type="text/css" href="~/Scripts/Lib/jRating/jquery/jRating.jquery.css" media="screen" />
@@ -191,7 +200,17 @@
             });
         });
     </script>
-    <script src="/Content/themes/20Thing/js/twentythings_full.js"></script>
+    @*<script src="/Content/themes/20Thing/js/twentythings_full.js"></script>*@
+    <script>
+        var intoZing = '@ViewBag.IntoZing';
+        if (intoZing.toLowerCase() === 'zing') {
+            document.write('<script src="/Content/themes/20Thing/js/twentythings.js"><' + '/script>');
+        }
+        else {
+            document.write('<script src="/Content/themes/20Thing/js/twentythings_full.js"><' + '/script>');
+        }
+
+    </script>
     <script src="/Content/themes/20Thing/js/twentythings.preloader.js"></script>
     <script src="/Content/themes/20Thing/js/twentythings.history.js"></script>
     <script src="/Content/themes/20Thing/js/twentythings.locale.js"></script>
@@ -212,7 +231,6 @@
     <script type="text/javascript">
         $(document).ready(function () {
             TT.initialize();
-
             $(".basic").jRating({
                 onClick: function (element, rate, idBox,nameBox, widthColorOneStar) {
                     $.ajax({

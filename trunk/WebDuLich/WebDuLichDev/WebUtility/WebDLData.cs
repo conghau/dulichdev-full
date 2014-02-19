@@ -94,6 +94,18 @@ namespace WebDuLichDev.WebUtility
         private static string _menu = "Menu";
         private static string _languageCode = "LanguageCode";
         public static bool UserIsAdmin = false;
+        private static string _intoZing = null;
+        public static string IntoZing
+        {
+            get
+            {
+                return Utility.ObjectToString(HttpContext.Current.Session[_intoZing]);
+            }
+            set { 
+                HttpContext.Current.Session[_intoZing] = value; 
+            }
+        }
+        //public static string PathImageBook ="/Content/themes/20Thing/css/images_full";
 
         private static string _accessTokenZingMe = "";
         
@@ -113,6 +125,7 @@ namespace WebDuLichDev.WebUtility
                 long userId = Utility.ObjectToLong(HttpContext.Current.Session[_userId]);
                 return userId;
             }
+
         }
 
         public static string UserName
@@ -123,6 +136,7 @@ namespace WebDuLichDev.WebUtility
                 return userName;
             }
         }
+
         //Get main menu
         public static string Menu
         {
