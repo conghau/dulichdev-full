@@ -423,4 +423,28 @@
   <data name="Direction" xml:space="preserve">
     <value>Hướng dẫn</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="HomePhone" xml:space="preserve">
+    <value>Điện thoại bàn</value>
+  </data>
+  <data name="Mobiphone" xml:space="preserve">
+    <value>Di động</value>
+  </data>
+  <data name="OpenCloseTime" xml:space="preserve">
+    <value>Giờ mở/ đóng</value>
+  </data>
+  <data name="PayType" xml:space="preserve">
+    <value>Loại thanh toán</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="RoomType" xml:space="preserve">
+    <value>Loại phòng</value>
+  </data>
 </root>
