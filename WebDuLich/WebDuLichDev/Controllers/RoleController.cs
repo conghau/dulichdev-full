@@ -204,7 +204,7 @@ namespace WebDuLichDev.Controllers
         {
             try
             {
-                bool result=false;
+                //bool result=false;
                 A_AssignedPermissionBAL assignedPermissionBal = new A_AssignedPermissionBAL();
                 for (int index = 0; index < listEditRole.Count; index++)
                 {

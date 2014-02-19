@@ -84,6 +84,15 @@ namespace WebDuLichDev.Controllers
             try
             {
                 ViewBag.CityId = ID;
+                ViewBag.IntoZing = WebDuLichSecurity.IntoZing;
+                //if (WebDuLichSecurity.IntoZing)
+                //{
+                //    WebDuLichSecurity.PathImageBook = "/Content/themes/20Thing/css/images";
+                //}
+                //else
+                //{
+                //    WebDuLichSecurity.PathImageBook = "/Content/themes/20Thing/css/images_full";
+                //}
 
                 DL_CityBAL dlCityBal = new DL_CityBAL();
                 var city = dlCityBal.GetByID(ID);
@@ -197,7 +206,7 @@ namespace WebDuLichDev.Controllers
             {
                 long userId = WebSecurity.CurrentUserId; // WebSecurity.CurrentUserId;
                 bool success = false;
-                string error = "";
+                //string error = "";
                 float avg = 0;
                 long total = 0;
                 //DL_CommentCityBAL dlCommentCityBal = new DL_CommentCityBAL();
