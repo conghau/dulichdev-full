@@ -44,7 +44,7 @@ namespace WebDuLichDev
 
     public static class RegisterAuthZing
         {
-            private static ZME_Environment env = ZME_Environment.DEVELOPMENT;
+            private static ZME_Environment env = ZME_Environment.PRODUCTION;
             private static string appname = "dulich";
             private static string apikey = "663270de6faf4149ac73cb5e77374924";
             private static string secretkey = "ac2105d2856646e4b70b24db66b53f29";
