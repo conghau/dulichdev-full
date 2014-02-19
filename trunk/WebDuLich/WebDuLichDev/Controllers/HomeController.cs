@@ -40,7 +40,7 @@ namespace WebDuLichDev.Controllers
                     Hashtable me_info = me.getInfo(access_token1, "id,username");
                     string user_name = me_info["username"].ToString();
                     long user_id = long.Parse(me_info["id"].ToString());
-
+                    WebDuLichSecurity.IntoZing = common.SetIntoZing();
                     using (UsersContext db = new UsersContext())
                     {
                         UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == user_name);
@@ -76,7 +76,7 @@ namespace WebDuLichDev.Controllers
                         Hashtable me_info = me.getInfo(access_token1, "id,username");
                         string user_name = me_info["username"].ToString();
                         long user_id = long.Parse(me_info["id"].ToString());
-
+                        WebDuLichSecurity.IntoZing = common.SetIntoZing();
                         using (UsersContext db = new UsersContext())
                         {
                             UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == user_name);

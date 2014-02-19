@@ -15,7 +15,7 @@ using DuLichDLL.ExceptionType;
 
 namespace WebDuLichDev.Controllers
 {
-    public class RestaurantController : Controller
+    public class RestaurantController : BaseController
     {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(RestaurantController).Name);
@@ -333,8 +333,6 @@ namespace WebDuLichDev.Controllers
         {
             try
             {
-                //DL_NicePlaceInfoDetailBAL dlNicePlaceInfoDetail = new DL_NicePlaceInfoDetailBAL();
-                //var model = dlNicePlaceInfoDetail.GetByPlaceId(placeId);
                 var model = new DL_RestaurantInfoDetail();
                 for (int index = 0; index < RestaunantBookTemp.Count; index++)
                 {

@@ -330,8 +330,6 @@ namespace WebDuLichDev.Controllers
         {
             try
             {
-                //DL_NicePlaceInfoDetailBAL dlNicePlaceInfoDetail = new DL_NicePlaceInfoDetailBAL();
-                //var model = dlNicePlaceInfoDetail.GetByPlaceId(placeId);
                 var model = new DL_HotelPlaceInfoDetail();
                 for (int index = 0; index < HotelBookTemp.Count; index++)
                 {
