@@ -3,6 +3,15 @@
     ViewBag.Title = ViewBag.Title + " - " + Resources.Language.Place;
     Layout = "~/Views/Shared/_LayoutFilp.cshtml";
 }
+@if (ViewBag.IntoZing =="zing")
+{
+    ViewBag.PathImageBook = "/Content/themes/20Thing/css/images";
+}
+else
+{
+    ViewBag.PathImageBook = "/Content/themes/20Thing/css/images_full";
+}
+
 <div id="search-dropdown">
     <div class="fader">
         <div class="background-top"></div>
@@ -60,10 +69,10 @@
         </div>
     </div>
     <div id="front-cover">
-        <img src="/Content/themes/20Thing/css/images_full/front-cover.png" width="830" height="520" />
+        <img src="@ViewBag.PathImageBook/front-cover.png"  />
     </div>
     <div id="back-cover">
-        <img src="/Content/themes/20Thing/css/images_full/back-cover.jpg" data-src-flipped="/Content/themes/20Thing/css/images_full/back-cover-flipped.jpg" width="830" height="520" />
+        <img src="@ViewBag.PathImageBook/back-cover.jpg" data-src-flipped="@ViewBag.PathImageBook/back-cover-flipped.jpg"  />
     </div>
     <div id="page-shadow-overlay"></div>
 
@@ -186,7 +195,7 @@
         </div>
     </div>
     <div id="left-page">
-        <img src="/Content/themes/20Thing/css/images_full/left-page.jpg" data-src-flipped="/Content/themes/20Thing/css/images_full/left-page-flipped.jpg" width="830" height="520" atl=""/>
+        <img src="@ViewBag.PathImageBook/left-page.jpg" data-src-flipped="@ViewBag.PathImageBook/left-page-flipped.jpg"  atl=""/>
     </div>
     <div id="right-page">
         <div id="paperstack">
@@ -199,7 +208,7 @@
             <div class="paper s7"></div>
             <div class="shadow"></div>
         </div>
-        <img src="/Content/themes/20Thing/css/images_full/right-page.jpg" width="830" height="520" />
+        <img src="@ViewBag.PathImageBook/right-page.jpg"  />
     </div>
 </div>
 <nav id="chapter-nav">

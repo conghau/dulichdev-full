@@ -141,5 +141,10 @@ namespace WebDuLichDev.WebUtility
             }
         }
         #endregion
+
+        public static string SetIntoZing()
+        {
+            return "zing";
+        }
     }
 }
