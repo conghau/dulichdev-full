@@ -1,0 +1,124 @@
+﻿@model DuLichDLL.Model.DL_RestaurantInfoDetail
+@{
+    ViewBag.Title = "RestaurantInfoDetail";
+    Layout = "~/Views/Shared/_pureLayout.cshtml";
+}
+@if (null != Model)
+{
+    <div id="tabstrip">
+        <ul>
+            <li class="k-state-active">@Resources.Language.DetailInfo</li>
+            <li>@Resources.Language.Menu</li>
+            <li>@Resources.Language.Note</li>
+            <li>@Resources.Language.Contact</li>
+        </ul>
+        <div>
+            <div class="k-content info">
+                @if (null != Model.Info)
+                { 
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.Info))
+                }
+                else
+                {
+                    <p>Chua co thong tin</p>   
+                }
+            </div>
+        </div>
+        <div>
+            <div class="k-content info">
+                @if (null != Model.Menu)
+                { 
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.Menu))
+                }
+                else
+                {
+                    <p>Chua co thong tin</p>   
+                }
+            </div>
+        </div>
+        <div>
+            <div class="k-content info">
+                @if (null != Model.Note)
+                { 
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.Note))
+                }
+                else
+                {
+                    <p>Chua co thong tin</p>   
+                }
+            </div>
+        </div>
+        <div>
+            <div class="k-content info">
+                <p>
+                    <b>@Resources.Language.Mobiphone</b>: 
+                        @if (!string.IsNullOrEmpty(Model.MobiPhone))
+                        {  
+                            @Model.MobiPhone.ToString()
+                        }
+                        else
+                        {
+                            <a>N\A</a>
+                        }
+                </p>
+                <p>
+                    <b>@Resources.Language.HomePhone</b>: @if (!string.IsNullOrEmpty(Model.HomePhone))
+                                                          {  
+                        @Model.HomePhone.ToString()
+                                                          }
+                                                          else
+                                                          {
+                        <a>N\A</a>
+                                                          }
+                </p>
+                <p>
+                    <b>@Resources.Language.Email</b>: @if (!string.IsNullOrEmpty(Model.Email))
+                                                      {  
+                        @Model.Email.ToString()
+                                                      }
+                                                      else
+                                                      {
+                        <a>N\A</a>
+                                                      }
+                </p>
+                <p>
+                    <b>@Resources.Language.Fax</b>: @if (!string.IsNullOrEmpty(Model.Fax))
+                                                    {  
+                        @Model.Fax.ToString()
+                                                    }
+                                                    else
+                                                    {
+                        <a>N\A</a>
+                                                    }
+                </p>
+                <p>
+                    <b>Website</b>: @if (!string.IsNullOrEmpty(Model.Website))
+                                    {  
+                        @Model.Website.ToString()
+                                    }
+                                    else
+                                    {
+                        <a>N\A</a>
+                                    }
+                </p>
+
+            </div>
+        </div>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        $("#tabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            }
+        });
+    });
+</script>
+<style>
+    .info {
+        height: 450px;
+    }
+</style>

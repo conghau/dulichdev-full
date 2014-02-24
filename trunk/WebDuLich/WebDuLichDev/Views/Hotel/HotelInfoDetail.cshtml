@@ -1,0 +1,132 @@
+﻿@model DuLichDLL.Model.DL_HotelPlaceInfoDetail
+@{
+    ViewBag.Title = "HotelInfoDetail";
+    Layout = "~/Views/Shared/_pureLayout.cshtml";
+}
+@if (null != Model)
+{
+    <div id="tabstrip">
+        <ul>
+            <li class="k-state-active">@Resources.Language.Introduce</li>
+            <li>@Resources.Language.DetailInfo</li>
+            <li>@Resources.Language.Services</li>
+            <li>@Resources.Language.Note</li>
+            <li>@Resources.Language.Contact</li>
+        </ul>
+        <div>
+            <div class="k-content info">
+                @if (null != Model.Info)
+                { 
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.Info))
+                }
+                else
+                {
+                    <p>Chua co thong tin</p>   
+                }
+            </div>
+        </div>
+        <div>
+            <div class="k-content info">
+
+                <p>
+                    <b>@Resources.Language.RoomType</b>: @Model.RoomType.ToString()
+                </p>
+                <p>
+                    <b>@Resources.Language.Price</b>: @Model.Price.ToString()
+                </p>
+                <p>
+                    <b>@Resources.Language.PayType</b>: @Model.PayType.ToString()
+                </p>
+                <p>
+                    <b>@Resources.Language.OpenCloseTime</b>: @Model.OpenCloseTime.ToString()
+                </p>
+
+            </div>
+        </div>
+        <div>
+            <div class="k-content info">
+                @if (null != Model.Service)
+                { 
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.Service))
+                }
+                else
+                {
+                    <p>Chua co thong tin</p>   
+                }
+            </div>
+        </div>
+        <div>
+            <div class="k-content info">
+                @if (null != Model.Note)
+                { 
+                    @Html.Raw(HttpUtility.HtmlDecode(Model.Note))
+                }
+                else
+                {
+                    <p>Chua co thong tin</p>   
+                }
+            </div>
+        </div>
+        <div>
+            <div class="k-content info">
+                <p>
+                    <b>@Resources.Language.Mobiphone</b>: 
+                        @if (!string.IsNullOrEmpty(Model.MobiPhone))
+                        {  
+                            @Model.MobiPhone.ToString()
+                        }
+                        else
+                        {
+                            <a>N\A</a>
+                        }
+                </p>
+                <p>
+                    <b>@Resources.Language.HomePhone</b>: @if (!string.IsNullOrEmpty(Model.HomePhone))
+                                                          {  
+                        @Model.HomePhone.ToString()
+                                                          }
+                                                          else
+                                                          {
+                        <a>N\A</a>
+                                                          }
+                </p>
+                <p>
+                    <b>@Resources.Language.Email</b>: @if (!string.IsNullOrEmpty(Model.Email))
+                                                      {  
+                        @Model.Email.ToString()
+                                                      }
+                                                      else
+                                                      {
+                        <a>N\A</a>
+                                                      }
+                </p>
+                <p>
+                    <b>@Resources.Language.Fax</b>: @if (!string.IsNullOrEmpty(Model.Fax))
+                                                    {  
+                        @Model.Fax.ToString()
+                                                    }
+                                                    else
+                                                    {
+                        <a>N\A</a>
+                                                    }
+                </p>
+            </div>
+        </div>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        $("#tabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "fadeIn"
+                }
+            }
+        });
+    });
+</script>
+<style>
+    .info {
+        height: 450px;
+    }
+</style>

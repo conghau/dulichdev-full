@@ -242,14 +242,35 @@
     <Content Include="Content\themes\20thing\css\images\cover-hotel.png" />
     <Content Include="Content\themes\20thing\css\images\coverRestaurant.png" />
     <Content Include="Content\themes\20thing\css\images\front-cover.jpg" />
+    <Content Include="Content\themes\20thing\css\images\front-cover.png" />
     <Content Include="Content\themes\20thing\css\images\grey-mask.png" />
     <Content Include="Content\themes\20thing\css\images\left-page-flipped.jpg" />
     <Content Include="Content\themes\20thing\css\images\left-page.jpg" />
+    <Content Include="Content\themes\20thing\css\images\Maps.png" />
+    <Content Include="Content\themes\20thing\css\images\Maps_green.png" />
     <Content Include="Content\themes\20thing\css\images\repeat-x.png" />
     <Content Include="Content\themes\20thing\css\images\right-page-paper.jpg" />
     <Content Include="Content\themes\20thing\css\images\right-page.jpg" />
     <Content Include="Content\themes\20thing\css\images\socialicons.png" />
     <Content Include="Content\themes\20thing\css\images\sprites.png" />
+    <Content Include="Content\themes\20thing\css\images_full\3d01_clouds.png" />
+    <Content Include="Content\themes\20thing\css\images_full\back-cover-flipped.jpg" />
+    <Content Include="Content\themes\20thing\css\images_full\back-cover.jpg" />
+    <Content Include="Content\themes\20thing\css\images_full\cloud01.png" />
+    <Content Include="Content\themes\20thing\css\images_full\cover-hotel.png" />
+    <Content Include="Content\themes\20thing\css\images_full\coverRestaurant.png" />
+    <Content Include="Content\themes\20thing\css\images_full\front-cover.jpg" />
+    <Content Include="Content\themes\20thing\css\images_full\front-cover.png" />
+    <Content Include="Content\themes\20thing\css\images_full\grey-mask.png" />
+    <Content Include="Content\themes\20thing\css\images_full\left-page-flipped.jpg" />
+    <Content Include="Content\themes\20thing\css\images_full\left-page.jpg" />
+    <Content Include="Content\themes\20thing\css\images_full\Maps.png" />
+    <Content Include="Content\themes\20thing\css\images_full\Maps_green.png" />
+    <Content Include="Content\themes\20thing\css\images_full\repeat-x.png" />
+    <Content Include="Content\themes\20thing\css\images_full\right-page-paper.jpg" />
+    <Content Include="Content\themes\20thing\css\images_full\right-page.jpg" />
+    <Content Include="Content\themes\20thing\css\images_full\socialicons.png" />
+    <Content Include="Content\themes\20thing\css\images_full\sprites.png" />
     <Content Include="Content\themes\20thing\css\layouts.css" />
     <Content Include="Content\themes\20thing\css\main.css" />
     <Content Include="Content\themes\20thing\css\main_full.css" />
@@ -257,7 +278,6 @@
     <Content Include="Content\themes\20thing\css\print.css" />
     <Content Include="Content\themes\20thing\css\reset.css" />
     <Content Include="Content\themes\20thing\css\style.css" />
-    <Content Include="Content\themes\20thing\css\twentythings.css" />
     <Content Include="Content\themes\20thing\css\twentythings.min.css" />
     <Content Include="Content\themes\20thing\css\twentythings2.css" />
     <Content Include="Content\themes\20thing\index.html" />
@@ -415,9 +435,12 @@
     <Content Include="Content\themes\3DBookShowcase\fonts\thegodfather-v2-webfont.ttf" />
     <Content Include="Content\themes\3DBookShowcase\fonts\thegodfather-v2-webfont.woff" />
     <None Include="Properties\PublishProfiles\dulich - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\dulich - FTP %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\dulich - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\dulich - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\dulich - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\dulich - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\Global\Common.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -665,7 +688,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutFilp.cshtml" />
     <Content Include="Views\Shared\p_Header.cshtml" />
-    <Content Include="Views\City\AddCity.cshtml" />
     <Content Include="Views\Shared\_Rate.cshtml" />
     <Content Include="Views\Hotel\AddHotel.cshtml" />
     <Content Include="Views\Place\AddPlace.cshtml" />
@@ -707,6 +729,8 @@
     <Content Include="Views\City\EditCity.cshtml" />
     <Content Include="Views\map\Map.cshtml" />
     <Content Include="Views\map\DirectionGetLatLong.cshtml" />
+    <Content Include="Views\Hotel\HotelInfoDetail.cshtml" />
+    <Content Include="Views\Restaurant\RestaurantInfoDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -749,16 +773,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57410</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62688/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

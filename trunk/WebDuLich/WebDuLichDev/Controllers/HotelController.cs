@@ -293,7 +293,7 @@ namespace WebDuLichDev.Controllers
                 ViewBag.CityId = ID;
                 DL_CityBAL dlCityBal = new DL_CityBAL();
                 var city = dlCityBal.GetByID(ID);
-                ViewBag.Title = city.CityName;
+                ViewBag.CityName = city.CityName;
 
                 DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
                 DL_HotelPlaceInfoDetailBAL dlHotelDetailBal = new DL_HotelPlaceInfoDetailBAL();

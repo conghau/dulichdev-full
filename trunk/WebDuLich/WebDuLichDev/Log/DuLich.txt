@@ -1105,3 +1105,71 @@ ERROR | 2014-01-03 09:30:56 | Index was outside the bounds of the array.
 ERROR | 2014-01-03 09:33:00 | Index was outside the bounds of the array.
 ERROR | 2014-01-03 09:49:04 | Object reference not set to an instance of an object.
 ERROR | 2014-01-03 09:49:15 | Object reference not set to an instance of an object.
+ERROR | 2014-02-19 17:58:39 | Object reference not set to an instance of an object.
+ERROR | 2014-02-19 18:00:48 | Object reference not set to an instance of an object.
+ERROR | 2014-02-19 18:00:57 | Object reference not set to an instance of an object.
+ERROR | 2014-02-19 18:06:35 | Object reference not set to an instance of an object.
+ERROR | 2014-02-19 18:10:13 | Object reference not set to an instance of an object.
+ERROR | 2014-02-19 18:12:45 | Expected a "{" but found a "<".  Block statements must be enclosed in "{" and "}".  You cannot use single-statement control-flow statements in CSHTML pages. For example, the following is not allowed:
+
+@if(isLoggedIn)
+    <p>Hello, @user</p>
+
+Instead, wrap the contents of the block in "{}":
+
+@if(isLoggedIn) {
+    <p>Hello, @user</p>
+}
+
+ERROR | 2014-02-19 18:12:50 | Expected a "{" but found a "<".  Block statements must be enclosed in "{" and "}".  You cannot use single-statement control-flow statements in CSHTML pages. For example, the following is not allowed:
+
+@if(isLoggedIn)
+    <p>Hello, @user</p>
+
+Instead, wrap the contents of the block in "{}":
+
+@if(isLoggedIn) {
+    <p>Hello, @user</p>
+}
+
+ERROR | 2014-02-19 18:12:54 | Expected a "{" but found a "<".  Block statements must be enclosed in "{" and "}".  You cannot use single-statement control-flow statements in CSHTML pages. For example, the following is not allowed:
+
+@if(isLoggedIn)
+    <p>Hello, @user</p>
+
+Instead, wrap the contents of the block in "{}":
+
+@if(isLoggedIn) {
+    <p>Hello, @user</p>
+}
+
+ERROR | 2014-02-19 18:13:46 | Expected a "{" but found a "@".  Block statements must be enclosed in "{" and "}".  You cannot use single-statement control-flow statements in CSHTML pages. For example, the following is not allowed:
+
+@if(isLoggedIn)
+    <p>Hello, @user</p>
+
+Instead, wrap the contents of the block in "{}":
+
+@if(isLoggedIn) {
+    <p>Hello, @user</p>
+}
+
+ERROR | 2014-02-19 18:21:38 | Object reference not set to an instance of an object.
+ERROR | 2014-02-19 18:25:28 | ERROR_DL_PlaceDAL: UpdateStatusById	Could not find stored procedure 'p_DL_Place_Update_Status'.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.UpdateStatusById(Int64 ID, Int32 status) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 987
+INFO | 2014-02-19 18:26:13 | Update Hotel Sucess
+INFO | 2014-02-19 18:28:37 | Update Hotel Sucess
+INFO | 2014-02-19 18:30:16 | Update Hotel Sucess
+ERROR | 2014-02-22 06:49:22 | Cannot perform runtime binding on a null reference
+ERROR | 2014-02-22 06:49:33 | Cannot perform runtime binding on a null reference
+ERROR | 2014-02-22 06:52:24 | Cannot perform runtime binding on a null reference
