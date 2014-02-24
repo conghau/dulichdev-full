@@ -376,6 +376,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quay lại.
+        /// </summary>
+        internal static string GoBack {
+            get {
+                return ResourceManager.GetString("GoBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lịch sử.
         /// </summary>
         internal static string History {
@@ -957,6 +966,15 @@ namespace Resources {
         internal static string SUC_Update {
             get {
                 return ResourceManager.GetString("SUC_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mục lục.
+        /// </summary>
+        internal static string tableofcontents {
+            get {
+                return ResourceManager.GetString("tableofcontents", resourceCulture);
             }
         }
         

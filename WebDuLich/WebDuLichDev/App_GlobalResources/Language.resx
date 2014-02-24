@@ -447,4 +447,10 @@
   <data name="RoomType" xml:space="preserve">
     <value>Loại phòng</value>
   </data>
+  <data name="GoBack" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="tableofcontents" xml:space="preserve">
+    <value>Mục lục</value>
+  </data>
 </root>

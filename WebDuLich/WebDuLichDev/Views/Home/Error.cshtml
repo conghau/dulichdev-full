@@ -3,4 +3,31 @@
     ViewBag.Title = "Error";
 }
 
-<h2>Loi CMNR</h2>
+<head>
+    <style>
+        body {
+            background: #f9fee8;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .error_page {
+            width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            margin: 20px 0 0;
+        }
+    </style>
+</head>
+<div class="error_page">
+    <img src="/Content/themes/custom/image/kidmondo_face_sad.gif" />
+    <h1>Chúng tôi thành thật xin lỗi vì sự bất tiện này ...</h1>
+    <h2>Không tìm thấy trang hoặc đã có lỗi xảy ra :(</h2>
+    <a href="@Url.Action("Index","Home")"> Quay về trang chủ </a>
+</div>
+

@@ -96,7 +96,7 @@ namespace WebDuLichDev.Controllers
 
                 DL_CityBAL dlCityBal = new DL_CityBAL();
                 var city = dlCityBal.GetByID(ID);
-                ViewBag.Title = city.CityName;
+                ViewBag.CityName = city.CityName;
 
                 vm_Pagination pagination = new vm_Pagination { OrderBy = DL_PlaceColumns.CreatedDate.ToString(), OrderDirection = "DESC" };
                 DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
