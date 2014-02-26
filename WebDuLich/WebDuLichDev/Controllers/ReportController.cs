@@ -13,7 +13,7 @@ using WebDuLichDev.Filters;
 
 namespace WebDuLichDev.Controllers
 {
-    public class ReportController : Controller
+    public class ReportController : BaseController
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(ReportController).Name);
         string version = "Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + " ";
@@ -68,7 +68,7 @@ namespace WebDuLichDev.Controllers
                 long totalRecords = 0;
 
                 DL_SPAMREPORTBAL dl_SpamReportBal = new DL_SPAMREPORTBAL();
-                var model = dl_SpamReportBal.GetListWithGroupByPlace(pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
+                var model = dl_SpamReportBal.GetListWithGroupByPlace(pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, "DESC", out totalRecords);
                 common.LoadPagingData(this, pagination.Page ?? MvcApplication.pageDefault, pagination.PageSize ?? MvcApplication.pageSizeDefault, totalRecords);
                 ViewData["OrderBy"] = pagination.OrderBy;
                 ViewData["OrderDirection"] = pagination.OrderDirection;

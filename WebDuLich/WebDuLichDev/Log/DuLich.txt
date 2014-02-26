@@ -1201,3 +1201,18 @@ ERROR | 2014-02-26 08:53:09 | Access token missing. You must give access token
 ERROR | 2014-02-26 08:54:05 | Access token missing. You must give access token
 ERROR | 2014-02-26 08:54:10 | Access token missing. You must give access token
 ERROR | 2014-02-26 08:54:13 | Access token missing. You must give access token
+ERROR | 2014-02-26 11:35:00 | ERROR_DL_PlaceDAL: GetByID	ExecuteReader requires an open and available Connection. The connection's current state is connecting.	   at System.Data.SqlClient.SqlConnection.GetOpenConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_PlaceDAL.GetByID(Int64 ID) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 65
+ERROR | 2014-02-26 11:35:00 | Access token missing. You must give access token
+ERROR | 2014-02-26 11:35:01 | Access token missing. You must give access token
+ERROR | 2014-02-26 11:35:26 | Access token missing. You must give access token
