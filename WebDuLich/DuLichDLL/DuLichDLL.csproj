@@ -70,6 +70,7 @@
     <Compile Include="BAL\DL_PlaceBAL.cs" />
     <Compile Include="BAL\DL_PlaceTypeBAL.cs" />
     <Compile Include="BAL\DL_RestaurantInfoDetailBAL.cs" />
+    <Compile Include="BAL\DL_SPAMREPORTBAL.cs" />
     <Compile Include="BAL\M_SystemSettingBAL.cs" />
     <Compile Include="BAL\UserProfileBAL.cs" />
     <Compile Include="BAL\webpages_MembershipBAL.cs" />
@@ -99,8 +100,10 @@
     <Compile Include="DAL\DL_PlaceDAL.cs" />
     <Compile Include="DAL\DL_PlaceTypeDAL.cs" />
     <Compile Include="DAL\DL_RestaurantInfoDetailDAL.cs" />
+    <Compile Include="DAL\DL_SPAMREPORTDAL.cs" />
     <Compile Include="DAL\M_SystemSettingDAL.cs" />
     <Compile Include="DAL\UserProfileDAL.cs" />
+    <Compile Include="DAL\vm_Pagination.cs" />
     <Compile Include="DAL\webpages_MembershipDAL.cs" />
     <Compile Include="DAL\webpages_OAuthMembershipDAL.cs" />
     <Compile Include="DAL\webpages_RolesDAL.cs" />
@@ -132,6 +135,7 @@
     <Compile Include="Model\DL_Place.cs" />
     <Compile Include="Model\DL_PlaceType.cs" />
     <Compile Include="Model\DL_RestaurantInfoDetail.cs" />
+    <Compile Include="Model\DL_SPAMREPORT.cs" />
     <Compile Include="Model\M_SystemSetting.cs" />
     <Compile Include="Model\M_SystemSetting_Config.cs" />
     <Compile Include="Model\UserProfile.cs" />

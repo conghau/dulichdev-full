@@ -485,7 +485,7 @@ namespace DuLichDLL.DAL
                 cnn.Close();
             }
         }
-        public long Delete(long ID, long userID, SqlConnection cnn, SqlTransaction tran)
+        public long Delete(long ID, SqlConnection cnn, SqlTransaction tran)
         {
             try
             {
@@ -493,7 +493,6 @@ namespace DuLichDLL.DAL
                 SqlCommand cmd = new SqlCommand(DL_PlaceProcedure.p_DL_Place_Delete.ToString(), cnn, tran);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ID", SqlDbType.BigInt).Value = ID;
-                cmd.Parameters.Add("@UpdatedBy", SqlDbType.BigInt).Value = userID;
                 SqlParameterCollection parameterValues = cmd.Parameters;
                 int i = 0;
                 foreach (SqlParameter parameter in parameterValues)
