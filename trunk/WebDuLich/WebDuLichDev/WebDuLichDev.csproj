@@ -383,6 +383,8 @@
     <Content Include="Content\themes\custom\Image\Edit-Dark.png" />
     <Content Include="Content\themes\custom\Image\Edit-Light.png" />
     <Content Include="Content\themes\custom\Image\en-US-icon.png" />
+    <Content Include="Content\themes\custom\Image\Flag-04-1.png" />
+    <Content Include="Content\themes\custom\Image\Flag-04.png" />
     <Content Include="Content\themes\custom\Image\kidmondo_face_sad.gif" />
     <Content Include="Content\themes\custom\Image\Maps.png" />
     <Content Include="Content\themes\custom\Image\Maps_green.png" />

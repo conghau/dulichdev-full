@@ -20,13 +20,13 @@
     var pageNum = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageNum.ToString()].ToString());
     var page = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.Page.ToString()].ToString());
 
-    <input type="hidden" value="@ViewData["OrderBy"]" name="orderBy" id="orderBy" />
-    <input type="hidden" value="@ViewData["OrderDirection"]" name="orderDirection"id="orderDirection" />
+    <input type="hidden" value="@ViewData["OrderBy"]" name="OrderBy" id="orderBy" />
+    <input type="hidden" value="@ViewData["OrderDirection"]" name="OrderDirection"id="orderDirection" />
     <form id="frmMain" method="post" action="#">
         <table class="table table-striped table-bordered table-condensed table-hover">
             <tr>
                 <th>#</th>
-                <th></th>
+                <th>ID</th>
                 <th>@Resources.Language.PlaceName</th>
                 <th>@Resources.Language.NumberReportSpam</th>
                 <th>@Resources.Language.Process</th>

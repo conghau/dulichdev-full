@@ -16,7 +16,7 @@ using DuLichDLL.Enum;
 using WebMatrix.WebData;
 namespace WebDuLichDev.Controllers
 {
-    public class RoleController : Controller
+    public class RoleController : BaseController
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(RoleController).Name);
         string version = "Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + " ";
@@ -222,7 +222,8 @@ namespace WebDuLichDev.Controllers
                         assignedPermissionBal.Delete(ID, listEditRole[index].FunctionId, listEditRole[index].ObjectId);
                     }
                 }
-                return View("Manage"); 
+                TempData["Message"] = ResultMessage.SUC_Update;
+                return RedirectToAction("Manage"); 
             }
             catch (BusinessException bx)
             {

@@ -26,10 +26,10 @@
                 }
                 else
                 {
-                <li class="first"><a href="javascript:paging(1,@pageNum)" ><i class="icon-backward"></i></a></li>
+                <li class="first"><a href="javascript:paging(1,@pageNum)" title="@Resources.Language.First" ><i class="icon-backward"></i></a></li>
                     var previous = page - 1;
         
-                <li class="previous"><a href="javascript:paging(@previous,@pageNum)"><i class="icon-chevron-left"></i></a></li>
+                <li class="previous"><a href="javascript:paging(@previous,@pageNum)" title="@Resources.Language.GoBack"><i class="icon-chevron-left"></i></a></li>
                 }
                 if (pageNum <= 5)
                 {
@@ -107,8 +107,8 @@
                 }
                 else
                 {
-                <li class="next"><a href="javascript:paging(@next,@pageNum)"><i class="icon-chevron-right"></i></a></li>
-                <li class="last"><a href="javascript:paging(@pageNum,@pageNum)"><i class="icon-forward"></i></a></li>
+                <li class="next"><a href="javascript:paging(@next,@pageNum)" title="@Resources.Language.Next"><i class="icon-chevron-right"></i></a></li>
+                <li class="last"><a href="javascript:paging(@pageNum,@pageNum)" title="@Resources.Language.Last"><i class="icon-forward"></i></a></li>
                 }
             }
 
@@ -118,7 +118,7 @@
 <script>
     function isNumberKey(evt) {
         var charCode = (evt.which) ? evt.which : event.keyCode
-        if ((charCode > 48 && charCode < 57) || charCode == 8 || charCode == 13)
+        if ((charCode > 47 && charCode < 57) || charCode == 8 || charCode == 13)
             return true;
         return false;
     }
