@@ -113,6 +113,7 @@ else
                             <div class="page-title">
                                 <h2 style="display:inline">@item.dlPlace.Name</h2>
                                 <a href="@Url.Action("map", "map", new { co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ"><img src="/Content/themes/custom/Image/Maps.png" style="margin-top: -13px;"/></a>
+                                <a class="report-spam" href="#" onclick="reportspam(@item.dlPlace.ID, this);return false;" title="Báo cáo vi phạm"><img src="/Content/themes/custom/Image/Flag-04.png" style="margin-top: -13px;"/></a>
                             </div>
                             <div style="height: 28px;">
                                 @Html.Partial("p_rating", item.dlPlace)
@@ -150,6 +151,7 @@ else
                             <div class="page-title">
                                 <h2 style="display:inline">@item.dlPlace.Name</h2>
                                 <a href="@Url.Action("map", "map", new { co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ"><img src="/Content/themes/custom/Image/Maps.png" style="margin-top: -13px;"/></a>
+                                <a class="report-spam" href="#" onclick="reportspam(@item.dlPlace.ID, this);return false;" title="Báo cáo vi phạm"><img src="/Content/themes/custom/Image/Flag-04.png" style="margin-top: -13px;"/></a>
                             </div>
                                 <div style="height: 28px;">
                                     @Html.Partial("p_rating", item.dlPlace)
@@ -247,10 +249,10 @@ else
         <a class="closeprint fancybox-close" href="#" title="@Resources.Language.Close"></a>
         <a class="printBook" href="@Url.Action("PrintBook", "Place", new { cityId = @ViewBag.cityId })" target="_blank">
             <h2>Print Book</h2>
-            <p>Print the book (in Letter or A4 size only)</p>
+            <p>In Sách (Sử dụng giấy A4)</p>
         </a>
         <a class="downloadPdf" target="_blank" href="/media/20ThingsILearnedaboutBrowsersandtheWeb.pdf">
-            <h2>Download PDF</h2>
+            <h2>Tải bản PDF</h2>
             
         </a>
     </div>

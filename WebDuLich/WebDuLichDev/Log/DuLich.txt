@@ -1173,3 +1173,31 @@ INFO | 2014-02-19 18:30:16 | Update Hotel Sucess
 ERROR | 2014-02-22 06:49:22 | Cannot perform runtime binding on a null reference
 ERROR | 2014-02-22 06:49:33 | Cannot perform runtime binding on a null reference
 ERROR | 2014-02-22 06:52:24 | Cannot perform runtime binding on a null reference
+ERROR | 2014-02-24 20:13:44 | ERROR_DL_SPAMREPORTDAL: ConvertOneRow	Column 'ID' does not belong to table .	   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DuLichDLL.DAL.DL_SPAMREPORTDAL.ConvertOneRow(DataRow row) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_SPAMREPORTDAL.cs:line 20
+ERROR | 2014-02-24 20:14:40 | ERROR_DL_SPAMREPORTDAL: ConvertOneRow	Column 'ID' does not belong to table .	   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DuLichDLL.DAL.DL_SPAMREPORTDAL.ConvertOneRow(DataRow row) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_SPAMREPORTDAL.cs:line 20
+ERROR | 2014-02-24 20:17:50 | ERROR_DL_SPAMREPORTDAL: ConvertOneRow	Column 'ID' does not belong to table .	   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DuLichDLL.DAL.DL_SPAMREPORTDAL.ConvertOneRow(DataRow row) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_SPAMREPORTDAL.cs:line 20
+ERROR | 2014-02-26 06:07:43 | A public action method 'lisniceplace' was not found on controller 'WebDuLichDev.Controllers.PlaceController'.
+ERROR | 2014-02-26 06:49:34 | ERROR_DL_SPAMREPORTDAL: ProcessingReportSpam	Object reference not set to an instance of an object.	   at DuLichDLL.DAL.DL_SPAMREPORTDAL.ProcessingReportSpam(Int64[] listReportIdSkip, Int64[] listReportIdAccept) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_SPAMREPORTDAL.cs:line 404
+ERROR | 2014-02-26 07:50:40 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Spams(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2014-02-26 07:50:58 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Spams(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2014-02-26 07:50:58 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Spams(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2014-02-26 07:50:58 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Spams(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2014-02-26 07:52:10 | The parameters dictionary contains a null entry for parameter 'placeId' of non-nullable type 'System.Int64' for method 'System.Web.Mvc.ActionResult Spams(Int64)' in 'WebDuLichDev.Controllers.PlaceController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+ERROR | 2014-02-26 08:50:00 | Access token missing. You must give access token
+ERROR | 2014-02-26 08:50:50 | 'System.Collections.Generic.List<WebDuLichDev.Models.vm_NicePlace>' does not contain a definition for 'AvgRating'
+ERROR | 2014-02-26 08:50:54 | 'System.Collections.Generic.List<WebDuLichDev.Models.HotelInfo>' does not contain a definition for 'AvgRating'
+ERROR | 2014-02-26 08:53:09 | Access token missing. You must give access token
+ERROR | 2014-02-26 08:54:05 | Access token missing. You must give access token
+ERROR | 2014-02-26 08:54:10 | Access token missing. You must give access token
+ERROR | 2014-02-26 08:54:13 | Access token missing. You must give access token

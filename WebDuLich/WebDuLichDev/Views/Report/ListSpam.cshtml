@@ -1,0 +1,85 @@
+﻿@model List<DuLichDLL.Model.DL_SPAMREPORT>
+@{
+    ViewBag.Title = "ReportSpam";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ReportSpam</h2>
+@if (TempData["Message"] != null)
+{
+    <input id="messageBoxCode" value="@TempData["Message"].ToString()" type="hidden"/>
+    <div id="messageBox" class="alert ">
+        <a class="close" data-dismiss="alert">×</a>
+        @WebDuLichDev.WebUtility.common.GetResourceValue(TempData["Message"].ToString())
+    </div>
+}
+@if (null != Model && Model.Count > 0)
+{
+
+    var pageSize = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageSize.ToString()].ToString());
+    var pageNum = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.PageNum.ToString()].ToString());
+    var page = int.Parse(ViewData[WebDuLichDev.Enum.PageInfo.Page.ToString()].ToString());
+
+    <input type="hidden" value="@ViewData["OrderBy"]" name="orderBy" id="orderBy" />
+    <input type="hidden" value="@ViewData["OrderDirection"]" name="orderDirection"id="orderDirection" />
+    <form id="frmMain" method="post" action="#">
+        <table class="table table-striped table-bordered table-condensed table-hover">
+            <tr>
+                <th>#</th>
+                <th></th>
+                <th>@Resources.Language.PlaceName</th>
+                <th>@Resources.Language.NumberReportSpam</th>
+                <th>@Resources.Language.Process</th>
+                <th>@Resources.Language.Skip</th>
+                
+            </tr>
+            @{var i = 0;}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@((page - 1) * pageSize + i + 1)</td>
+                    <td>@item.DL_PlaceID</td>
+                    <td><a href="@Url.Action("NicePlace", "Place", new { ID = @item.DL_PlaceID })" target="_blank">@item.PlaceName</a> </td>
+                    <td>@item.NumberReport</td>
+                    <td>
+                        <input type="checkbox" value="@item.DL_PlaceID" name="listPlaceIdAccept" class="check process-@item.DL_PlaceID"/></td>
+                    <td>
+                        <input type="checkbox" value="@item.DL_PlaceID" name="listPlaceIdSkip" class="check skip-@item.DL_PlaceID" /></td>
+                    
+                </tr>
+                i++;
+            }
+        </table>
+        <div class="form-actions" style="padding-left:40%">
+            <button type="reset" class="btn btn-primary" name="btn-cancel">@Resources.Language.Cancel</button>
+        <button type="submit" value="submit" class="btn btn-primary">@Resources.Language.Submit</button>
+        </div>
+        <div class="form-inline">@Html.Partial("p_Pagination", null, ViewData)</div>
+        
+        
+    </form>
+}
+<script>
+    $(document).ready(function () {
+        $('.check').click(function () {
+            var placeid = $(this).val();
+            var isSkip = $('.skip-' + placeid).is(":checked");
+            var isProcess = $('.process-' + placeid).is(":checked")
+            //$('.process-' + placeid).prop("checked", false);
+            //$('.skip-' + placeid).prop("checked", false);
+
+            if ($(this).hasClass('process-' + placeid)) {
+                if(isProcess == true)
+                    //$('.process-' + placeid).prop("checked", true);
+                    $('.skip-' + placeid).prop("checked", false);
+
+            }
+            if ($(this).hasClass('skip-' + placeid)) {
+                if (isSkip == true)
+                    $('.process-' + placeid).prop("checked", false);
+                //else
+                //    $('.skip-' + placeid).prop("checked", false);
+            }
+        });
+    })
+</script>

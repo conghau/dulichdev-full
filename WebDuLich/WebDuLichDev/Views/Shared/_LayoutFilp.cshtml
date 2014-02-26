@@ -245,7 +245,7 @@
                                 $(element).find('.jRatingAverage').css('width', '0px')
                                 $(element).find('.jRatingColor').css('width', widthColorOneStar * data.Avg)
 
-                                $(element).parent().children().last().replaceWith('<p class=\"text\" style=\"float:right\">Current Rate : ' + data.Avg + ' by ' + data.TotalUser + ' people </p>')
+                                $(element).parent().children().last().replaceWith('<p class="text">   Đánh giá hiện tại :' + data.Avg + ' bởi ' + data.TotalUser + ' người</p>')
                                 $.ajax({
                                     url: '@Url.Action("PostNoticeRate","Zing")',
                                     type:"Post",
@@ -263,7 +263,24 @@
                 }
             });
         });
-        
+        function reportspam(e,b) {
+            $.ajax({
+                url: '@Url.Action("Spams","Place")',
+                    data: { placeId: e },
+                    type: "post",
+                    dataType: "Json",
+                    success: function (data) {
+                        if (data.status == 'OK') {
+                            alert('Thành công');
+                            var img = b.children;
+                            $(img).attr('src', '/Content/themes/custom/Image/Flag-04-1.png');
+                        }
+                        else {
+                            alert('Thất bại');
+                        }
+                    }
+                });
+            };
     </script>
 </body>
 </html>
