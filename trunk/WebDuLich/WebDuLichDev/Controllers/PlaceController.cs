@@ -16,7 +16,7 @@ using WebMatrix.WebData;
 
 namespace WebDuLichDev.Controllers
 {
-    public class PlaceController : Controller
+    public class PlaceController : BaseController
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(PlaceController).Name);
         string version = "Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + " ";
@@ -251,6 +251,36 @@ namespace WebDuLichDev.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Spams(long placeId)
+        {
+            try
+            {
+                DL_SPAMREPORT dlSpamReport = new DL_SPAMREPORT{ DL_PlaceID = placeId, UserID = WebSecurity.GetUserId(User.Identity.Name),Status =0};
+                DL_SPAMREPORTBAL dlSpamReportBal = new DL_SPAMREPORTBAL();
+                long result = dlSpamReportBal.Insert(dlSpamReport);
+                if (result > 0)
+                {
+                    return Json(new { status = "OK" }, "text/plain");
+                }
+                else
+                    return Json(new {status ="NO"},"text/plain" );
+            }
+            catch (BusinessException bx)
+            {
+                log.Error(bx.Message);
+                TempData[PageInfo.Message.ToString()] = bx.Message;
+                return null;
+            }
+            catch (Exception ex)
+            {
+                //LogBAL.LogEx("BLM_ERR_Common", ex);
+                log.Error(ex.Message);
+                TempData[PageInfo.Message.ToString()] = "BLM_ERR_Common";
+                return null;
+            }
+        }
+
         #region Admin Control
 
         [Authorize]
@@ -447,7 +477,7 @@ namespace WebDuLichDev.Controllers
                 return RedirectToAction("Error", "Home");
             }
 
-        }
+        }      
         #endregion
 
     }

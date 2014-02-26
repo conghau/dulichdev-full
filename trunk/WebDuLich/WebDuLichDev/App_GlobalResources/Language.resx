@@ -453,4 +453,25 @@
   <data name="tableofcontents" xml:space="preserve">
     <value>Mục lục</value>
   </data>
+  <data name="NumberReportSpam" xml:space="preserve">
+    <value>Số lần đánh giá</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Báo Cáo</value>
+  </data>
+  <data name="Spam" xml:space="preserve">
+    <value>Sai phạm</value>
+  </data>
+  <data name="Process" xml:space="preserve">
+    <value>Xử lý</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Bỏ qua</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Từ khóa</value>
+  </data>
 </root>

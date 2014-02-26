@@ -17,11 +17,11 @@ else
         <div class="background-bottom"></div>
         <div class="results">
             <div class="things">
-                <h4><span>Search Book</span></h4>
+                <h4><span>@Resources.Language.Search</span></h4>
                 <hr>
             </div>
             <div class="keywords">
-                <h4><span>KEYWORDS</span></h4>
+                <h4><span>@Resources.Language.Keyword</span></h4>
                 <hr>
             </div>
             <div class="empty">@Resources.Language.NoFound .</div>
@@ -113,6 +113,7 @@ else
                                 <h2 style="display: inline">@item.dlPlace.Name</h2>
                                 <a href="@Url.Action("map", "map", new { co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ">
                                     <img src="/Content/themes/custom/Image/Maps.png" style="margin-top: -13px;" /></a>
+                                <a class="report-spam" href="#" onclick="reportspam(@item.dlPlace.ID, this);return false;" title="Báo cáo vi phạm"><img src="/Content/themes/custom/Image/Flag-04.png" style="margin-top: -13px;"/></a>
                             </div>
                             <div style="height: 28px;">
                                 @Html.Partial("p_rating", item.dlPlace)
@@ -152,6 +153,7 @@ else
                                 <h2 style="display: inline">@item.dlPlace.Name</h2>
                                 <a href="@Url.Action("map", "map", new { co_ordinate = item.dlPlace.Co_ordinate, address = item.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ">
                                     <img src="/Content/themes/custom/Image/Maps.png" style="margin-top: -13px;" /></a>
+                                    <a class="report-spam" href="#" onclick="reportspam(@item.dlPlace.ID, this);return false;" title="Báo cáo vi phạm"><img src="/Content/themes/custom/Image/Flag-04.png" style="margin-top: -13px;"/></a>
                             </div>
                             <div style="height: 28px;">
                                 @Html.Partial("p_rating", item.dlPlace)
@@ -306,8 +308,8 @@ else
 <div id="table-of-contents">
 			<div class="center">
 				<div class="header">
-					<a class="go-back" href="/">Go Back</a>
-					<h2><span>Table of Things</span></h2>
+					<a class="go-back" href="/">@Resources.Language.GoBack</a>
+            <h2><span>@Resources.Language.tableofcontents</span></h2>
 					<hr>
 				</div>
 				<ul>

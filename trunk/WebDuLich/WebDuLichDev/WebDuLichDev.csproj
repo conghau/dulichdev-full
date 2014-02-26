@@ -171,6 +171,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Language.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.en-US.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\Language.vi-VN.designer.cs">
       <DependentUpon>Language.vi-VN.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -197,6 +202,7 @@
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\SystemManagerController.cs" />
     <Compile Include="Controllers\ZingController.cs" />
     <Compile Include="enum\Enum.cs" />
@@ -214,6 +220,7 @@
     <Compile Include="Models\vm_Place.cs" />
     <Compile Include="Models\vm_Role.cs" />
     <Compile Include="Models\vm_Search.cs" />
+    <Compile Include="Models\vm_SpamReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebUtility\BaseController.cs" />
     <Compile Include="WebUtility\common.cs" />
@@ -376,10 +383,15 @@
     <Content Include="Content\themes\custom\Image\Edit-Dark.png" />
     <Content Include="Content\themes\custom\Image\Edit-Light.png" />
     <Content Include="Content\themes\custom\Image\en-US-icon.png" />
+    <Content Include="Content\themes\custom\Image\kidmondo_face_sad.gif" />
+    <Content Include="Content\themes\custom\Image\Maps.png" />
+    <Content Include="Content\themes\custom\Image\Maps_green.png" />
     <Content Include="Content\themes\custom\Image\Message-Add.png" />
     <Content Include="Content\themes\custom\Image\Next-Dark.png" />
     <Content Include="Content\themes\custom\Image\Next-Light.png" />
     <Content Include="Content\themes\custom\Image\notecover.png" />
+    <Content Include="Content\themes\custom\Image\notecover1.png" />
+    <Content Include="Content\themes\custom\Image\notecover3.png" />
     <Content Include="Content\themes\custom\Image\Shape-Star2-none.png" />
     <Content Include="Content\themes\custom\Image\Shape-Star2.png" />
     <Content Include="Content\themes\custom\Image\User-Dark.png" />
@@ -731,6 +743,7 @@
     <Content Include="Views\map\DirectionGetLatLong.cshtml" />
     <Content Include="Views\Hotel\HotelInfoDetail.cshtml" />
     <Content Include="Views\Restaurant\RestaurantInfoDetail.cshtml" />
+    <Content Include="Views\Report\ListSpam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -758,6 +771,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Language.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Language.en-US.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
