@@ -17,6 +17,7 @@
     <script src="@Url.Content("~/Scripts/KendoJS/kendo.all.min.js")"></script>
     @Scripts.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.js")
     @Styles.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.css")
+    @Styles.Render("~/Scripts/Lib/Alert/jquery.alerts.css")
     <script type="text/javascript" src="http://static.me.zing.vn/v3/js/zm.xcall-1.01.js"></script>
 </head>
 <body>
@@ -38,5 +39,6 @@
         </div>
     </footer>
     @RenderSection("resiseIframe", false)
+    <script src="@Url.Content("~/Scripts/Lib/Alert/jquery.alerts.js")"></script>
 </body>
 </html>

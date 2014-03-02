@@ -154,6 +154,7 @@
 }
 
 .form-2 input[type=submit] {
+    padding:0;
     margin-left: 1%;
     background: #fbd568; /* Fallback */
     background: -moz-linear-gradient(#fbd568, #ffb347);

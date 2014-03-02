@@ -133,6 +133,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Điểm đánh giá trung bình.
+        /// </summary>
+        internal static string AvgRating {
+            get {
+                return ResourceManager.GetString("AvgRating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thông tin cơ bản.
         /// </summary>
         internal static string BasicInfo {

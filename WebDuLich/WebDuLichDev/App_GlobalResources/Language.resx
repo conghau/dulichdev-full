@@ -474,4 +474,7 @@
   <data name="Keyword" xml:space="preserve">
     <value>Từ khóa</value>
   </data>
+  <data name="AvgRating" xml:space="preserve">
+    <value>Điểm đánh giá trung bình</value>
+  </data>
 </root>

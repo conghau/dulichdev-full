@@ -2,9 +2,11 @@
 @{
     ViewBag.Title = "ReportSpam";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    @Scripts.Render("~/Scripts/Lib/qtip/jquery.qtip.js")
+    @Styles.Render("~/Scripts/Lib/qtip/jquery.qtip.css")
 }
 
-<h2>ReportSpam</h2>
+<h2 style="border-bottom: 2px solid #ff6a00; text-align: center">@Resources.Language.Report @Resources.Language.Spam</h2>
 @if (TempData["Message"] != null)
 {
     <input id="messageBoxCode" value="@TempData["Message"].ToString()" type="hidden"/>
@@ -31,7 +33,7 @@
                 <th>@Resources.Language.NumberReportSpam</th>
                 <th>@Resources.Language.Process</th>
                 <th>@Resources.Language.Skip</th>
-                
+
             </tr>
             @{var i = 0;}
             @foreach (var item in Model)
@@ -40,23 +42,23 @@
                     <td>@((page - 1) * pageSize + i + 1)</td>
                     <td>@item.DL_PlaceID</td>
                     <td><a href="@Url.Action("NicePlace", "Place", new { ID = @item.DL_PlaceID })" target="_blank">@item.PlaceName</a> </td>
-                    <td>@item.NumberReport</td>
+                    <td><a href="@Url.Action("GetUserByPlace", "Report", new { PlaceId = @item.DL_PlaceID })" class="qtip-tooltip">@item.NumberReport</a></td>
                     <td>
                         <input type="checkbox" value="@item.DL_PlaceID" name="listPlaceIdAccept" class="check process-@item.DL_PlaceID"/></td>
                     <td>
                         <input type="checkbox" value="@item.DL_PlaceID" name="listPlaceIdSkip" class="check skip-@item.DL_PlaceID" /></td>
-                    
+
                 </tr>
                 i++;
             }
         </table>
-        <div class="form-actions" style="padding-left:40%">
+        <div class="form-actions" style="padding-left: 40%">
             <button type="reset" class="btn btn-primary" name="btn-cancel">@Resources.Language.Cancel</button>
-        <button type="submit" value="submit" class="btn btn-primary">@Resources.Language.Submit</button>
+            <button type="submit" value="submit" class="btn btn-primary">@Resources.Language.Submit</button>
         </div>
         <div class="form-inline">@Html.Partial("p_Pagination", null, ViewData)</div>
-        
-        
+
+
     </form>
 }
 <script>
@@ -65,21 +67,49 @@
             var placeid = $(this).val();
             var isSkip = $('.skip-' + placeid).is(":checked");
             var isProcess = $('.process-' + placeid).is(":checked")
-            //$('.process-' + placeid).prop("checked", false);
-            //$('.skip-' + placeid).prop("checked", false);
-
             if ($(this).hasClass('process-' + placeid)) {
-                if(isProcess == true)
-                    //$('.process-' + placeid).prop("checked", true);
+                if (isProcess == true)
                     $('.skip-' + placeid).prop("checked", false);
-
             }
             if ($(this).hasClass('skip-' + placeid)) {
                 if (isSkip == true)
                     $('.process-' + placeid).prop("checked", false);
-                //else
-                //    $('.skip-' + placeid).prop("checked", false);
             }
         });
+
+        $('.qtip-tooltip').each(function () {
+            // We make use of the .each() loop to gain access to each element via the "this" keyword...
+            $(this).qtip(
+		{
+		    content: {
+		        // Set the text to an image HTML string with the correct src URL to the loading image you want to use
+		        text: '<img class="throbber" src="~/Content/Images/throbber.gif" alt="Loading..." />',
+		        ajax: {
+		            url: $(this).attr('href') // Use the rel attribute of each element for the url to load
+		        },
+		        title: {
+		            text: '@Resources.Language.DetailInfo', // Give the tooltip a title using each elements text
+		            button: true
+		        }
+		    },
+		    position: {
+		        at: 'bottom right', // Position the tooltip above the link
+		        my: 'top left',
+		        viewport: $(window), // Keep the tooltip on-screen at all times
+		        effect: false // Disable positioning animation
+		    },
+		    show: {
+		        event: 'click',
+		        solo: true // Only show one tooltip at a time
+		    },
+		    hide: 'unfocus',
+		    style: {
+		        classes: 'qtip-wiki qtip-light qtip-shadow'
+		    }
+		})
+        })
+
+        // Make sure it doesn't follow the link when we click it
+	.click(function (event) { event.preventDefault(); });
     })
 </script>

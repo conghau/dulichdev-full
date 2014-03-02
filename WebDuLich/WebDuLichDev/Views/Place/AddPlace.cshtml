@@ -16,12 +16,12 @@
                     <div class="control-group">
                         <label class="control-label" for="input01">@Resources.Language.PlaceName</label>
                         <div class="controls">
-                            @Html.TextBoxFor(m => m.dlPlace.Name, new { id = "placeName", placeholder = "Place name ...", required = "", validationMessage = "Please enter {0}" })
+                            @Html.TextBox("dataRequest.dlPlace.Name",null, new { id = "placeName", placeholder = "Place name ...", required = "", validationMessage = "Please enter {0}" })
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="input01">@Resources.Language.Address</label>
-                        <div class="controls">@Html.TextBoxFor(m => m.dlPlace.Address, new { id = "Address", placeholder = "Address...", required = "", validationMessage = "Please enter {0}" })</div>
+                        <div class="controls">@Html.TextBox("dataRequest.dlPlace.Address",null, new { id = "Address", placeholder = "Address...", required = "", validationMessage = "Please enter {0}" })</div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="input01">@Resources.Language.Co_ordinate</label>
@@ -32,14 +32,14 @@
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="input01">@Resources.Language.City</label>
-                        <div class="controls">@Html.DropDownListFor(m => m.dlPlace.DL_CityId, WebDuLichDev.WebUtility.WebDuLichData.ListCity, new { id = "drop_CityList", @class = "DLL kendoDropDownList city" })</div>
+                        <div class="controls">@Html.DropDownList("dataRequest.dlPlace.DL_CityId", WebDuLichDev.WebUtility.WebDuLichData.ListCity, new { id = "drop_CityList", @class = "DLL kendoDropDownList city" })</div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="input01">@Resources.Language.Avatar</label>
 
                         <div class="controls">
                             <input id="uploadAvatar" name="fileUpload" type="file" />
-                            @Html.TextBoxFor(m => m.dlPlace.Avatar, new { id = "Avatar", type = "hidden", required = "", validationmessage = "Please upload {0}" })
+                            @Html.TextBox("dataRequest.dlPlace.Avatar",null, new { id = "Avatar", type = "hidden", required = "", validationmessage = "Please upload {0}" })
                             @*<input id="Avatar" name="dlPlace.Avatar" value="" type="hidden" required="" validationmessage="Please upload {0}" />*@
                             <div id="imgPhotoAvatar">
                                 <div class="row">
@@ -70,11 +70,11 @@
                         <div class="k-content">
                             @if (null != Model && Model.dlNicePlaceInfoDetail != null)
                             { 
-                                <textarea class="editor" name="dlNicePlaceInfoDetail.Info" rows="5" cols="20" style="width: 100%; height: 400px">@HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Info)</textarea>
+                                <textarea class="editor" name="dataRequest.dlNicePlaceInfoDetail.Info" rows="5" cols="20" style="width: 100%; height: 400px">@HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Info)</textarea>
                             }
                             else
                             {
-                                <textarea class="editor" name="dlNicePlaceInfoDetail.Info" rows="5" cols="20" style="width: 100%; height: 400px">&lt;p&gt;Please input some detail about this city:&lt;/p&gt;</textarea>
+                                <textarea class="editor" name="dataRequest.dlNicePlaceInfoDetail.Info" rows="5" cols="20" style="width: 100%; height: 400px">&lt;p&gt;Please input some detail about this city:&lt;/p&gt;</textarea>
                    
                             }
 
@@ -82,22 +82,21 @@
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" name="dlNicePlaceInfoDetail.History" rows="5" cols="20" style="width: 100%; height: 400px">                  
-                    &lt;p&gt;Please input some detail about this city:&lt;/p&gt;      
+                            <textarea class="editor" name="dataRequest.dlNicePlaceInfoDetail.History" rows="5" cols="20" style="width: 100%; height: 400px">                  
+     
                 </textarea>
                         </div>
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" name="dlNicePlaceInfoDetail.OpenCloseTime" rows="5" cols="20" style="width: 100%; height: 400px">                  
-                    &lt;p&gt;Please input some detail about this city:&lt;/p&gt;      
+                            <textarea class="editor" name="dataRequest.dlNicePlaceInfoDetail.OpenCloseTime" rows="5" cols="20" style="width: 100%; height: 400px">                  
+     
                 </textarea>
                         </div>
                     </div>
                     <div>
                         <div class="k-content">
-                            <textarea class="editor" name="dlNicePlaceInfoDetail.Note" rows="5" cols="20" style="width: 100%; height: 400px">                  
-                    &lt;p&gt;Please input some detail about this city:&lt;/p&gt;      
+                            <textarea class="editor" name="dataRequest.dlNicePlaceInfoDetail.Note" rows="5" cols="20" style="width: 100%; height: 400px">                      
                 </textarea>
                         </div>
                     </div>

@@ -38,6 +38,7 @@ namespace WebDuLichDev.Controllers
             return View();
         }
 
+
         public ActionResult ListRestaurant()
         {
             try
@@ -84,7 +85,7 @@ namespace WebDuLichDev.Controllers
                 long totalRecords = 0;
 
                 DL_PlaceBAL dlPlaceBAL = new DL_PlaceBAL();
-                var model = dlPlaceBAL.GetListWithFilter(0, "", "", (long)DL_PlaceTypeId.Restaurants, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
+                var model = dlPlaceBAL.GetListWithFilter(dataSearch.cityId ??0 , "", "", (long)DL_PlaceTypeId.Restaurants, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
 
                 common.LoadPagingData(this, pagination.Page ?? MvcApplication.pageDefault, pagination.PageSize ?? MvcApplication.pageSizeDefault, totalRecords);
                 ViewData["OrderBy"] = pagination.OrderBy;
@@ -294,7 +295,7 @@ namespace WebDuLichDev.Controllers
                 DL_CityBAL dlCityBal = new DL_CityBAL();
                 var city = dlCityBal.GetByID(ID);
                 ViewBag.CityName = city.CityName;
-
+                ViewBag.IntoZing = WebDuLichSecurity.IntoZing;
                 //vm_Pagination pagination = new vm_Pagination { OrderBy = DL_PlaceColumns.CreatedDate.ToString(), OrderDirection = "DESC" };
                 DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
                 DL_RestaurantInfoDetailBAL dlRestaurantInfoDetailBal = new DL_RestaurantInfoDetailBAL();
@@ -308,7 +309,7 @@ namespace WebDuLichDev.Controllers
                     var tmp = new RestaurantInfo();
                     tmp.dlPlace = dlRestaurantPlace[index];
                     tmp.dlRestaurantInfoDetail = dlRestaurantInfoDetailBal.GetByDLPlaceID(dlRestaurantPlace[index].ID);
-                    //tmp.listImageCity = dlImagePlaceBal.GetByDLPlaceID(dlRestaurantPlace[index].ID);
+                    tmp.listImagePlace = dlImagePlaceBal.GetByDLPlaceID(dlRestaurantPlace[index].ID);
                     restaurantBook.Add(tmp);
 
                 }

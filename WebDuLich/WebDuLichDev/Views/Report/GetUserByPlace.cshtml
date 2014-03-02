@@ -1,0 +1,25 @@
+﻿@model List<DuLichDLL.Model.DL_SPAMREPORT>
+@{
+    ViewBag.Title = "GetUserByPlace";
+    Layout = "~/Views/Shared/_pureLayout.cshtml";
+}
+@if (null != Model)
+{
+    <table class="table table-striped table-bordered table-condensed table-hover">
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <th> Date</th>
+        </tr>
+        @{int i = 1;}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@item.UserName</td>
+                <td>@item.CreateDate.ToShortDateString()</td>
+            </tr>
+            i++;
+        }
+    </table>
+}
