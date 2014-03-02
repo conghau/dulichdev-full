@@ -72,6 +72,7 @@ namespace WebDuLichDev.Controllers
                 common.LoadPagingData(this, pagination.Page ?? MvcApplication.pageDefault, pagination.PageSize ?? MvcApplication.pageSizeDefault, totalRecords);
                 ViewData["OrderBy"] = pagination.OrderBy;
                 ViewData["OrderDirection"] = pagination.OrderDirection;
+                TempData[PageInfo.Message.ToString()] = ResultMessage.SUC_Update;
                 return View(model);
             }
             catch (BusinessException bx)
@@ -89,5 +90,29 @@ namespace WebDuLichDev.Controllers
             }
         }
 
+        //[HttpPost]
+        public ActionResult GetUserByPlace(long placeId)
+        {
+            try
+            {
+                DL_SPAMREPORTBAL dlSpamReportBal = new DL_SPAMREPORTBAL();
+                List<DL_SPAMREPORT> model = new List<DL_SPAMREPORT>();
+                model = dlSpamReportBal.GetListUserByPlace(placeId);
+                return View(model);
+            }
+            catch (BusinessException bx)
+            {
+                log.Error(bx.Message);
+                TempData[PageInfo.Message.ToString()] = bx.Message;
+                return RedirectToAction("Error", "Home");
+            }
+            catch (Exception ex)
+            {
+                //LogBAL.LogEx("BLM_ERR_Common", ex);
+                log.Error(ex.Message);
+                TempData[PageInfo.Message.ToString()] = "BLM_ERR_Common";
+                return RedirectToAction("Error", "Home");
+            }
+        }
     }
 }

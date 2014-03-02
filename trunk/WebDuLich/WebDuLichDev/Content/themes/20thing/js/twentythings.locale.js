@@ -1,4 +1,4 @@
-// Copyright 2011 Google Inc.
+﻿// Copyright 2011 Google Inc.
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
 // as published by the Free Software Foundation; either version 2
@@ -62,14 +62,15 @@ TT.locale.initialize = function() {
 
   // Take over the language drop down links so that we can control which chapter
   // is opened when changing languages.
-  $('li a', this.list).attr('href', '#').click(function(event) {
-    var targetLocale = $(this).parents('li').attr('data-locale');
-    var targetURL =
-        TT.locale.removeLocaleCodeFromURL(document.location.pathname);
+  $('li a', this.list).attr('href', '#').click(function (event) {
+      //var targetLocale = $(this).parents('li').attr('data-locale');
+      //var targetURL =
+      //    TT.locale.removeLocaleCodeFromURL(document.location.pathname);
 
-    document.location = '/' + targetLocale + targetURL;
+      //document.location = '/' + targetLocale + targetURL;
 
-    event.preventDefault();
+      //event.preventDefault();
+      jAlert('Chưa hỗ trợ', 'Thông báo');
   });
 
   // Prevent text selection of the title.

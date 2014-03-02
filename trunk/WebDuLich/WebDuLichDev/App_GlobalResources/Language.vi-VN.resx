@@ -474,4 +474,7 @@
   <data name="VN" xml:space="preserve">
     <value>Tiếng Việt</value>
   </data>
+  <data name="AvgRating" xml:space="preserve">
+    <value>Điểm đánh giá trung bình</value>
+  </data>
 </root>

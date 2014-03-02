@@ -41,7 +41,7 @@ namespace WebDuLichDev.Controllers
                 long totalRecords = 0;
 
                 DL_PlaceBAL dlPlaceBAL = new DL_PlaceBAL();
-                var model = dlPlaceBAL.GetListWithFilter(0, "", "", 0, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
+                var model = dlPlaceBAL.GetListWithFilter(0, "", "", (int)DL_PlaceTypeId.Places, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
                 common.LoadPagingData(this, pagination.Page ?? MvcApplication.pageDefault, pagination.PageSize ?? MvcApplication.pageSizeDefault, totalRecords);
                 ViewData["OrderBy"] = pagination.OrderBy;
                 ViewData["OrderDirection"] = pagination.OrderDirection;
@@ -66,16 +66,31 @@ namespace WebDuLichDev.Controllers
         [HttpPost]
         public ActionResult ListNicePlace(vm_Pagination pagination, vm_Search dataSearch)
         {
+            try
+            {
+                long totalRecords = 0;
 
-            long totalRecords = 0;
+                DL_PlaceBAL dlPlaceBAL = new DL_PlaceBAL();
+                var model = dlPlaceBAL.GetListWithFilter(dataSearch.cityId ?? 0, dataSearch.placename ?? "", dataSearch.address ?? "", (int)DL_PlaceTypeId.Places, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
+                common.LoadPagingData(this, pagination.Page ?? MvcApplication.pageDefault, pagination.PageSize ?? MvcApplication.pageSizeDefault, totalRecords);
+                ViewData["OrderBy"] = pagination.OrderBy;
+                ViewData["OrderDirection"] = pagination.OrderDirection;
 
-            DL_PlaceBAL dlPlaceBAL = new DL_PlaceBAL();
-            var model = dlPlaceBAL.GetListWithFilter(dataSearch.cityId ?? 0, dataSearch.placename ?? "", dataSearch.address ?? "", 0, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
-            common.LoadPagingData(this, pagination.Page ?? MvcApplication.pageDefault, pagination.PageSize ?? MvcApplication.pageSizeDefault, totalRecords);
-            ViewData["OrderBy"] = pagination.OrderBy;
-            ViewData["OrderDirection"] = pagination.OrderDirection;
-
-            return View(model);
+                return View(model);
+            }
+            catch (BusinessException bx)
+            {
+                log.Error(bx.Message);
+                TempData[PageInfo.Message.ToString()] = bx.Message;
+                return RedirectToAction("Error", "Home");
+            }
+            catch (Exception ex)
+            {
+                //LogBAL.LogEx("BLM_ERR_Common", ex);
+                log.Error(ex.Message);
+                TempData[PageInfo.Message.ToString()] = "BLM_ERR_Common";
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         //[Authorize]
@@ -270,14 +285,14 @@ namespace WebDuLichDev.Controllers
             {
                 log.Error(bx.Message);
                 TempData[PageInfo.Message.ToString()] = bx.Message;
-                return null;
+                return Json(new { status = "NO" }, "text/plain");
             }
             catch (Exception ex)
             {
                 //LogBAL.LogEx("BLM_ERR_Common", ex);
                 log.Error(ex.Message);
                 TempData[PageInfo.Message.ToString()] = "BLM_ERR_Common";
-                return null;
+                return Json(new { status = "NO" }, "text/plain");
             }
         }
 

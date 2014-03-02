@@ -11,6 +11,7 @@ using WebDuLichDev.WebUtility;
 using System.IO;
 using DuLichDLL.ExceptionType;
 using WebDuLichDev.Enum;
+using WebDuLichDev.Filters;
 
 
 namespace WebDuLichDev.Controllers
@@ -30,6 +31,7 @@ namespace WebDuLichDev.Controllers
         }
         #region admin
 
+        [Permission("List Hotel", "View")]
         public ActionResult ListHotel()
         {
             try
@@ -68,6 +70,7 @@ namespace WebDuLichDev.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult ListHotel(vm_Pagination pagination, vm_Search dataSearch)
         {
@@ -76,7 +79,7 @@ namespace WebDuLichDev.Controllers
                 long totalRecords = 0;
 
                 DL_PlaceBAL dlPlaceBAL = new DL_PlaceBAL();
-                var model = dlPlaceBAL.GetListWithFilter(0, "", "", (long)DL_PlaceTypeId.Hotels, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
+                var model = dlPlaceBAL.GetListWithFilter(dataSearch.cityId ?? 0, "", "", (long)DL_PlaceTypeId.Hotels, pagination.Page.Value, pagination.PageSize.Value, pagination.OrderBy, pagination.OrderDirection, out totalRecords);
 
                 common.LoadPagingData(this, pagination.Page ?? MvcApplication.pageDefault, pagination.PageSize ?? MvcApplication.pageSizeDefault, totalRecords);
                 ViewData["OrderBy"] = pagination.OrderBy;
@@ -98,12 +101,15 @@ namespace WebDuLichDev.Controllers
                 return RedirectToAction("Error", "Home");
             }
         }
+
+        [Permission("List Hotel", "Insert")]
         public ActionResult AddHotel()
         {
             //ViewBag.NewPlaceID = ID;
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult AddHotel(HotelInfo hotelinfo, string[] imagePlace)
         {
@@ -152,6 +158,8 @@ namespace WebDuLichDev.Controllers
             }
 
         }
+
+        [Permission("List Hotel", "Insert")]
         public ActionResult UpdateHotel(long ID)
         {
             try
@@ -184,6 +192,8 @@ namespace WebDuLichDev.Controllers
 
             
         }
+
+        [Authorize]
         [HttpPost]
         public ActionResult UpdateHotel(HotelInfo hotelinfo, string[] imagePlace)
         {
@@ -223,7 +233,6 @@ namespace WebDuLichDev.Controllers
                 result = dlPlaceBal.UpdateHotel(hotelinfo.dlPlace, hotelinfo.dlHotelPlaceInfoDetail, listdlImangePlaceTempNew);
                 if (true == result)
                 {
-                    log.Info("Update Hotel Sucess");
                     TempData["Message"] = ResultMessage.SUC_Update;
                     return RedirectToAction("ListHotel");
                 }
@@ -247,7 +256,8 @@ namespace WebDuLichDev.Controllers
                 return RedirectToAction("Error", "Home");
             }
         }
-        
+
+        [Permission("List Hotel", "Delete")]
         public ActionResult DelHotel(long ID)
         {
             try
@@ -294,6 +304,7 @@ namespace WebDuLichDev.Controllers
                 DL_CityBAL dlCityBal = new DL_CityBAL();
                 var city = dlCityBal.GetByID(ID);
                 ViewBag.CityName = city.CityName;
+                ViewBag.IntoZing = WebDuLichSecurity.IntoZing;
 
                 DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
                 DL_HotelPlaceInfoDetailBAL dlHotelDetailBal = new DL_HotelPlaceInfoDetailBAL();
@@ -305,7 +316,7 @@ namespace WebDuLichDev.Controllers
                     var tmp = new HotelInfo();
                     tmp.dlPlace = dlHotelPlace[index];
                     tmp.dlHotelPlaceInfoDetail = dlHotelDetailBal.GetByDLPlaceID(dlHotelPlace[index].ID);
-                    //tmp.listImageCity = dlImagePlaceBal.GetByDLPlaceID(dlRestaurantPlace[index].ID);
+                    tmp.listImagePlace = dlImagePlaceBal.GetByDLPlaceID(dlHotelPlace[index].ID);
                     HotelBook.Add(tmp);
 
                 }

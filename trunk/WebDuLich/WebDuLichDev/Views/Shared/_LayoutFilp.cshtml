@@ -26,6 +26,7 @@
     </script>
     @Scripts.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.js")
     @Styles.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.css")
+    @Styles.Render("~/Scripts/Lib/Alert/jquery.alerts.css")
     <link rel="stylesheet" type="text/css" href="~/Scripts/Lib/jRating/jquery/jRating.jquery.css" media="screen" />
  
     <script type="text/javascript">
@@ -87,7 +88,7 @@
         </div>
 
         <!-- Input type="search" is currently too inconsistent across browsers and platforms -->
-        <input id="search-field" type="text" value="Search Book">
+        <input id="search-field" type="text" value="@Resources.Language.Search">
     </header>
     @RenderBody()
     <footer>
@@ -227,6 +228,7 @@
     <script src="/Content/themes/20Thing/js/twentythings.tableofthings.js"></script>
     <script src="/Content/themes/20Thing/js/twentythings.flipintro.js"></script>
 
+    <script src="/Scripts/Lib/Alert/jquery.alerts.js"></script>
     <script type="text/javascript" src="~/Scripts/Lib/jRating/jquery/jRating.jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -271,12 +273,12 @@
                     dataType: "Json",
                     success: function (data) {
                         if (data.status == 'OK') {
-                            alert('Thành công');
+                            jAlert('Cảm ơn bạn đã báo cáo cho chúng tôi', 'Thông báo');
                             var img = b.children;
                             $(img).attr('src', '/Content/themes/custom/Image/Flag-04-1.png');
                         }
                         else {
-                            alert('Thất bại');
+                            jAlert('Chưa thực hiện được', 'Thông báo');
                         }
                     }
                 });

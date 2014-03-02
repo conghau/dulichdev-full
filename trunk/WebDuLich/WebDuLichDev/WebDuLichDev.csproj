@@ -456,6 +456,7 @@
     <None Include="Properties\PublishProfiles\dulich - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\new.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Log\DuLich.txt" />
     <Content Include="Scripts\Global\Common.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -473,6 +474,8 @@
     <Content Include="Scripts\KendoJS\kendo.all.min.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\Lib\Alert\jquery.alerts.css" />
+    <Content Include="Scripts\Lib\Alert\jquery.alerts.js" />
     <Content Include="Scripts\Lib\bootstrap\css\bootstrap-responsive.css" />
     <Content Include="Scripts\Lib\bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="Scripts\Lib\bootstrap\css\bootstrap.css" />
@@ -507,6 +510,10 @@
     <Content Include="Scripts\Lib\jRating\jquery\jRating.jquery.css" />
     <Content Include="Scripts\Lib\jRating\jquery\jRating.jquery.js" />
     <Content Include="Scripts\Lib\jRating\jquery\jRating.jquery.min.js" />
+    <Content Include="Scripts\Lib\qtip\jquery.qtip.css" />
+    <Content Include="Scripts\Lib\qtip\jquery.qtip.js" />
+    <Content Include="Scripts\Lib\qtip\jquery.qtip.min.css" />
+    <Content Include="Scripts\Lib\qtip\jquery.qtip.min.js" />
     <Content Include="Scripts\Lib\star-half.png" />
     <Content Include="Scripts\Lib\star-off.png" />
     <Content Include="Scripts\Lib\star-on.png" />
@@ -746,6 +753,8 @@
     <Content Include="Views\Hotel\HotelInfoDetail.cshtml" />
     <Content Include="Views\Restaurant\RestaurantInfoDetail.cshtml" />
     <Content Include="Views\Report\ListSpam.cshtml" />
+    <Content Include="Views\City\CityManager.cshtml" />
+    <Content Include="Views\Report\GetUserByPlace.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
