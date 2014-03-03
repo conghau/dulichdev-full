@@ -121,10 +121,11 @@ else
 
                             </div>
                             <div class="right">
-                                <img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/>
-                                <img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/>
+                                <img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="@item.dlPlace.Name" width="233" height="120"/>
+                                
                                 @if (item.listImagePlace != null && item.listImagePlace.Count > 0)
                                 {
+                                    <img src="~/Data/Images/Place/@item.listImagePlace[0].LinkImage" alt="@item.dlPlace.Name" width="233" height="120"/>
                                     <a href="@Url.Action("ListImagePlace", "Place", new { placeId = item.dlPlace.ID })" class="listImage fancybox.iframe">@Resources.Language.SeeMore ...</a>
                                 }
                             </div>
@@ -158,10 +159,10 @@ else
                                     @Html.Partial("p_likesocial", item.dlPlace.ID)
                                 </div>
                                 <div class="right">
-                                    <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
-                                    <a title="1st title" class="fancybox fancybox.iframe" href="~/Data/Avatar/Place/@item.dlPlace.Avatar"><img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="" width="233" height="120"/></a>
+                                    <img src="~/Data/Avatar/Place/@item.dlPlace.Avatar" alt="@item.dlPlace.Name" width="233" height="120"/>                         
                                 @if (item.listImagePlace != null && item.listImagePlace.Count > 0)
                                 {
+                                    <img src="~/Data/Images/Place/@item.listImagePlace[0].LinkImage" alt="@item.dlPlace.Name" width="233" height="120"/>
                                     <a href="@Url.Action("ListImagePlace", "Place", new { placeId = item.dlPlace.ID })" class="listImage fancybox.iframe">@Resources.Language.SeeMore ...</a>
                                 }
                             </div>

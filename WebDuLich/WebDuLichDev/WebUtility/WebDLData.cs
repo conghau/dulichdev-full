@@ -10,6 +10,7 @@ using WebMatrix.WebData;
 using System.Threading;
 using System.Web.SessionState;
 using System.Globalization;
+using System.Text;
 
 namespace WebDuLichDev.WebUtility
 {
@@ -84,7 +85,7 @@ namespace WebDuLichDev.WebUtility
                 }
                 return listrole;
             }
-        }
+        }   
     }
 
     public class WebDuLichSecurity
