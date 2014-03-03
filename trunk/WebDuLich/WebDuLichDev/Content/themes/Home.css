@@ -41,8 +41,25 @@ body {
     padding-left: 10px;
 }
 
-label {
+/*label {
     display: block;
     margin-top: 80px;
     margin-left: 5px;
+}*/
+
+.notetext p {
+    margin-left: 5px;
+} 
+
+p.drop-cap {
+    margin-top: 80px;
+    line-height: 1.4em;
+    
 }
+
+    p.drop-cap:first-letter {
+        float: left;
+        font-size: 45px;
+        margin: 7px 5px 0 0;
+        vertical-align: text-top;
+    }

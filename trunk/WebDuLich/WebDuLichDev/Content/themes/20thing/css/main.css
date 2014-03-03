@@ -2312,6 +2312,9 @@ footer ul li {
     left: 32px;
     top: 10px;
 }
+    #pages .right img {
+        height:150px;
+    }
 
     #pages section {
         width: 640px;
