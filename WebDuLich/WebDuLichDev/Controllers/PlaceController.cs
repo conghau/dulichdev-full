@@ -93,7 +93,7 @@ namespace WebDuLichDev.Controllers
             }
         }
 
-        //[Authorize]
+        [Authorize]
         public ActionResult NicePlaceByCity(long ID)
         {
             try
@@ -201,6 +201,7 @@ namespace WebDuLichDev.Controllers
             }
         }
 
+        [Authorize]
         public ActionResult PrintBook(long cityId)
         {
             DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
@@ -458,6 +459,7 @@ namespace WebDuLichDev.Controllers
 
             // return View();
         }
+        
         public ActionResult DelNicePlace(long ID)
         {
             try

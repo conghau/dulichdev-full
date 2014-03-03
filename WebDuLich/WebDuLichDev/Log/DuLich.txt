@@ -1216,3 +1216,95 @@ ERROR | 2014-02-26 11:35:00 | ERROR_DL_PlaceDAL: GetByID	ExecuteReader requires 
 ERROR | 2014-02-26 11:35:00 | Access token missing. You must give access token
 ERROR | 2014-02-26 11:35:01 | Access token missing. You must give access token
 ERROR | 2014-02-26 11:35:26 | Access token missing. You must give access token
+ERROR | 2014-02-27 06:04:41 | The view 'citymanager' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/City/citymanager.aspx
+~/Views/City/citymanager.ascx
+~/Views/Shared/citymanager.aspx
+~/Views/Shared/citymanager.ascx
+~/Views/City/citymanager.cshtml
+~/Views/City/citymanager.vbhtml
+~/Views/Shared/citymanager.cshtml
+~/Views/Shared/citymanager.vbhtml
+ERROR | 2014-02-27 06:05:12 | The view 'citymanager' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/City/citymanager.aspx
+~/Views/City/citymanager.ascx
+~/Views/Shared/citymanager.aspx
+~/Views/Shared/citymanager.ascx
+~/Views/City/citymanager.cshtml
+~/Views/City/citymanager.vbhtml
+~/Views/Shared/citymanager.cshtml
+~/Views/Shared/citymanager.vbhtml
+ERROR | 2014-02-27 06:21:50 | A public action method 'AddCity' was not found on controller 'WebDuLichDev.Controllers.CityController'.
+ERROR | 2014-02-27 07:06:27 | A public action method 'ListUserByPlace' was not found on controller 'WebDuLichDev.Controllers.ReportController'.
+ERROR | 2014-02-27 07:06:55 | A public action method 'GetUserByPlace' was not found on controller 'WebDuLichDev.Controllers.ReportController'.
+ERROR | 2014-02-27 07:08:41 | ERROR_DL_SPAMREPORTDAL: GetListUserByPlace	Procedure or function 'p_DL_SPAMREPORT_Get_ByID' expects parameter '@ID', which was not supplied.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DuLichDLL.DAL.DL_SPAMREPORTDAL.GetListUserByPlace(Int64 placeId) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_SPAMREPORTDAL.cs:line 491
+ERROR | 2014-02-27 07:18:58 | ERROR_DL_SPAMREPORTDAL: ConvertOneRowWithUser	Column 'NumberReport' does not belong to table .	   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at DuLichDLL.DAL.DL_SPAMREPORTDAL.ConvertOneRowWithUser(DataRow row) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_SPAMREPORTDAL.cs:line 53
+ERROR | 2014-02-28 16:22:12 | ERROR_DL_PlaceDAL: Insert	Cannot insert the value NULL into column 'Name', table 'dulich_data_hau.dbo.DL_Place'; column does not allow nulls. INSERT fails.
+The statement has been terminated.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.Insert(DL_Place dL_Place, SqlConnection cnn, SqlTransaction tran) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 344
+ERROR | 2014-02-28 16:26:33 | ERROR_DL_PlaceDAL: Insert	Cannot insert the value NULL into column 'Name', table 'dulich_data_hau.dbo.DL_Place'; column does not allow nulls. INSERT fails.
+The statement has been terminated.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_PlaceDAL.Insert(DL_Place dL_Place, SqlConnection cnn, SqlTransaction tran) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 344
+ERROR | 2014-02-28 16:32:37 | ERROR_DL_PlaceDAL: InsertNicePlace	Object reference not set to an instance of an object.	   at DuLichDLL.DAL.DL_PlaceDAL.InsertNicePlace(DL_Place dlPlace, DL_NicePlaceInfoDetail dlNicePlaceDetail, List`1 dlImagePlace) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_PlaceDAL.cs:line 539
+ERROR | 2014-02-28 16:33:42 | ERROR_DL_NicePlaceInfoDetailDAL: Insert	Procedure or function 'p_DL_NicePlaceInfoDetail_Insert' expects parameter '@History', which was not supplied.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_NicePlaceInfoDetailDAL.Insert(DL_NicePlaceInfoDetail dL_NicePlaceInfoDetail, SqlConnection cnn, SqlTransaction tran) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_NicePlaceInfoDetailDAL.cs:line 194
+ERROR | 2014-02-28 16:38:21 | ERROR_DL_NicePlaceInfoDetailDAL: Insert	Procedure or function 'p_DL_NicePlaceInfoDetail_Insert' expects parameter '@History', which was not supplied.	   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at DuLichDLL.DAL.DL_NicePlaceInfoDetailDAL.Insert(DL_NicePlaceInfoDetail dL_NicePlaceInfoDetail, SqlConnection cnn, SqlTransaction tran) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_NicePlaceInfoDetailDAL.cs:line 194
