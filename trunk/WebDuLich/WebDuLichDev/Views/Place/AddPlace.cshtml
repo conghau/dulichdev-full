@@ -232,7 +232,7 @@
             // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
             $.each(files, function () {
                 //alert(this.extension);
-                if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                if ((this.extension.toLowerCase() == ".jpg") || (this.extension.toLowerCase() == ".png") || (this.extension.toLowerCase() == ".bmp")) {
                     return true;
                 }
                 else {
@@ -245,7 +245,7 @@
             //var newName = new 
             // Check the extension of each file and abort the upload if it is not .jpg ,.png ,.bmp
             $.each(files, function () {
-                if ((this.extension == ".jpg") || (this.extension == ".png") || (this.extension == ".bmp")) {
+                if ((this.extension.toLowerCase() == ".jpg") || (this.extension.toLowerCase() == ".png") || (this.extension.toLowerCase() == ".bmp")) {
                     return true;
                 }
                 else {
