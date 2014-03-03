@@ -283,6 +283,49 @@ namespace DuLichDLL.DAL
                 throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_RestaurantInfoDetailDAL: Update"));
             }
         }
+
+        public long UpdateByPlaceId(DL_RestaurantInfoDetail dL_RestaurantInfoDetail, SqlConnection cnn, SqlTransaction tran)
+        {
+            try
+            {
+                long id = 0;
+                SqlCommand cmd = new SqlCommand(DL_RestaurantInfoDetailProcedure.p_DL_RestaurantInfoDetail_UpdateByPlaceId.ToString(), cnn, tran);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@DL_PlaceId", SqlDbType.BigInt).Value = dL_RestaurantInfoDetail.DL_PlaceId;
+                cmd.Parameters.Add("@Info", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.Info;
+                cmd.Parameters.Add("@Menu", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.Menu;
+                cmd.Parameters.Add("@Note", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.Note;
+                cmd.Parameters.Add("@MobiPhone", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.MobiPhone;
+                cmd.Parameters.Add("@HomePhone", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.HomePhone;
+                cmd.Parameters.Add("@Fax", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.Fax;
+                cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.Email;
+                cmd.Parameters.Add("@Website", SqlDbType.NVarChar).Value = dL_RestaurantInfoDetail.Website;
+                cmd.Parameters.Add("@Status", SqlDbType.Int).Value = dL_RestaurantInfoDetail.Status;
+                SqlParameterCollection parameterValues = cmd.Parameters;
+                int i = 0;
+                foreach (SqlParameter parameter in parameterValues)
+                {
+                    if ((parameter.Direction != ParameterDirection.Output) && (parameter.Direction != ParameterDirection.ReturnValue))
+                    {
+                        if (parameter.Value == null)
+                            parameter.Value = DBNull.Value;
+                        i++;
+                    }
+                }
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                    id = Utility.Utility.ObjectToLong(result.ToString());
+                return id;
+            }
+            catch (DataAccessException ex)
+            {
+                throw new DataAccessException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_RestaurantInfoDetailDAL: UpdateByPlaceId"));
+            }
+        }
         public long Delete(long ID, long userID)
         {
             SqlConnection cnn = null;

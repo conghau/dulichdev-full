@@ -122,7 +122,8 @@ namespace DuLichDLL.Model
         p_DL_HotelPlaceInfoDetail_Update,
         p_DL_HotelPlaceInfoDetail_Get_List,
         p_DL_HotelPlaceInfoDetail_Get_ByID,
-        p_DL_HotelPlaceInfoDetail_Get_By_DL_PlaceId
+        p_DL_HotelPlaceInfoDetail_Get_By_DL_PlaceId,
+        p_DL_HotelPlaceInfoDetail_UpdateByPlaceId,
 
     }
 }
