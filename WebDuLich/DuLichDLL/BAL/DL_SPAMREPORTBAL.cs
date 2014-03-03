@@ -154,5 +154,26 @@ namespace DuLichDLL.BAL
                 throw new BusinessException(ExceptionMessage.throwEx(ex, "ERROR_DL_SPAMREPORTBAL: ProcessingReportSpam"));
             }
         }
+
+        public List<DL_SPAMREPORT> GetListUserByPlace(long placeId)
+        {
+            try
+            {
+                DL_SPAMREPORTDAL dL_SPAMREPORTDAL = new DL_SPAMREPORTDAL();
+                return dL_SPAMREPORTDAL.GetListUserByPlace(placeId);
+            }
+            catch (DataAccessException ex)
+            {
+                throw new BusinessException(ex.Message);
+            }
+            catch (BusinessException ex)
+            {
+                throw new BusinessException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new BusinessException(ExceptionMessage.throwEx(ex, "ERROR_DL_SPAMREPORTBAL: GetListUserByPlace"));
+            }
+        }
     }
 }

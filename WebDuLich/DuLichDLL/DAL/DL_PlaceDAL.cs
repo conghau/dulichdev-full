@@ -723,7 +723,7 @@ namespace DuLichDLL.DAL
                // dlHotelPlaceInfoDetail.DL_PlaceId = dlPlace.ID;
                 //dlDHotelPlaceInfoDetail.Staus = 0;
                 //updapte NicePlaceInfo
-                dlHotelPlaceInfoDetailDAL.Update(dlHotelPlaceInfoDetail, cnn, tran);
+                dlHotelPlaceInfoDetailDAL.UpdateByPlaceId(dlHotelPlaceInfoDetail, cnn, tran);
 
                 //update ImagePlace
                 if (null != dlImagePlace)
@@ -825,7 +825,7 @@ namespace DuLichDLL.DAL
                 placeId = Update_SomeValue(dlPlace, cnn, tran);
 
                 dlNicePlaceInfoDetail.DL_PlaceId = dlPlace.ID;
-                dlNicePlaceInfoDetailDAL.Update(dlNicePlaceInfoDetail, cnn, tran);
+                dlNicePlaceInfoDetailDAL.UpdateByPlaceId(dlNicePlaceInfoDetail, cnn, tran);
 
                 //update ImagePlace
                 if (null != dlImagePlace)
@@ -877,7 +877,7 @@ namespace DuLichDLL.DAL
                 // dlHotelPlaceInfoDetail.DL_PlaceId = dlPlace.ID;
                 //dlDHotelPlaceInfoDetail.Staus = 0;
                 //updapte NicePlaceInfo
-                dlRestaurantInfoDetailDAL.Update(dlRestaurantInfoDetail, cnn, tran);
+                dlRestaurantInfoDetailDAL.UpdateByPlaceId(dlRestaurantInfoDetail, cnn, tran);
 
                 //update ImagePlace
                 if (null != dlImagePlace)

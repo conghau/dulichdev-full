@@ -191,6 +191,17 @@ namespace DuLichDLL.DAL
                 cmd.Parameters.Add("@OpenCloseTime", SqlDbType.NVarChar).Value = dL_NicePlaceInfoDetail.OpenCloseTime;
                 cmd.Parameters.Add("@Note", SqlDbType.NVarChar).Value = dL_NicePlaceInfoDetail.Note;
                 cmd.Parameters.Add("@Staus", SqlDbType.Int).Value = dL_NicePlaceInfoDetail.Staus;
+                SqlParameterCollection parameterValues = cmd.Parameters;
+                int i = 0;
+                foreach (SqlParameter parameter in parameterValues)
+                {
+                    if ((parameter.Direction != ParameterDirection.Output) && (parameter.Direction != ParameterDirection.ReturnValue))
+                    {
+                        if (parameter.Value == null)
+                            parameter.Value = DBNull.Value;
+                        i++;
+                    }
+                }
                 id = Utility.Utility.ObjectToLong(cmd.ExecuteScalar());
                 return id;
             }
@@ -285,6 +296,45 @@ namespace DuLichDLL.DAL
             catch (Exception ex)
             {
                 throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_NicePlaceInfoDetailDAL: Update"));
+            }
+        }
+
+        public long UpdateByPlaceId(DL_NicePlaceInfoDetail dL_NicePlaceInfoDetail, SqlConnection cnn, SqlTransaction tran)
+        {
+            try
+            {
+                long id = 0;
+                SqlCommand cmd = new SqlCommand(DL_NicePlaceInfoDetailProcedure.p_DL_NicePlaceInfoDetail_UpdateByPlaceId.ToString(), cnn, tran);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@DL_PlaceId", SqlDbType.BigInt).Value = dL_NicePlaceInfoDetail.DL_PlaceId;
+                cmd.Parameters.Add("@Info", SqlDbType.NText).Value = dL_NicePlaceInfoDetail.Info;
+                cmd.Parameters.Add("@History", SqlDbType.NText).Value = dL_NicePlaceInfoDetail.History;
+                cmd.Parameters.Add("@OpenCloseTime", SqlDbType.NVarChar).Value = dL_NicePlaceInfoDetail.OpenCloseTime;
+                cmd.Parameters.Add("@Note", SqlDbType.NVarChar).Value = dL_NicePlaceInfoDetail.Note;
+                cmd.Parameters.Add("@Staus", SqlDbType.Int).Value = dL_NicePlaceInfoDetail.Staus;
+                SqlParameterCollection parameterValues = cmd.Parameters;
+                int i = 0;
+                foreach (SqlParameter parameter in parameterValues)
+                {
+                    if ((parameter.Direction != ParameterDirection.Output) && (parameter.Direction != ParameterDirection.ReturnValue))
+                    {
+                        if (parameter.Value == null)
+                            parameter.Value = DBNull.Value;
+                        i++;
+                    }
+                }
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                    id = Utility.Utility.ObjectToLong(result.ToString());
+                return id;
+            }
+            catch (DataAccessException ex)
+            {
+                throw new DataAccessException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_NicePlaceInfoDetailDAL: UpdateByPlaceId"));
             }
         }
         public long Delete(long ID, long userID)

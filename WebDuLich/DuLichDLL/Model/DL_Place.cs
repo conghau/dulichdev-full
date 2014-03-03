@@ -82,8 +82,11 @@ namespace DuLichDLL.Model
 
         public string FirstChar
         {
-            get { return _firstChar; }
-            set { _firstChar = value; }
+            get {
+                string tmp = Utility.Utility.convertToUnSign2(_firstChar);
+                return  tmp; 
+            }
+            set { _firstChar = Utility.Utility.convertToUnSign2(value); }
         }
 
         private string _co_ordinate;

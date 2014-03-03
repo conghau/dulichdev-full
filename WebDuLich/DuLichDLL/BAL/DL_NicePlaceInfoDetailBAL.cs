@@ -112,7 +112,7 @@ namespace DuLichDLL.BAL
             {
                 throw new BusinessException(ExceptionMessage.throwEx(ex, "ERROR_DL_NicePlaceInfoDetailBAL: Update"));
             }
-        }
+        }     
         public long Delete(long ID, long userID)
         {
             try

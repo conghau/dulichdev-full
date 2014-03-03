@@ -331,6 +331,52 @@ namespace DuLichDLL.DAL
                 throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_HotelPlaceInfoDetailDAL: Update"));
             }
         }
+
+        public long UpdateByPlaceId(DL_HotelPlaceInfoDetail dL_HotelPlaceInfoDetail, SqlConnection cnn, SqlTransaction tran)
+        {
+            try
+            {
+                long id = 0;
+                SqlCommand cmd = new SqlCommand(DL_HotelPlaceInfoDetailProcedure.p_DL_HotelPlaceInfoDetail_UpdateByPlaceId.ToString(), cnn, tran);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@DL_PlaceId", SqlDbType.BigInt).Value = dL_HotelPlaceInfoDetail.DL_PlaceId;
+                cmd.Parameters.Add("@Info", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.Info;
+                cmd.Parameters.Add("@Service", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.Service;
+                cmd.Parameters.Add("@RoomType", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.RoomType;
+                cmd.Parameters.Add("@OpenCloseTime", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.OpenCloseTime;
+                cmd.Parameters.Add("@Price", SqlDbType.Char).Value = dL_HotelPlaceInfoDetail.Price;
+                cmd.Parameters.Add("@PayType", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.PayType;
+                cmd.Parameters.Add("@Note", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.Note;
+                cmd.Parameters.Add("@MobiPhone", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.MobiPhone;
+                cmd.Parameters.Add("@HomePhone", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.HomePhone;
+                cmd.Parameters.Add("@Fax", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.Fax;
+                cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = dL_HotelPlaceInfoDetail.Email;
+                cmd.Parameters.Add("@Status", SqlDbType.Int).Value = dL_HotelPlaceInfoDetail.Status;
+                SqlParameterCollection parameterValues = cmd.Parameters;
+                int i = 0;
+                foreach (SqlParameter parameter in parameterValues)
+                {
+                    if ((parameter.Direction != ParameterDirection.Output) && (parameter.Direction != ParameterDirection.ReturnValue))
+                    {
+                        if (parameter.Value == null)
+                            parameter.Value = DBNull.Value;
+                        i++;
+                    }
+                }
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                    id = Utility.Utility.ObjectToLong(result.ToString());
+                return id;
+            }
+            catch (DataAccessException ex)
+            {
+                throw new DataAccessException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_HotelPlaceInfoDetailDAL: UpdateByPlaceId"));
+            }
+        }
         public long Delete(long ID, long userID)
         {
             SqlConnection cnn = null;

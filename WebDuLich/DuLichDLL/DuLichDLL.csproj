@@ -103,7 +103,6 @@
     <Compile Include="DAL\DL_SPAMREPORTDAL.cs" />
     <Compile Include="DAL\M_SystemSettingDAL.cs" />
     <Compile Include="DAL\UserProfileDAL.cs" />
-    <Compile Include="DAL\vm_Pagination.cs" />
     <Compile Include="DAL\webpages_MembershipDAL.cs" />
     <Compile Include="DAL\webpages_OAuthMembershipDAL.cs" />
     <Compile Include="DAL\webpages_RolesDAL.cs" />

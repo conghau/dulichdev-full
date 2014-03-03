@@ -45,6 +45,22 @@ namespace DuLichDLL.DAL
                 throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_SPAMREPORTDAL: ConvertOneRow"));
             }
         }
+        private DL_SPAMREPORT ConvertOneRowWithUser(DataRow row)
+        {
+            try
+            {
+                DL_SPAMREPORT result = new DL_SPAMREPORT();
+                result.UserID = Utility.Utility.ObjectToInt(row[DL_SPAMREPORTColumns.UserID.ToString()].ToString());
+                result.UserName = Utility.Utility.ObjectToString(row[DL_SPAMREPORTColumns.UserName.ToString()].ToString());
+                result.CreateDate = Utility.Utility.ObjectToDateTime(row[DL_SPAMREPORTColumns.CreateDate.ToString()].ToString());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_SPAMREPORTDAL: ConvertOneRowWithUser"));
+            }
+        }
+
         private List<DL_SPAMREPORT> GetDataObject(DataTable dt)
         {
             List<DL_SPAMREPORT> results = new List<DL_SPAMREPORT>();
@@ -60,6 +76,15 @@ namespace DuLichDLL.DAL
             foreach (DataRow item in dt.Rows)
             {
                 results.Add(ConvertOneRowWithGroup(item));
+            }
+            return results;
+        }
+        private List<DL_SPAMREPORT> ConvertOneRowWithUser(DataTable dt)
+        {
+            List<DL_SPAMREPORT> results = new List<DL_SPAMREPORT>();
+            foreach (DataRow item in dt.Rows)
+            {
+                results.Add(ConvertOneRowWithUser(item));
             }
             return results;
         }
@@ -452,5 +477,33 @@ namespace DuLichDLL.DAL
             }
         }
 
+        public List<DL_SPAMREPORT> GetListUserByPlace(long placeId)
+        {
+            SqlConnection cnn = null;
+            try
+            {
+                cnn = DataProvider.OpenConnection();
+                SqlCommand cmd = new SqlCommand(DL_SPAMREPORTProcedure.p_DL_SPAMREPORT_GetListUserByPlaceID.ToString(), cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@PlaceId", SqlDbType.BigInt).Value = placeId;
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                List<DL_SPAMREPORT> results = ConvertOneRowWithUser(dt);
+                return results;
+            }
+            catch (DataAccessException ex)
+            {
+                throw new DataAccessException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_SPAMREPORTDAL: GetListUserByPlace"));
+            }
+            finally
+            {
+                cnn.Close();
+            }
+        }
     }
 }

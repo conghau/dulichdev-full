@@ -59,6 +59,14 @@ namespace DuLichDLL.Model
             get { return _placeName; }
             set { _placeName = value; }
         }
+
+        private string _userName;
+
+        public string UserName
+        {
+            get { return _userName; }
+            set { _userName = value; }
+        }
     }
     public enum DL_SPAMREPORTColumns
     {
@@ -70,6 +78,7 @@ namespace DuLichDLL.Model
         Status,
         NumberReport,
         PlaceName,
+        UserName,
     }
     public enum DL_SPAMREPORTProcedure
     {
@@ -81,6 +90,7 @@ namespace DuLichDLL.Model
         p_DL_SPAMREPORT_Get_ListPlaceID,
         p_DL_SPAMREPORT_Get_ListGroupByPlace,
         p_DL_SPAMREPORT_DeleteByPlaceId,
+        p_DL_SPAMREPORT_GetListUserByPlaceID
 
     }
 }
