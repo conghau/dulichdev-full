@@ -32,6 +32,27 @@ namespace DuLichDLL.BAL
                 throw new BusinessException(ExceptionMessage.throwEx(ex, "ERROR_DL_CityBAL: GetByID"));
             }
         }
+
+        public DL_City GetByPlaceID(long placeID)
+        {
+            try
+            {
+                DL_CityDAL dL_CityDAL = new DL_CityDAL();
+                return dL_CityDAL.GetByPlaceID(placeID);
+            }
+            catch (DataAccessException ex)
+            {
+                throw new BusinessException(ex.Message);
+            }
+            catch (BusinessException ex)
+            {
+                throw new BusinessException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new BusinessException(ExceptionMessage.throwEx(ex, "ERROR_DL_CityBAL: GetByPlaceID"));
+            }
+        }
         public List<DL_City> GetList()
         {
             try

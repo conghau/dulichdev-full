@@ -85,7 +85,8 @@ namespace DuLichDLL.Model
         p_DL_City_Get_List,
         p_DL_City_Get_ByID,
         p_DL_City_UpdateContent,
-        p_DL_City_Get_List_WithFilter
+        p_DL_City_Get_List_WithFilter,
+        p_DL_City_Get_ByPlaceID,
 
     }
 }
