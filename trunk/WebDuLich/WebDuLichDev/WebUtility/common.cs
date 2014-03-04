@@ -2,6 +2,7 @@
 using DuLichDLL.Model;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,7 +40,7 @@ namespace WebDuLichDev.WebUtility
         {
             string value = string.Empty;
 
-            value = DuLichDLL.Utility.Utility.ObjectToString(HttpContext.GetGlobalResourceObject("Language", resourceName));
+            value = DuLichDLL.Utility.Utility.ObjectToString(HttpContext.GetGlobalResourceObject("Language", resourceName, new CultureInfo(WebDuLichSecurity.LanguageCode)));
             if (string.IsNullOrWhiteSpace(value))
             {
                 value = resourceName;
@@ -84,7 +85,7 @@ namespace WebDuLichDev.WebUtility
         {
             try
             {
-                string menu = "<li class=\"dropdown item\"><a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">" + node.ObjectName + "<b class=\"caret\"></b></a><ul class=\"dropdown-menu\"> ";
+                string menu = "<li class=\"dropdown item\"><a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">" + GetResourceValue(node.ObjectName) + "<b class=\"caret\"></b></a><ul class=\"dropdown-menu\"> ";
 
                 if (node.ObjectType != WebDuLichDev.WebUtility.Enum.ObjectType.WebPartial.ToString())
                 {
@@ -111,7 +112,7 @@ namespace WebDuLichDev.WebUtility
                                 {
                                     href = "#";
                                 }
-                                menu = menu + "<li class=\"dropdown-item\"><a href=\"" + href + "\" title=\"niceplace\">" + item.ObjectName + "</a></li>";
+                                menu = menu + "<li class=\"dropdown-item\"><a href=\"" + href + "\">" + GetResourceValue(item.ObjectName) + "</a></li>";
 
                             }
                             else

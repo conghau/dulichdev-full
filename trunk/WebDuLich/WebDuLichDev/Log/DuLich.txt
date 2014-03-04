@@ -1308,3 +1308,9 @@ ERROR | 2014-02-28 16:38:21 | ERROR_DL_NicePlaceInfoDetailDAL: Insert	Procedure 
    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
    at System.Data.SqlClient.SqlCommand.ExecuteScalar()
    at DuLichDLL.DAL.DL_NicePlaceInfoDetailDAL.Insert(DL_NicePlaceInfoDetail dL_NicePlaceInfoDetail, SqlConnection cnn, SqlTransaction tran) in d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\DuLichDLL\DAL\DL_NicePlaceInfoDetailDAL.cs:line 194
+ERROR | 2014-03-04 11:06:46 | d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\WebDuLichDev\Views\Place\NicePlace.cshtml(75): error CS0103: The name 'item' does not exist in the current context
+ERROR | 2014-03-04 11:07:41 | d:\KHOALUAN\dulichdev_full\dulichdev-full\WebDuLich\WebDuLichDev\Views\Place\NicePlace.cshtml(75): error CS0103: The name 'item' does not exist in the current context
+ERROR | 2014-03-04 11:13:29 | Cannot perform runtime binding on a null reference
+ERROR | 2014-03-04 11:19:10 | 'int' does not contain a definition for 'ToUpper'
+ERROR | 2014-03-04 13:13:00 | Operator '==' cannot be applied to operands of type 'long' and 'string'
+ERROR | 2014-03-04 13:18:57 | Operator '==' cannot be applied to operands of type 'long' and 'string'

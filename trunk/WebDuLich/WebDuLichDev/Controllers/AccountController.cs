@@ -291,7 +291,7 @@ namespace WebDuLichDev.Controllers
 
             if (User.Identity.IsAuthenticated || !OAuthWebSecurity.TryDeserializeProviderUserId(model.ExternalLoginData, out provider, out providerUserId))
             {
-                return RedirectToAction("Manage");
+                return RedirectToAction("Changepassword");
             }
 
             if (ModelState.IsValid)

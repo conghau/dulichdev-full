@@ -845,7 +845,7 @@ TT.navigation.updateCurrentPointer = function(currentPage, targetPage) {
   currentPage.removeClass('current');
   targetPage.addClass('current');
 
-  //TT.sharing.updateSharer();
+  TT.sharing.updateSharer();
   TT.navigation.updatePageReferences();
   TT.navigation.updateNextPrevLinks(targetPage);
 

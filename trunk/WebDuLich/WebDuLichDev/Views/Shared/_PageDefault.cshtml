@@ -7,39 +7,39 @@
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Scripts/Lib/bootstrap/css/bootstrap.css")
     @Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/Content/rating.css")
-    @Scripts.Render("~/Scripts/rating.js")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/base")
     @RenderSection("scripts", required: false)
     <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
     @*@Styles.Render("~/Content/themes/pageDefault.css")*@
-    @Styles.Render("~/Content/themes/20Thing/css/main.css")
+    @Styles.Render("~/Content/themes/20Thing/css/main_full.css")
+    @Scripts.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.js")
+    @Styles.Render("~/Scripts/Lib/FancyBox/source/jquery.fancybox.css")
+    @Styles.Render("~/Scripts/Lib/Alert/jquery.alerts.css")
+    <link rel="stylesheet" type="text/css" href="~/Scripts/Lib/jRating/jquery/jRating.jquery.css" media="screen" />
+ 
 </head>
 <body>
-    <header class="navbar navbar-fixed-top">
+    <header class="">
         <nav>
             <ul>
-                <li class="backtobook"><a href="#">BACK TO BOOK</a></li>
+                @if (ViewBag.PlaceType == 1)
+                {
+                    <li class="back"><a class="back" href="@Url.Action( "RestaurantByCity","Restaurant", new {ID = ViewBag.CityId})">Đến sách</a></li>
+                }
+                    @if (ViewBag.PlaceType == 2)
+                {
+                    <li class="back"><a class="back" href="@Url.Action( "HotelByCity","Hotel", new {ID = ViewBag.CityId})">Đến sách</a></li>
+                }
+                @if (ViewBag.PlaceType == 3)
+                {
+                    <li class="back"><a class="back" href="@Url.Action( "NicePlaceByCity", "Place",new {ID = ViewBag.CityId})">Đến sách</a></li>
+                }
                 <li class="divider1"></li>
-                <li class="about"><a href="#">FIRST</a></li>
-                <li class="divider2"></li>
-                <li class="credits"><a href="#">CREDITS</a></li>
-                <li class="divider2"></li>
             </ul>
         </nav>
-
-        <div id="language-selector">
-            <div id="language-selector-title"><a>VIETNAM (VI)</a></div>
-            <div id="language-selector-list">
-                <ul>
-                    <li><a>ENGLISH (US)</a></li>
-                </ul>
-            </div>
-        </div>
-
         <!-- Input type="search" is currently too inconsistent across browsers and platforms -->
-        <input id="search-field" type="text" value="Search Book">
+        <input id="search-field" type="text" value="Tìm">
     </header>
     <div id="bodyPageDefault">
         @RenderBody()
@@ -71,8 +71,8 @@
                 <p>@Resources.Language.SHAREBOOK</p>
                 <input type="text" class="clipboard-notification" value="" readonly="readonly" />
                 <ul>
-                    <li class="facebook"><a href="http://www.facebook.com/sharer.php?u=http://20thingsilearned.com&amp;t=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web" title="Facebook"></a></li>
-                    <li class="twitter"><a href="http://twitter.com/share?original_referer=http://20thingsilearned.com&amp;text=20%20Things%20I%20learned%20About%20Browsers%20and%20the%20Web&amp;url=http://20thingsilearned.com" title="Twitter"></a></li>
+                    <li class="facebook"><a href="http://www.facebook.com/sharer.php?u=http://dulich.azurewebsites.net/" title="Facebook"></a></li>
+                    <li class="twitter"><a href="http://twitter.com/share?original_referer=http://dulich.azurewebsites.net/" title="Twitter"></a></li>
                     <li class="gplus"></li>
                     <li class="zingme"><a class="" name="zm_share" type="icon" title="Chia sẻ lên Zing Me"></a>
                         <script src="http://stc.ugc.zdn.vn/link/js/lwb.0.7.js" type="text/javascript"></script>
@@ -98,6 +98,115 @@
             </div>
         </div>
     </footer>
-    <script src="/Content/themes/20Thing/js/twentythings.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //$(".basic").jRating();
+            $('.map').fancybox({
+                maxWidth: 600,
+                fitToView: false,
+                width: '550px',
+                height: '530px',
+                autoSize: false,
+                closeClick: false,
+                openEffect: 'fadeIn',
+                closeEffect: 'none',
+                padding: 10,
+                //afterClose: function () { location.reload(false); }
+            });
+
+            $('.ptext').fancybox({
+                maxWidth: 600,
+                fitToView: false,
+                width: '537px',
+                height: '530px',
+                autoSize: false,
+                closeClick: false,
+                openEffect: 'fadeIn',
+                closeEffect: 'none',
+                padding: 10,
+                //afterClose: function () { location.reload(false); }
+            });
+
+            $('.listImage').fancybox({
+                maxWidth: 600,
+                fitToView: false,
+                width: '537px',
+                height: '530px',
+                autoSize: false,
+                closeClick: false,
+                openEffect: 'fadeIn',
+                closeEffect: 'none',
+                padding: 10,
+                //afterClose: function () { location.reload(false); }
+            });
+
+            $('.fancyboxCmt').fancybox({
+                maxWidth: 600,
+                fitToView: false,
+                width: '537px',
+                height: '530px',
+                autoSize: false,
+                closeClick: false,
+                openEffect: 'fadeIn',
+                closeEffect: 'none',
+                padding: 10,
+                //afterClose: function () { location.reload(false); }
+            });
+        });
+    </script>
+    <script src="/Scripts/Lib/Alert/jquery.alerts.js"></script>
+    <script type="text/javascript" src="~/Scripts/Lib/jRating/jquery/jRating.jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".basic").jRating({
+                onClick: function (element, rate, idBox, nameBox, widthColorOneStar) {
+                    $.ajax({
+                        url: '@Url.Action("Rating","Place")',
+                        type: "Post",
+                        data: { rate: rate, placeId: idBox },
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.success) {
+
+                                $(element).attr('data-average', data.Avg);
+                                $(element).find('.jRatingAverage').css('width', '0px')
+                                $(element).find('.jRatingColor').css('width', widthColorOneStar * data.Avg)
+
+                                $(element).parent().children().last().replaceWith('<p class="text">   Đánh giá hiện tại :' + data.Avg + ' bởi ' + data.TotalUser + ' người</p>')
+                                $.ajax({
+                                    url: '@Url.Action("PostNoticeRate","Zing")',
+                                    type: "Post",
+                                    data: { rate: rate, placeName: nameBox, ID: idBox },
+                                    dataType: 'json',
+                                    success: function (result) {
+                                    }
+                                });
+                            }
+                            else
+                                alert("that bai");
+                        },
+                    });
+                }
+            });
+        });
+        function reportspam(e, b) {
+            $.ajax({
+                url: '@Url.Action("Spams","Place")',
+                data: { placeId: e },
+                type: "post",
+                dataType: "Json",
+                success: function (data) {
+                    if (data.status == 'OK') {
+                        jAlert('Cảm ơn bạn đã báo cáo cho chúng tôi', 'Thông báo');
+                        var img = b.children;
+                        $(img).attr('src', '/Content/themes/custom/Image/Flag-04-1.png');
+                    }
+                    else {
+                        jAlert('Chưa thực hiện được', 'Thông báo');
+                    }
+                }
+            });
+        };
+    </script>
 </body>
 </html>

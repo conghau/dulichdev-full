@@ -477,4 +477,16 @@
   <data name="AvgRating" xml:space="preserve">
     <value>Điểm đánh giá trung bình</value>
   </data>
+  <data name="NicePlace" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Cấu hình</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Tài khoản</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Quyền</value>
+  </data>
 </root>

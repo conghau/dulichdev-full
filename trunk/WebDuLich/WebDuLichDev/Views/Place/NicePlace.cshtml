@@ -1,60 +1,74 @@
 ﻿@model WebDuLichDev.Models.vm_NicePlace
 @{
-    ViewBag.Title = @Resources.Language.Place;
+    ViewBag.Title = Model.dlPlace.Name;
     Layout = "~/Views/Shared/_PageDefault.cshtml";
+    ViewBag.PathImageBook = "/Content/themes/20Thing/css/images_full";
 }
-
+<div id="search-dropdown">
+    <div class="fader">
+        <div class="background-top"></div>
+        <div class="background-bottom"></div>
+        <div class="results">
+            <div class="things">
+                <h4><span>@Resources.Language.Search</span></h4>
+                <hr>
+            </div>
+            <div class="keywords">
+                <h4><span>KEYWORDS</span></h4>
+                <hr>
+            </div>
+            <div class="empty">@Resources.Language.NoFound .</div>
+        </div>
+    </div>
+</div>
+<div id="grey-mask" style="left: 0px;"></div>
 @if (null != Model)
 {
-    <h2>NicePlace</h2>
-    <div class="page">
-        <section>
-            <div class="page-title">
-                <h2>@Model.dlPlace.Name</h2>
-            </div>
-            <div>
-                <img src="~/Data/Avatar/Place/@Model.dlPlace.Avatar" width="350" height="250" alt="@Model.dlPlace.Name" />
-                @if (Model.listImagePlace != null)
-                {
-                    foreach (var item in Model.listImagePlace)
-                    {
-                    <img src="~/Data/Avatar/Place/@item.LinkImage" width="350" height="250" alt="@Model.dlPlace.Name" />   
-                    }
-                }
-            </div>
-            <div>
-                <p>@Resources.Language.DetailInfo</p>
-                @if (null != Model.dlNicePlaceInfoDetail.Info)
-                {
-                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Info))</p>}
-                else
-                { <p>Chua co thong tin</p>}
-            </div>
-            <div>
-                <p>@Resources.Language.History</p>
-                @if (null != Model.dlNicePlaceInfoDetail.History)
-                {
-                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.History))</p>}
-                else
-                { <p>Chua co thong tin</p>}
-            </div>
-            <div>
-                <p>@Resources.Language.Note</p>
-                @if (null != Model.dlNicePlaceInfoDetail.Note)
-                {
-                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Note))</p>}
-                else
-                { <p>Chua co thong tin</p>}
-            </div>
-            <div>
-                <p>@Resources.Language.Time</p>
-                @if (null != Model.dlNicePlaceInfoDetail.OpenCloseTime)
-                {
-                    <p class="drop-cap">@Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.OpenCloseTime))</p>}
-                else
-                { <p>Chua co thong tin</p>}
-            </div>
-        </section>
+    <div id="book">
+        <div id="left-page">
+            <img src="@ViewBag.PathImageBook/left-page.jpg"/>
+        </div>
+        <div id="right-page"></div>
+        <div id="pages">
+
+            <section>
+                <div class="page">
+                    <div class="page-title">
+                        <h2 style="display: inline">@Model.dlPlace.Name</h2>
+                        <a href="@Url.Action("map", "map", new { co_ordinate = Model.dlPlace.Co_ordinate, address = Model.dlPlace.Address })" class="map fancybox.iframe showmap" title="xem bản đồ">
+                            <img src="/Content/themes/custom/Image/Maps.png" style="margin-top: -13px;" /></a>
+                        <a class="report-spam" href="#" onclick="reportspam(@Model.dlPlace.ID, this);return false;" title="Báo cáo vi phạm">
+                            <img src="/Content/themes/custom/Image/Flag-04.png" style="margin-top: -13px;" /></a>
+                    </div>
+                    <div style="height: 28px;">
+                        @Html.Partial("p_rating", Model.dlPlace)
+                        @Html.Partial("p_likesocial", Model.dlPlace.ID)
+
+                    </div>
+                    <div class="right">
+                        <img src="~/Data/Avatar/Place/@Model.dlPlace.Avatar" alt="@Model.dlPlace.Name" width="233" height="120"/>
+
+                        @if (Model.listImagePlace != null && Model.listImagePlace.Count > 0)
+                        {
+                            <img src="~/Data/Images/Place/@Model.listImagePlace[0].LinkImage" alt="@Model.dlPlace.Name" width="233" height="120"/>
+                            <a href="@Url.Action("ListImagePlace", "Place", new { placeId = Model.dlPlace.ID })" class="listImage fancybox.iframe">@Resources.Language.SeeMore ...</a>
+                        }
+                    </div>
+                    <div class="box">
+                        @Html.Raw(HttpUtility.HtmlDecode(Model.dlNicePlaceInfoDetail.Info))
+                    </div>
+                    <div class="seemore"><a href="@Url.Action("PlaceInfoDetail", "Place", new { placeId = Model.dlPlace.ID })" class="ptext fancybox.iframe">@Resources.Language.SeeMore ...</a></div>
+                    <div class="comment">
+                        <p>@Resources.Language.Comment:</p>
+                        <a href="@Url.Action("CommentPlace", "Place", new { placeId = Model.dlPlace.ID, type = "zingme" })" class="zingme fancyboxCmt fancybox.iframe" title="Bình luận trên zingme"></a>
+                        <a href="@Url.Action("CommentPlace", "Place", new { placeId = Model.dlPlace.ID, type = "facebook" })" class="facebook fancyboxCmt fancybox.iframe" title="Bình luận trên facebook"></a>
+                        <a href="@Url.Action("CommentPlace", "Place", new { placeId = Model.dlPlace.ID, type = "twitter" })" class="twitter fancyboxCmt fancybox.iframe" title="Bình luận trên twitter"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
     </div>
     
 }
@@ -62,3 +76,17 @@ else
 {
     <h2>Xin loi, dia diem nay da bi xoa hoac co loi khong hien thi duoc</h2>
 }
+<style>
+    #book {
+        left: -564.5px;
+        top: 80px;
+        margin: 0px;
+        opacity: 1;
+    }
+
+    #right-page {
+        background-image: url("/Content/themes/20Thing/css/images_full/right-page.jpg");
+        width: 830px;
+        z-index: 0;
+    }
+</style>

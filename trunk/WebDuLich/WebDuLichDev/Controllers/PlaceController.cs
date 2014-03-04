@@ -93,22 +93,12 @@ namespace WebDuLichDev.Controllers
             }
         }
 
-        [Authorize]
         public ActionResult NicePlaceByCity(long ID)
         {
             try
             {
                 ViewBag.CityId = ID;
                 ViewBag.IntoZing = WebDuLichSecurity.IntoZing;
-                //if (WebDuLichSecurity.IntoZing)
-                //{
-                //    WebDuLichSecurity.PathImageBook = "/Content/themes/20Thing/css/images";
-                //}
-                //else
-                //{
-                //    WebDuLichSecurity.PathImageBook = "/Content/themes/20Thing/css/images_full";
-                //}
-
                 DL_CityBAL dlCityBal = new DL_CityBAL();
                 var city = dlCityBal.GetByID(ID);
                 ViewBag.CityName = city.CityName;
@@ -149,18 +139,37 @@ namespace WebDuLichDev.Controllers
 
         public ActionResult NicePlace(long ID)
         {
-            DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
-            DL_NicePlaceInfoDetailBAL dlNicePlaceInfoDetailBal = new DL_NicePlaceInfoDetailBAL();
-            DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
+            try
+            {
+                DL_PlaceBAL dlPlaceBal = new DL_PlaceBAL();
+                DL_NicePlaceInfoDetailBAL dlNicePlaceInfoDetailBal = new DL_NicePlaceInfoDetailBAL();
+                DL_ImagePlaceBAL dlImagePlaceBal = new DL_ImagePlaceBAL();
 
-            var nicePlace = new vm_NicePlace();
+                var nicePlace = new vm_NicePlace();
+                nicePlace.dlPlace = dlPlaceBal.GetByID(ID);
+                nicePlace.dlNicePlaceInfoDetail = dlNicePlaceInfoDetailBal.GetByPlaceId(ID);
+                nicePlace.listImagePlace = dlImagePlaceBal.GetByDLPlaceID(ID);
 
-            //nicePlace = nicePlaceBook.Where(p => p.dlPlace.ID == ID).Single();
-            nicePlace.dlPlace = dlPlaceBal.GetByID(ID);
-            nicePlace.dlNicePlaceInfoDetail = dlNicePlaceInfoDetailBal.GetByPlaceId(ID);
-            nicePlace.listImagePlace = dlImagePlaceBal.GetByDLPlaceID(ID);
-
-            return View(nicePlace);
+                ViewBag.PlaceType = nicePlace.dlPlace.DL_PlaceTypeId;
+                DL_CityBAL dlCityBal = new DL_CityBAL();
+                var city = dlCityBal.GetByPlaceID(ID);
+                ViewBag.CityName = city.CityName;
+                ViewBag.CityId = city.ID;
+                return View(nicePlace);
+            }
+            catch (BusinessException bx)
+            {
+                log.Error(bx.Message);
+                TempData[PageInfo.Message.ToString()] = bx.Message;
+                return RedirectToAction("Error", "Home");
+            }
+            catch (Exception ex)
+            {
+                //LogBAL.LogEx("BLM_ERR_Common", ex);
+                log.Error(ex.Message);
+                TempData[PageInfo.Message.ToString()] = "BLM_ERR_Common";
+                return RedirectToAction("Error", "Home");
+            }
         }
 
         public ActionResult ListImagePlace(long placeId)
@@ -214,6 +223,7 @@ namespace WebDuLichDev.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult Rating(long placeId, int rate)
         {
@@ -267,6 +277,7 @@ namespace WebDuLichDev.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult Spams(long placeId)
         {
