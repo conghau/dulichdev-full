@@ -75,6 +75,41 @@ namespace DuLichDLL.DAL
                 cnn.Close();
             }
         }
+
+        public DL_City GetByPlaceID(long placeID)
+        {
+            SqlConnection cnn = null;
+            try
+            {
+                cnn = DataProvider.OpenConnection();
+                SqlCommand cmd = new SqlCommand(DL_CityProcedure.p_DL_City_Get_ByPlaceID.ToString(), cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@PlaceId", SqlDbType.BigInt).Value = placeID;
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                List<DL_City> results = GetDataObject(dt);
+                DL_City dL_City = new DL_City();
+                if (results.Count > 0)
+                {
+                    dL_City = results[0];
+                }
+                return dL_City;
+            }
+            catch (DataAccessException ex)
+            {
+                throw new DataAccessException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new DataAccessException(ExceptionMessage.throwEx(ex, "ERROR_DL_CityDAL: GetByPlaceID"));
+            }
+            finally
+            {
+                if (null != cnn)
+                    cnn.Close();
+            }
+        }
         public List<DL_City> GetList()
         {
             SqlConnection cnn = null;
