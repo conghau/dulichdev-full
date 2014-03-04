@@ -205,16 +205,16 @@
     <value>Email</value>
   </data>
   <data name="EN" xml:space="preserve">
-    <value>Tiếng Anh</value>
+    <value>English</value>
   </data>
   <data name="ERR_Exist" xml:space="preserve">
-    <value>Đã tồn tại</value>
+    <value>Is Exist</value>
   </data>
   <data name="ERR_Insert" xml:space="preserve">
-    <value>Thêm mới thất bại</value>
+    <value>Insert Error</value>
   </data>
   <data name="ERR_Update" xml:space="preserve">
-    <value>Cập nhập thất bại</value>
+    <value>Update error</value>
   </data>
   <data name="Fax" xml:space="preserve">
     <value>Fax</value>
@@ -436,16 +436,16 @@
     <value>Submit</value>
   </data>
   <data name="SUC_Insert" xml:space="preserve">
-    <value>Thêm mới thành công</value>
+    <value>Insert success</value>
   </data>
   <data name="SUC_Update" xml:space="preserve">
-    <value>Cập nhập thành công</value>
+    <value>Update success</value>
   </data>
   <data name="tableofcontents" xml:space="preserve">
-    <value>Mục lục</value>
+    <value>Table Of Contents</value>
   </data>
   <data name="TableOfIndex" xml:space="preserve">
-    <value>Xem dạng bảng</value>
+    <value>Table</value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Time</value>
@@ -476,5 +476,20 @@
   </data>
   <data name="AvgRating" xml:space="preserve">
     <value>Average rating</value>
+  </data>
+  <data name="NicePlace" xml:space="preserve">
+    <value>Nice Place</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Share</value>
   </data>
 </root>

@@ -50,7 +50,7 @@ var l = window.location;
  */
 TT.sharing.BASE_URL = l.protocol + '//' + l.host;
 
-
+TT.sharing.BASE_URL_PLACE = l.protocol + '//' + l.host + '/place/niceplace'
 /**
  * Facebook share link.
  */
@@ -267,7 +267,7 @@ TT.sharing.shareBookOnTwitter = function () {
  * @return {boolean} Return false.
  */
 TT.sharing.shareChapterOnFacebook = function () {
-    var url = TT.sharing.BASE_URL + '/' + TT.navigation.getCurrentArticleId();
+    var url = TT.sharing.BASE_URL_PLACE + '/' + TT.navigation.getPlaceId($('#pages section.current').attr('class'));
     var title = SERVER_VARIABLES['FACEBOOK_MESSAGE_SINGLE'];
 
     TT.sharing.shareOnFacebook(url, title);
@@ -281,7 +281,7 @@ TT.sharing.shareChapterOnFacebook = function () {
  * @return {boolean} Return false.
  */
 TT.sharing.shareChapterOnTwitter = function () {
-    var url = TT.sharing.BASE_URL + '/' + TT.navigation.getCurrentArticleId();
+    var url = TT.sharing.BASE_URL + '/' + TT.navigation.getPlaceId($('#pages section.current').attr('class'));
     var title = SERVER_VARIABLES['TWITTER_MESSAGE_SINGLE'];
 
     TT.sharing.shareOnTwitter(url, title);

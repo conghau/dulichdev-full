@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tài khoản.
+        /// </summary>
+        internal static string Account {
+            get {
+                return ResourceManager.GetString("Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Thêm.
         /// </summary>
         internal static string Add {
@@ -691,6 +700,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Địa điểm.
+        /// </summary>
+        internal static string NicePlace {
+            get {
+                return ResourceManager.GetString("NicePlace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Không tìm thấy.
         /// </summary>
         internal static string NoFound {
@@ -907,6 +925,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quyền.
+        /// </summary>
+        internal static string Roles {
+            get {
+                return ResourceManager.GetString("Roles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loại phòng.
         /// </summary>
         internal static string RoomType {
@@ -966,6 +993,15 @@ namespace Resources {
         internal static string SetPassword {
             get {
                 return ResourceManager.GetString("SetPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cấu hình.
+        /// </summary>
+        internal static string Setting {
+            get {
+                return ResourceManager.GetString("Setting", resourceCulture);
             }
         }
         

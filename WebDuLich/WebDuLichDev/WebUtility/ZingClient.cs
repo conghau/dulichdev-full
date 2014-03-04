@@ -56,16 +56,13 @@ namespace WebDuLichDev.WebUtility
 
         public void RequestAuthentication(HttpContextBase context, Uri returnUrl)
         {
-            //string url = HttpUtility.UrlEncode(returnUrl.ToString());
-            var random = new Random();
-            long number_ran = random.Next(1, 100000);
-            string state = number_ran.ToString();
+            //var random = new Random();
+            //long number_ran = random.Next(1, 100000);
+            //string state = number_ran.ToString();
             ZME_Authentication oauth = new ZME_Authentication(WebDuLichDev.RegisterAuthZing.config());
-            string url_old = "http://localhost:62688";
-            Uri uri_old = new Uri(url_old);
+            string callbackurl= "http://dulich.azurewebsites.net/";
 
-            string uri_new = uri_old.ToString();
-            String url = oauth.getAuthorizedUrl(uri_new, "14103");
+            String url = oauth.getAuthorizedUrl(callbackurl, "14103");
 
             context.Response.Redirect(url);
         }
@@ -74,9 +71,6 @@ namespace WebDuLichDev.WebUtility
         {
             code = context.Request.QueryString["code"];
             string signedRequestParam = context.Request.Params["signed_request"];
-            //NameValueCollection pColl = context.Request.Params;
-            //pColl.GetValue("signed_request");
-            //pColl.GetKey(10);
             int expires = 0;
 
             ZME_Authentication oauth = new ZME_Authentication(WebDuLichDev.RegisterAuthZing.config());

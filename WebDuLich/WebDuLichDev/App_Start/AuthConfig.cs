@@ -36,7 +36,7 @@ namespace WebDuLichDev
              
             //Zing Me SDK Config App ID  
             ZingClient zingClient = new ZingClient("663270de6faf4149ac73cb5e77374924", "ac2105d2856646e4b70b24db66b53f29", null);
-            OAuthWebSecurity.RegisterClient(zingClient,"ZingMe",null);
+            OAuthWebSecurity.RegisterClient(zingClient,"Zing Me",null);
             //OAuthWebSecurity.RegisterClient(
             //    new ZingClient("663270de6faf4149ac73cb5e77374924", "ac2105d2856646e4b70b24db66b53f29", null), "ZingMe", null);     
         }

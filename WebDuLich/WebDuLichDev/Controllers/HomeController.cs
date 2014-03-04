@@ -17,6 +17,8 @@ namespace WebDuLichDev.Controllers
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(PlaceController).Name);
         string version = "Version " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + " ";
+        
+        [AllowAnonymous]
         public ActionResult Index()
         {
             //ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
@@ -27,20 +29,21 @@ namespace WebDuLichDev.Controllers
                 {
                     WebDuLichSecurity.Menu = common.RenderMenu();
                 }
-                if (!String.IsNullOrEmpty(Request.QueryString["code"]))
+                if (!String.IsNullOrEmpty(Request.Params["signed_request"]))
                 {
                     ZME_Authentication oauth = new ZME_Authentication(WebDuLichDev.RegisterAuthZing.config());
                     ZME_Me me = new ZME_Me(WebDuLichDev.RegisterAuthZing.config());
                     int expires = 0;
                     var routeValues = this.RouteData.Values;
-                    var code = Request.QueryString["code"];
-                    var access_token1 = oauth.getAccessTokenFromCode(code, out expires);
+                    string signedRequestParam = Request.Params["signed_request"];
+                    var access_token1 = oauth.getAccessTokenFromSignedRequest(signedRequestParam, out expires);
                     WebDuLichSecurity.AccessTokenZingMe = access_token1;
 
                     Hashtable me_info = me.getInfo(access_token1, "id,username");
                     string user_name = me_info["username"].ToString();
                     long user_id = long.Parse(me_info["id"].ToString());
                     WebDuLichSecurity.IntoZing = common.SetIntoZing();
+                    log.Info("co signed");
                     using (UsersContext db = new UsersContext())
                     {
                         UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == user_name);
@@ -52,31 +55,42 @@ namespace WebDuLichDev.Controllers
                             db.SaveChanges();
                             OAuthWebSecurity.CreateOrUpdateAccount("ZingMe", user_id.ToString(), user_name);
                             OAuthWebSecurity.Login("ZingMe", user_id.ToString(), createPersistentCookie: false);
+                            log.Info("login by signed request, user is not exist");
                         }
                         else
                         {
+                            //WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
                             ModelState.AddModelError("UserName", "User name already exists. Please enter a different user name.");
                             OAuthWebSecurity.Login("ZingMe", user_id.ToString(), createPersistentCookie: false);
+                            log.Info("login by signed request, user is exist");
                         }
                     }
-                    return Redirect("./");
-                }
+                    if (WebSecurity.IsAuthenticated == false)
+                    {
+                        log.Info(" not is login");
+                        return Redirect("./");
+                    }
+                    else
+                        log.Info("is login");
+                    WebDuLichSecurity.Menu = common.RenderMenu();
+                    return View();
+                }               
                 else
                 {
-                    if (!String.IsNullOrEmpty(Request.Params["signed_request"]))
+                    if (!String.IsNullOrEmpty(Request.QueryString["code"]))
                     {
                         ZME_Authentication oauth = new ZME_Authentication(WebDuLichDev.RegisterAuthZing.config());
                         ZME_Me me = new ZME_Me(WebDuLichDev.RegisterAuthZing.config());
                         int expires = 0;
                         var routeValues = this.RouteData.Values;
-                        string signedRequestParam = Request.Params["signed_request"];
-                        var access_token1 = oauth.getAccessTokenFromSignedRequest(signedRequestParam, out expires);
+                        var code = Request.QueryString["code"];
+                        var access_token1 = oauth.getAccessTokenFromCode(code, out expires);
                         WebDuLichSecurity.AccessTokenZingMe = access_token1;
 
                         Hashtable me_info = me.getInfo(access_token1, "id,username");
                         string user_name = me_info["username"].ToString();
                         long user_id = long.Parse(me_info["id"].ToString());
-                        WebDuLichSecurity.IntoZing = common.SetIntoZing();
+                        log.Info("have string code");
                         using (UsersContext db = new UsersContext())
                         {
                             UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == user_name);
@@ -88,17 +102,18 @@ namespace WebDuLichDev.Controllers
                                 db.SaveChanges();
                                 OAuthWebSecurity.CreateOrUpdateAccount("ZingMe", user_id.ToString(), user_name);
                                 OAuthWebSecurity.Login("ZingMe", user_id.ToString(), createPersistentCookie: false);
+                                log.Info("login to zing by code, user is not exist");
                             }
                             else
                             {
-                                //WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
                                 ModelState.AddModelError("UserName", "User name already exists. Please enter a different user name.");
                                 OAuthWebSecurity.Login("ZingMe", user_id.ToString(), createPersistentCookie: false);
+
+                                log.Info("login to zing code,user is exist");
                             }
                         }
-                        if(User.Identity.IsAuthenticated == false)
-                            return Redirect("./");
-                        
+                        WebDuLichSecurity.Menu = common.RenderMenu();
+                        return View();
                     }
                 }
                 
@@ -145,6 +160,11 @@ namespace WebDuLichDev.Controllers
             {
                 string url = Request.UrlReferrer.AbsoluteUri;
                 WebDuLichSecurity.LanguageCode = languageCode;
+                if (WebSecurity.IsAuthenticated)
+                {
+                    //common com = new common();
+                    WebDuLichSecurity.Menu = common.RenderMenu();
+                }
                 return Redirect(url);
             }
             catch (Exception)
